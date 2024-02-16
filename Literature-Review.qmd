@@ -1,0 +1,7 @@
+# Literature Review
+
+The evolution from R-CNN to faster R-CNN represents a significant advancement in object detection algorithms, especially in terms of speed and efficiency. A brief history of the development progression of R-CNN, Fast R-CNN, and Faster R-CNN adds valuable context to our study on object detection architectures. It will help to understand the evolution of these models, the motivations behind their development, and the improvements made over time.
+
+## R-CNN (Region based Convolutional Network)
+
+R-CNN was a breakthrough in object detection. It employed a multi stage approach that involved selective search for generating region proposals followed by a convolutional neural network for feature extraction and a support vector machine (SVM) for object classification within each region.

@@ -1,0 +1,26 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "R-CNN"
+  subtitle: "Computer Vision - Object Detection"
+  author: "Group 8"
+  date: "2/16/2024"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - Literature-Review.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

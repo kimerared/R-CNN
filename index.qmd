@@ -1,0 +1,13 @@
+---
+jupyter: python3
+---
+
+# Preface {.unnumbered}
+
+Computer Vision Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8
+
+Please visit our repository in [GitHub](https://github.com/kimerared/R-CNN.git){.uri}.
+
+```{python}
+1 + 1
+```
