@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R-CNN",
+    "section": "",
+    "text": "Preface\nComputer Vision Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8\nPlease visit our repository in GitHub.\n\n1 + 1\n\n2"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html#subtitle",
+    "href": "summary.html#subtitle",
+    "title": "2  Summary",
+    "section": "2.1 Subtitle",
+    "text": "2.1 Subtitle\ntext\n\n2.1.1 Subtitle 2\nThis is last level.\nMatrices\n\\[\n\\left[\\begin{matrix}1 & 0\\\\0 & 1\\\\2 & 3\\end{matrix}\\right]\n\\]\nAnother example.\n\\[\n\\sqrt{x^2+1}\n\\]\nThis is a simple math expression without numbering separated from text."
+  },
+  {
+    "objectID": "Literature-Review.html#r-cnn-region-based-convolutional-network",
+    "href": "Literature-Review.html#r-cnn-region-based-convolutional-network",
+    "title": "3  Literature Review",
+    "section": "3.1 R-CNN (Region based Convolutional Network)",
+    "text": "3.1 R-CNN (Region based Convolutional Network)\nR-CNN was a breakthrough in object detection. It employed a multi stage approach that involved selective search for generating region proposals followed by a convolutional neural network for feature extraction and a support vector machine (SVM) for object classification within each region."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  }
+]
