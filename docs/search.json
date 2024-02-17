@@ -81,21 +81,21 @@
     "href": "results.html#faster-r-cnn",
     "title": "6  Results",
     "section": "6.1 Faster R-CNN",
-    "text": "6.1 Faster R-CNN\nWe used the Faster R-CNN model from TensorFlow Hub (Inception-ResNet-V2). According to the authors [1], Inception-ResNet-V2 is a deep convolutional neural network architecture introduced as part of the Inception family.\nThe Faster R-CNN results can be seen in images 1-4. In the first image, the model was fairly accurate in identifying individual chairs and a couple of the tables. In the second image, Faster R-CNN correctly identified all beetles. In the third image the model had some issues with misclassifications of the types of phones. In the fourth image there seemed to be some confusion in the distinction between birds and animals in general."
+    "text": "6.1 Faster R-CNN\nWe used the Faster R-CNN model from TensorFlow Hub (Inception-ResNet-V2). According to the authors [1], Inception-ResNet-V2 is a deep convolutional neural network architecture introduced as part of the Inception family.\nThe Faster R-CNN results can be seen in images 1-4. In the first image, the model was fairly accurate in identifying individual chairs and a couple of the tables.\n\n\n\nFigure 6: Faster R-CNN result 1\n\n\nIn the second image, Faster R-CNN correctly identified all beetles.\n\n\n\nFigure 7: Faster R-CNN result 2\n\n\nIn the third image the model had some issues with misclassifications of the types of phones.\n\n\n\nFigure 8: Faster R-CNN result 3\n\n\nIn the fourth image there seemed to be some confusion in the distinction between birds and animals in general.\n\n\n\nFigure 9: Faster R-CNN result 4"
   },
   {
     "objectID": "results.html#mask-r-cnn",
     "href": "results.html#mask-r-cnn",
     "title": "6  Results",
     "section": "6.2 Mask R-CNN",
-    "text": "6.2 Mask R-CNN\nImages 5-7 are the results from the Mask R-CNN model that was trained from the COCO dataset. Based on the results this model seems to perform much better than the Faster R-CNN model. In image five, Mask R-CNN very accurately detected the giraffe and two zebras. In image six, the model was able to clearly detect the objects with a high mean average precision. Image seven comes from a video that was fed to the Mask R-CNN model. In this image, the model did have some trouble identifying all the objects."
+    "text": "6.2 Mask R-CNN\nImages 5-7 are the results from the Mask R-CNN model that was trained from the COCO dataset. Based on the results this model seems to perform much better than the Faster R-CNN model.\nIn image five, Mask R-CNN very accurately detected the giraffe and two zebras.\n\n\n\nFigure 10: Mask R-CNN result 1\n\n\nIn image six, the model was able to clearly detect the objects with a high mean average precision.\n\n\n\nFigure 11: Mask R-CNN result 2\n\n\nImage seven comes from a video that was fed to the Mask R-CNN model. In this frame, the model did have some trouble identifying all the objects.\n\n\n\nFigure 12: Mask R-CNN result 3"
   },
   {
     "objectID": "results.html#yolov8",
     "href": "results.html#yolov8",
     "title": "6  Results",
     "section": "6.3 YOLOv8",
-    "text": "6.3 YOLOv8\nThe last model used in our analysis was YOLOv8. This model also seemed to perform better than the Faster R-CNN model. Our YOLOv8 small (YOLOv8s) model was trained on a custom dataset that consisted of tanks and was subsequently tested on test photos of tanks. Images 8-10 show the results of the YOLOv8s model. The model accurately identified all of the tanks.\n\n\n\n\n[1] C. Szegedy, S. Ioffe, V. Vanhoucke, and A. Alemi, “Inception-v4, inception-ResNet and the impact of residual connections on learning,” in Proceedings of the thirty-first AAAI conference on artificial intelligence (AAAI-17), 2017, pp. 4278–4284."
+    "text": "6.3 YOLOv8\nThe last model used in our analysis was YOLOv8. This model also seemed to perform better than the Faster R-CNN model. Our YOLOv8 small (YOLOv8s) model was trained on a custom dataset that consisted of tanks and was subsequently tested on test photos of tanks. Images 8-10 show the results of the YOLOv8s model. The model accurately identified all of the tanks.\n\n\n\nFigure 13: YOLOv8 result 1\n\n\n\n\n\nFigure 14: YOLOv8 result 2\n\n\n\n\n\nFigure 15: YOLOv8 result 3\n\n\n\n\n\n\n[1] C. Szegedy, S. Ioffe, V. Vanhoucke, and A. Alemi, “Inception-v4, inception-ResNet and the impact of residual connections on learning,” in Proceedings of the thirty-first AAAI conference on artificial intelligence (AAAI-17), 2017, pp. 4278–4284."
   },
   {
     "objectID": "references.html",
