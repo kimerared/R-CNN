@@ -34,15 +34,17 @@ An initial drawback of the R-CNN architecture was its computational inefficiency
 
 ## Fast R-CNN
 
-Fast R-CNN represents a faster and more efficient iteration of the original R-CNN for object detection. It tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations and accelerates the inference process.
+Fast R-CNN, a significant advancement in object detection, introduces several innovations enhancing both training and testing efficiency while improving detection accuracy. Unlike its predecessors, Fast R-CNN leverages the VGG16 network, achieving a remarkable 9x increase in training speed compared to R-CNN @girshick2015fastrcnn. At test-time, Fast R-CNN demonstrates an impressive speed improvement of 213x, making it significantly faster and more practical for real-world applications. Additionally, Fast R-CNN outperforms previous methods in terms of mean Average Precision (mAP) on benchmark datasets like PASCAL VOC 2012 @girshick2015fastrcnn.
+
+\--Fast R-CNN represents a faster and more efficient iteration of the original R-CNN for object detection. It tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations and accelerates the inference process.\--
 
 ### Architecture
 
-Fast R-CNN employs a regional pattern network (RPN) to directly generate region proposals from the convolutional feature maps of the input image @girshick2015fastrcnn. This eliminates the necessity for external region proposals, such as selective search, as used in the original R-CNN. The RPN functions by sliding a small grid (essentially a compact CNN) across the evolving feature map to predict the spatial dimensions (bounding boxes) and associated probability scores for objects within each sliding window. Subsequently, these local parameters serve as inputs for the subsequent stage of the process.
+Expanding upon its architecture, Fast R-CNN incorporates several key components to achieve its performance gains. Firstly, it utilizes a Region Proposal Network (RPN) to generate region proposals directly from the convolutional feature maps, eliminating the need for external proposal methods like selective search. The RPN functions by sliding a small grid (essentially a compact CNN) across the evolving feature map to predict the spatial dimensions (bounding boxes) and associated probability scores for objects within each sliding window. This streamlines the detection process and enhances efficiency. Furthermore, Fast R-CNN introduces the Region of Interest (RoI) pooling layer @girshick2015fastrcnn, allowing feature extraction from region proposals of varying sizes without the need for expensive resizing operations. This enables precise alignment of features with the corresponding regions of interest, leading to improved localization accuracy. Moreover, Fast R-CNN adopts a unified network architecture, enabling end-to-end training of both the region proposal and object detection tasks. This approach ensures better optimization, and facilitates seamless integration of different components, contributing to the overall efficiency and effectiveness of the model.
 
-### Feature Extraction with RoI Pooling
+### RoI Pooling Layer
 
-The RoI pooling layer employs max pooling to transform features within any valid region of interest into a compact feature map with a fixed spatial extent of H × W (e.g., 7 × 7), where H and W are layer hyper-parameters independent of any specific RoI. A more efficient training strategy leverages feature sharing throughout the process. During Fast R-CNN training, stochastic gradient descent (SGD) minibatches are hierarchically sampled: N images are initially sampled, followed by R/N RoIs from each image. Notably, both during forward and backward passes, ROIs from the same image share computation and memory. Fixed-size feature maps yielded from RoI pooling are input to fully connected layers for object classification and bounding-box regression. Feature classification aims to detect features and assign class probabilities for each proposed location, while bounding box regression seeks to enhance the localization accuracy of detected features. Fast R-CNN introduces multitasking loss functions that amalgamate classification and bounding box regression losses. This enables joint training of both tasks, ensuring the network learns to predict object location and precise bounding boxes concurrently.
+The RoI pooling layer employs max pooling to transform features within any valid region of interest into a compact feature map with a fixed spatial extent of H × W (e.g., 7 × 7) @girshick2015fastrcnn, where H and W are layer hyper-parameters independent of any specific RoI. A more efficient training strategy leverages feature sharing throughout the process. During Fast R-CNN training, stochastic gradient descent (SGD) minibatches are hierarchically sampled: N images are initially sampled, followed by R/N RoIs from each image. Notably, both during forward and backward passes, ROIs from the same image share computation and memory. Fixed-size feature maps yielded from RoI pooling are input to fully connected layers for object classification and bounding-box regression. Feature classification aims to detect features and assign class probabilities for each proposed location, while bounding box regression seeks to enhance the localization accuracy of detected features. Fast R-CNN introduces multitasking loss functions that amalgamate classification and bounding box regression losses. This enables joint training of both tasks, ensuring the network learns to predict object location and precise bounding boxes concurrently.
 
 ![Figure 2: Flowchart of Fast R-CNN](images/LR/LR-fig02-Fast-R-CNN.png){style="text-align: center;" fig-alt="Fast R-CNN Flowchart" fig-align="center"}
 
@@ -54,7 +56,7 @@ In contrast to R-CNN, which comprises multiple independent steps (such as region
 
 Compared to preceding methodologies, Faster R-CNN achieves swifter and more efficient object recognition by seamlessly integrating regional proposal steps directly into the network architecture. Subsequent advancements have expanded upon this framework, establishing it as a fundamental component in object recognition. The architecture commences with a feature extraction backbone, typically a convolutional neural network (CNN) pre-trained on extensive datasets such as ImageNet. This backbone extracts pertinent features from the input image.
 
-### Region Proposal network (RPN)
+### Region Proposal Network (RPN)
 
 The feature maps derived from the backbone network are input to a Region Proposal Network (RPN) @ren2015fasterrcnn. The RPN, a compact fully convolutional network, employs a sliding window approach (typically 3x3) over the feature maps to generate region proposals. The RPN yields a collection of bounding box proposals accompanied by objectness scores, indicating the probability of containing an object. These proposals are generated by leveraging predefined anchor boxes of varying scales and aspect ratios.
 
@@ -62,9 +64,9 @@ The feature maps derived from the backbone network are input to a Region Proposa
 
 The RPN generates region proposals by predicting offsets and scales for a predefined set of anchor boxes at each spatial position in the feature maps. These anchor boxes, varying in size and aspect ratio, serve as reference boxes for the proposal generation process.
 
-### Region of Interest (RoI) Pooling or RoIAlign
+### Region of Interest (RoI)
 
-For each region proposal generated by the RPN, features are extracted from the feature maps using RoI pooling or RoIAlign. RoI pooling or RoIAlign ensures that features from the region proposals are aligned and resized to a fixed size, facilitating further processing.
+Region of Interest (RoI) refers to a specific area or region within an image that is selected for further analysis or processing. In the context of object detection and image segmentation tasks, RoIs typically represent regions where objects of interest are located.
 
 ### Classifier and Bounding Box Regressor
 
@@ -92,21 +94,21 @@ The final output comprises a collection of object detections alongside their bou
 
 ## Mask R-CNN
 
-Mask R-CNN extends Faster R-CNN by adding a branch to predict the segmentation mask at each Region of Interest (RoI), alongside existing branches for classification and bounding box regression. This is achieved by introducing a small, fully convolutional network on top of each RoI.
-
-### Architecture
+Mask R-CNN extends Faster R-CNN by adding a branch to predict the segmentation mask at each Region of Interest (RoI), alongside existing branches for classification and bounding box regression. This is achieved by introducing a small, fully convolutional network on top of each RoI. Below we briefly describe the architecture components.
 
 ### Backbone CNN
 
-Similar to Faster R-CNN, Mask R-CNN begins with a backbone Convolutional Neural Network (CNN) that extracts features from the input image. This backbone network is typically pre-trained on a large dataset like ImageNet to learn generic image features.
+Similar to Faster R-CNN, Mask R-CNN begins with a backbone that extracts features from the input image. This backbone network is typically pre-trained on a large dataset like ImageNet to learn generic image features.
 
 ### Regional Proposal Network (RPN)
 
 The RPN takes feature maps from the backbone network and generates region proposals using anchor boxes, refined based on their likelihood of containing objects.
 
-### RoI Align
+### Region of interest Align (RoIAlign)
 
-The RoI align layer extracts features from each region proposal, preserving spatial information better than previous pooling methods, ensuring accurate alignment of features with the region of interest.
+For each region proposal generated by the RPN, features are extracted from the feature maps using RoIAlign. RoIAlign is a technique used in CNNs for object detection tasks. RoIAlign improves upon RoIPool, a previous method, by eliminating the quantization step in the pooling operation, resulting in more accurate feature extraction from regions of interest @he2017maskrcnn. It precisely aligns features extracted from arbitrary-shaped regions with the spatial layout of the feature map, enabling more accurate object localization and segmentation.
+
+The RoIAlign layer extracts features from each region proposal, preserving spatial information better than previous pooling methods, ensuring accurate alignment of features with the region of interest.
 
 ### Parallel Branches
 

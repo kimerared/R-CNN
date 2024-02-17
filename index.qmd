@@ -6,8 +6,23 @@ jupyter: python3
 
 Computer Vision Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8
 
-Please visit our repository in [GitHub](https://github.com/kimerared/R-CNN.git){.uri}.
+# Glossary {.unnumbered}
 
-```{python}
-1 + 1
-```
+| Term     | Definition                                 |
+|----------|--------------------------------------------|
+| CNN      | Convolutional Neural Network               |
+| R-CNN    | Regions-Based Convolutional Neural Network |
+| YOLOv8   | You Only Look Once, version 8              |
+| RPN      | Region Proposal Network                    |
+| IoU      | Intersection over Union                    |
+| RoI      | Region of Interest                         |
+| RoIAlign | Region of Interest Align                   |
+| GPU      | Graphics Processing Unit                   |
+| CPU      | Central Processing Unit                    |
+| ReLU     | Rectified Linear Unit                      |
+| SVM      | Support Vector Machine                     |
+| mAP      | mean Average Precision                     |
+
+# Objectives {.unnumbered}
+
+The initial objective of this research paper is to evaluate the performance of the Faster R-CNN methodology on a dataset provided by Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun in their paper titled "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks," introduced at the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) in 2015 @ren2015fasterrcnn. We aim to replicate the results presented in this article and gain a comprehensive understanding of Faster R-CNN, which will serve as the foundation for our future testing endeavors. Furthermore, we will assess the performance of Mask R-CNN, and YOLOv8 to offer a comparison of various object detection methodologies. A YOLOv8 custom label was applied to detect military tanks.

@@ -25,41 +25,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -178,6 +163,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
   </ul>
 </nav>
     </div>
@@ -220,15 +207,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
 <p>Computer Vision Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8</p>
-<p>Please visit our repository in <a href="https://github.com/kimerared/R-CNN.git" class="uri">GitHub</a>.</p>
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>2</code></pre>
-</div>
-</div>
+</section>
+<section id="glossary" class="level1 unnumbered">
+<h1 class="unnumbered">Glossary</h1>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CNN</td>
+<td>Convolutional Neural Network</td>
+</tr>
+<tr class="even">
+<td>R-CNN</td>
+<td>Regions-Based Convolutional Neural Network</td>
+</tr>
+<tr class="odd">
+<td>YOLOv8</td>
+<td>You Only Look Once, version 8</td>
+</tr>
+<tr class="even">
+<td>RPN</td>
+<td>Region Proposal Network</td>
+</tr>
+<tr class="odd">
+<td>IoU</td>
+<td>Intersection over Union</td>
+</tr>
+<tr class="even">
+<td>RoI</td>
+<td>Region of Interest</td>
+</tr>
+<tr class="odd">
+<td>RoIAlign</td>
+<td>Region of Interest Align</td>
+</tr>
+<tr class="even">
+<td>GPU</td>
+<td>Graphics Processing Unit</td>
+</tr>
+<tr class="odd">
+<td>CPU</td>
+<td>Central Processing Unit</td>
+</tr>
+<tr class="even">
+<td>ReLU</td>
+<td>Rectified Linear Unit</td>
+</tr>
+<tr class="odd">
+<td>SVM</td>
+<td>Support Vector Machine</td>
+</tr>
+<tr class="even">
+<td>mAP</td>
+<td>mean Average Precision</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="objectives" class="level1 unnumbered">
+<h1 class="unnumbered">Objectives</h1>
+<p>The initial objective of this research paper is to evaluate the performance of the Faster R-CNN methodology on a dataset provided by Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun in their paper titled “Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks,” introduced at the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) in 2015 <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[1]</a></span>. We aim to replicate the results presented in this article and gain a comprehensive understanding of Faster R-CNN, which will serve as the foundation for our future testing endeavors. Furthermore, we will assess the performance of Mask R-CNN, and YOLOv8 to offer a comparison of various object detection methodologies. A YOLOv8 custom label was applied to detect military tanks.</p>
 
 
+<div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-ren2015fasterrcnn" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015.</div>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
