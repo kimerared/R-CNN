@@ -19,6 +19,7 @@ book:
     - methodology.qmd
     - analysis.qmd
     - results.qmd
+    - conclusion.qmd
     - references.qmd
 
 bibliography: references.bib
