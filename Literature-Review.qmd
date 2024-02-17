@@ -94,7 +94,7 @@ The final output comprises a collection of object detections alongside their bou
 -   **Efficient Region Proposal Generation:** The Region Proposal Network (RPN) significantly reduces the computational load of region proposal methods, enabling nearly cost-free region proposals by sharing convolutional features.
 -   **End-to-End Training:** RPN and Fast R-CNN can be jointly trained to share convolutional features, leading to a unified network architecture.
 -   **High-Quality Proposals:** RPN produces high-quality region proposals, enhancing detection accuracy compared to traditional methods like Selective Search and EdgeBoxes.
--   **Practical Implementation:** The proposed method achieves state-of-the-art object detection accuracy on benchmarks like PASCAL VOC while maintaining a practical frame rate of 5fps on a GPU.
+-   **Practical Implementation:** The proposed method achieves state-of-the-art object detection accuracy on benchmarks like PASCAL VOC @ren2015fasterrcnn while maintaining a practical frame rate of 5fps on a GPU.
 
 ## Mask R-CNN
 

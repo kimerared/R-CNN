@@ -6,13 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Project Lead: Hector R. Gavilanes">
-<meta name="author" content="Deep Learning Architect: Jacob Knight">
-<meta name="author" content="Data Scientist: Kyle Knuth">
-<meta name="author" content="Software Engineer: Sai Meghana">
-<meta name="dcterms.date" content="2024-02-16">
 
-<title>Computer Vision Object Detection</title>
+<title>Computer Vision Object Detection - 5&nbsp; Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -54,7 +49,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./results.html" rel="next">
+<link href="./methodology.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -97,7 +93,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./analysis.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -124,7 +120,7 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -154,8 +150,14 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./analysis.html" class="sidebar-item-text sidebar-link">
+  <a href="./analysis.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./results.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Results</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -174,9 +176,7 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link" data-scroll-target="#glossary">Glossary</a></li>
-  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives">Objectives</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link active" data-scroll-target="#analysis"><span class="header-section-number">6</span> Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -185,30 +185,14 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Computer Vision Object Detection</h1>
-<p class="subtitle lead">Using Faster R-CNN, Mask R-CNN, and YOLOv8</p>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Authors</div>
-    <div class="quarto-title-meta-contents">
-             <p>Project Lead: Hector R. Gavilanes </p>
-             <p>Deep Learning Architect: Jacob Knight </p>
-             <p>Data Scientist: Kyle Knuth </p>
-             <p>Software Engineer: Sai Meghana </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 16, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -216,83 +200,21 @@ div.csl-indent {
 
 </header>
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Computer Vision Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8</p>
-</section>
-<section id="glossary" class="level1 unnumbered">
-<h1 class="unnumbered">Glossary</h1>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Term</th>
-<th>Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>CNN</td>
-<td>Convolutional Neural Network</td>
-</tr>
-<tr class="even">
-<td>R-CNN</td>
-<td>Region-based Convolutional Neural Network</td>
-</tr>
-<tr class="odd">
-<td>YOLOv8</td>
-<td>You Only Look Once, version 8</td>
-</tr>
-<tr class="even">
-<td>RPN</td>
-<td>Region Proposal Network</td>
-</tr>
-<tr class="odd">
-<td>IoU</td>
-<td>Intersection over Union</td>
-</tr>
-<tr class="even">
-<td>RoI</td>
-<td>Region of Interest</td>
-</tr>
-<tr class="odd">
-<td>RoIAlign</td>
-<td>Region of Interest Align</td>
-</tr>
-<tr class="even">
-<td>GPU</td>
-<td>Graphics Processing Unit</td>
-</tr>
-<tr class="odd">
-<td>CPU</td>
-<td>Central Processing Unit</td>
-</tr>
-<tr class="even">
-<td>ReLU</td>
-<td>Rectified Linear Unit</td>
-</tr>
-<tr class="odd">
-<td>SVM</td>
-<td>Support Vector Machine</td>
-</tr>
-<tr class="even">
-<td>mAP</td>
-<td>mean Average Precision</td>
-</tr>
-<tr class="odd">
-<td>COCO</td>
-<td>Microsoft Common Objects in Context</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="objectives" class="level1 unnumbered">
-<h1 class="unnumbered">Objectives</h1>
-<p>The initial objective of this research paper is to evaluate the performance of the Faster R-CNN methodology on a dataset provided by Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun in their paper titled “Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks,” introduced at the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) in 2015 <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[1]</a></span>. We aim to replicate the results presented in this article and gain a comprehensive understanding of Faster R-CNN, which will serve as the foundation for our future testing endeavors. Furthermore, we will assess the performance of Mask R-CNN, and YOLOv8 to offer a comparison of various object detection methodologies. A YOLOv8 custom label was applied to detect military tanks.</p>
+<section id="analysis" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Analysis</h1>
+<p>The demonstration utilized the ResNet backbone network in conjunction with the COCO dataset. The Microsoft Common Objects in Context (COCO) dataset <span class="citation" data-cites="he2016deep"><a href="references.html#ref-he2016deep" role="doc-biblioref">[1]</a></span> is a large-scale dataset for object detection, segmentation, and captioning tasks. It contains over 200,000 images, each annotated with bounding boxes around objects in various categories such as people, animals, vehicles, and household items. Additionally, each image is annotated with pixel-level segmentation masks for object instances. The COCO dataset is widely used in computer vision research for benchmarking and evaluating object detection and segmentation algorithms.</p>
+<p>Faster R-CNN, known for its proficiency in object detection tasks, has showcased remarkable performance <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[2]</a></span> . However, challenges persist regarding its robustness to environmental variations such as shadows, occlusions, and perspective distortions. Furthermore, mislabeling of objects remains a concern, potentially leading to incorrect identifications due to similarities with trained categories.gories.</p>
+<p>In addition to Faster R-CNN, Mask R-CNN was employed, utilizing a pretrained model from the COCO dataset. This model underwent testing on both images, and a video dataset. Transitioning to YOLOv8, preparation of the data involved annotating the training set. Twenty images of tanks were manually annotated using CVAT.ai to draw bounding boxes around the targets. Subsequently, specific bounding box coordinates for YOLOv8 were obtained. Notably, all tank images for training and testing were sourced from Flickr.</p>
+<p>To configure the dataset appropriately for YOLOv8, a yaml file was created, specifying the dataset’s structure. This file included details such as the overall path to the data, the locations of the training, validation, and test sets, and the names of the classes to be identified.</p>
+<p>Following data preprocessing, YOLOv8 training commenced using the tank training set. Initially, twenty epochs were employed with the medium model. However, during testing, Google Colab encountered stability issues, necessitating a switch to the small model, which resulted in smooth execution.</p>
 
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-he2016deep" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">K. He, X. Zhang, S. Ren, and J. Sun, <span>“Deep residual learning for image recognition,”</span> in <em>Proceedings of the IEEE conference on computer vision and pattern recognition (CVPR)</em>, 2016, pp. 770–778.</div>
+</div>
 <div id="ref-ren2015fasterrcnn" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015, pp. 91–99.</div>
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015, pp. 91–99.</div>
 </div>
 </div>
 </section>
@@ -533,10 +455,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
+      <a href="./methodology.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodologies</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./results.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Results</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

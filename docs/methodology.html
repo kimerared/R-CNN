@@ -49,7 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./analysis.html" rel="next">
 <link href="./Literature-Review.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -152,6 +152,12 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
@@ -173,6 +179,7 @@ div.csl-indent {
   <li><a href="#multi-task-loss-function" id="toc-multi-task-loss-function" class="nav-link" data-scroll-target="#multi-task-loss-function"><span class="header-section-number">4.2.2</span> Multi-task Loss Function</a></li>
   <li><a href="#optimization" id="toc-optimization" class="nav-link" data-scroll-target="#optimization"><span class="header-section-number">4.2.3</span> Optimization</a></li>
   </ul></li>
+  <li><a href="#metrics" id="toc-metrics" class="nav-link" data-scroll-target="#metrics"><span class="header-section-number">4.3</span> Metrics</a></li>
   </ul>
 </nav>
     </div>
@@ -243,6 +250,18 @@ L = (1/N) * Σ[L_{cls}(p_i, p_i*) + λ * L_{reg}(t_i, t_i*)]
 \]</span></p>
 <p>The authors describe this backward function as <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[1]</a></span>, “In words, for each mini-batch RoI r and each pooling output unit yrj, the partial derivative ∂L/∂yrj is accumulated if i is the argmax selected for yrj by max pooling. In back-propagation, the partial derivatives ∂L/∂yrj are already computed by the backward function of the layer on top of the RoI pooling layer”. As iterations continue, weights and biases will be tuned towards values that optimize predictions.</p>
 <p>This formula represents the accumulation of partial derivatives with respect to the output units of the RoI pooling layer during backpropagation. It describes how the gradients of the loss function with respect to the outputs of the RoI pooling layer are computed and accumulated during the backward pass of the neural network training process. It helps us understand how the network learns from its mistakes and improves its predictions over time.</p>
+</section>
+</section>
+<section id="metrics" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="metrics"><span class="header-section-number">4.3</span> Metrics</h2>
+<p>One data metric utilized in the chosen paper, and that will also be used in the analysis, is the mean average precision (mAP). This evaluation metric is typically used for object detection, and consists of multiple sub-metrics such as the confusion matrix, recall, precision, and the intersection over union. mAP is mathematically defined as, n is the number of classes, and APk is the average precision of the current class (k). Mean average precision basically takes an established ground truth box around the target and compares it to the detected box from the deep learning model, yielding an accuracy score. A higher accuracy score implies that the deep learning model is accurate with its detection.</p>
+<p><span class="math display">\[
+mAP = (1/n) * \sum_{k=1}^{k=n}(AP_k)
+\]</span></p>
+<ul>
+<li><p><span class="math inline">\(AP_k\)</span> = the Average Precision of class <span class="math inline">\(k\)</span></p></li>
+<li><p><span class="math inline">\(n\)</span> = the number of classes.</p></li>
+</ul>
 
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
@@ -250,13 +269,12 @@ L = (1/N) * Σ[L_{cls}(p_i, p_i*) + λ * L_{reg}(t_i, t_i*)]
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">R. Girshick, <span>“Fast r-CNN,”</span> in <em>2015 IEEE international conference on computer vision (ICCV)</em>, 2015, pp. 1440–1448. doi: <a href="https://doi.org/10.1109/ICCV.2015.169">10.1109/ICCV.2015.169</a></div>
 </div>
 <div id="ref-ren2015fasterrcnn" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015.</div>
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015, pp. 91–99.</div>
 </div>
 <div id="ref-zhou2022visual" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[3] </div><div class="csl-right-inline">Y. Zhou, X. Wang, and L. Zhang, <span>“Visual identification and pose estimation algorithm of nut tightening robot system.”</span> Feb. 2022. doi: <a href="https://doi.org/10.21203/rs.3.rs-1391065/v1">10.21203/rs.3.rs-1391065/v1</a></div>
 </div>
 </div>
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -500,8 +518,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./analysis.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

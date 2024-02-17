@@ -17,6 +17,8 @@ book:
     - summary.qmd
     - Literature-Review.qmd
     - methodology.qmd
+    - analysis.qmd
+    - results.qmd
     - references.qmd
 
 bibliography: references.bib

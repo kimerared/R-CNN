@@ -22,6 +22,7 @@ Computer Vision Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8
 | ReLU     | Rectified Linear Unit                     |
 | SVM      | Support Vector Machine                    |
 | mAP      | mean Average Precision                    |
+| COCO     | Microsoft Common Objects in Context       |
 
 # Objectives {.unnumbered}
 
