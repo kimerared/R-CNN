@@ -8,20 +8,20 @@ Computer Vision Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8
 
 # Glossary {.unnumbered}
 
-| Term     | Definition                                 |
-|----------|--------------------------------------------|
-| CNN      | Convolutional Neural Network               |
-| R-CNN    | Regions-Based Convolutional Neural Network |
-| YOLOv8   | You Only Look Once, version 8              |
-| RPN      | Region Proposal Network                    |
-| IoU      | Intersection over Union                    |
-| RoI      | Region of Interest                         |
-| RoIAlign | Region of Interest Align                   |
-| GPU      | Graphics Processing Unit                   |
-| CPU      | Central Processing Unit                    |
-| ReLU     | Rectified Linear Unit                      |
-| SVM      | Support Vector Machine                     |
-| mAP      | mean Average Precision                     |
+| Term     | Definition                                |
+|----------|-------------------------------------------|
+| CNN      | Convolutional Neural Network              |
+| R-CNN    | Region-based Convolutional Neural Network |
+| YOLOv8   | You Only Look Once, version 8             |
+| RPN      | Region Proposal Network                   |
+| IoU      | Intersection over Union                   |
+| RoI      | Region of Interest                        |
+| RoIAlign | Region of Interest Align                  |
+| GPU      | Graphics Processing Unit                  |
+| CPU      | Central Processing Unit                   |
+| ReLU     | Rectified Linear Unit                     |
+| SVM      | Support Vector Machine                    |
+| mAP      | mean Average Precision                    |
 
 # Objectives {.unnumbered}
 

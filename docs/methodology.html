@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computer Vision Object Detection - 1&nbsp; Introduction</title>
+<title>Computer Vision Object Detection - 4&nbsp; Methodologies</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,8 +49,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./Literature-Review.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,6 +81,8 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -93,7 +95,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./methodology.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodologies</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -126,7 +128,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -144,7 +146,7 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./methodology.html" class="sidebar-item-text sidebar-link">
+  <a href="./methodology.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodologies</span></span></a>
   </div>
 </li>
@@ -159,15 +161,24 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#fast-r-cnn-training" id="toc-fast-r-cnn-training" class="nav-link active" data-scroll-target="#fast-r-cnn-training"><span class="header-section-number">4.1</span> Fast R-CNN Training</a></li>
+  <li><a href="#faster-r-cnn-training" id="toc-faster-r-cnn-training" class="nav-link" data-scroll-target="#faster-r-cnn-training"><span class="header-section-number">4.2</span> Faster R-CNN Training</a></li>
+  <li><a href="#region-proposal-network-rpn" id="toc-region-proposal-network-rpn" class="nav-link" data-scroll-target="#region-proposal-network-rpn"><span class="header-section-number">4.3</span> Region Proposal Network (RPN)</a></li>
+  <li><a href="#multi-task-loss-function" id="toc-multi-task-loss-function" class="nav-link" data-scroll-target="#multi-task-loss-function"><span class="header-section-number">4.4</span> Multi-task Loss Function</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodologies</span></h1>
 </div>
 
 
@@ -182,16 +193,49 @@ div.csl-indent {
 
 </header>
 
-<p>Object detection is a fundamental task in computer vision, playing a crucial role in various applications such as autonomous vehicles, surveillance systems, and medical imaging. Recent advancements in deep learning have led to the creation of sophisticated architectures such as Faster R-CNN, Mask R-CNN, and YOLO (You Only Look Once), all of which have substantially improved object detection performance. These architectures have revolutionized the field by achieving superior accuracy in detecting objects within images. However, despite significant advancements, a critical trade-off between accuracy and processing speed persists. It is essential to carefully consider this balance when selecting the most suitable model for practical applications.</p>
-<p>The efficiency of object detection models is essential, particularly in real-time applications where rapid decision-making is vital. Currently, object detection primarily relies on region proposal methods and region CNNs. For instance, Selective Search, a widely used region proposal method, exhibits a speed of 2 seconds per image when implemented on the CPU, which is considered slow for many real-world applications. On the other hand, EdgeBoxes, another region proposal method, offers improved speed, clocking in at 0.2 seconds per image. However, a notable constraint remains— even with advancements, the region proposal step still demands substantial computational resources when executed on the CPU rather than the GPU.</p>
-<p>Moreover, comparing the performance of Faster R-CNN with region proposal methods poses challenges. Since R-CNNs leverage GPU acceleration while region proposal methods primarily rely on CPU computation. A fair comparison between the two becomes challenging. To address this issue, Region Proposal Networks (RPNs) were introduced in 2015 as part of the Faster R-CNN framework <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[1]</a></span>. A novel approach that integrates the region proposal step directly into the object detection algorithm itself. This architectural innovation aims to streamline the object detection process and improve overall efficiency by leveraging GPU resources effectively.</p>
+<section id="fast-r-cnn-training" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="fast-r-cnn-training"><span class="header-section-number">4.1</span> Fast R-CNN Training</h2>
+<p>Fast R-CNN follows a single-stage training process <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[1]</a></span>. It begins by processing the image through convolutional and max pooling layers, resulting in a convolutional feature map. Each object proposal then undergoes region of interest pooling, generating fixed-length feature vectors. These feature vectors are fed through fully connected layers, leading to two output layers: one for object class probabilities and the other for real-valued object coordinates. Fast R-CNN’s training approach enables higher detection quality, updates all layers during training, and eliminates the need for disk storage for feature caching, contributing to its efficiency and accuracy <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[1]</a></span>.</p>
+</section>
+<section id="faster-r-cnn-training" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="faster-r-cnn-training"><span class="header-section-number">4.2</span> Faster R-CNN Training</h2>
+<p>On the other hand, Faster R-CNN training is a two-stage process, jointly training a Region Proposal Network (RPN) and a Fast R-CNN detector <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[2]</a></span> . In the first stage, the RPN generates region proposals by sliding a small network over the convolutional feature map, refining them, and assigning scores based on their likelihood of containing objects. These proposals serve as input for the second stage, where the convolutional feature map undergoes region of interest (RoI) pooling. This process results in fixed-length feature vectors for each proposal, which are then processed through fully connected layers to predict object class probabilities and refine object bounding box coordinates <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[1]</a></span>. This joint training approach allows Faster R-CNN to produce high-quality region proposals and accurately classify and localize objects in images.</p>
+</section>
+<section id="region-proposal-network-rpn" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="region-proposal-network-rpn"><span class="header-section-number">4.3</span> Region Proposal Network (RPN)</h2>
+<p>To produce the object proposals used during training, a Region Proposal Network (RPN) is used. The RPN takes in an image and produces a set of object proposals with an associating score. This region proposal is generated by sliding a small network over the convolutional feature map. At the center of each sliding window is a Translation-Invariant Anchor <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[2]</a></span>. This anchor is a reference box that each proposal in that region is relative to. These anchors being translation-invariant means that regardless if the image is translated in any way the prediction of that region should not change.</p>
+<div class="quarto-figure quarto-figure-center" style="text-align: center;">
+<figure class="figure">
+<p><img src="images/methods/Faster-RCNN-anchor-boxes.png" class="img-fluid figure-img" alt="Improved anchor boxes in Faster R-CNN"></p>
+<figcaption class="figure-caption">Figure 5: Improved anchor boxes in Faster R-CNN <span class="citation" data-cites="zhou2022visual"><a href="references.html#ref-zhou2022visual" role="doc-biblioref">[3]</a></span></figcaption>
+</figure>
+</div>
+<p>Three anchor boxes are depicted within each grid, as illustrated in Figure 5. The image encompasses numerous points, equivalent to a 600 x 600 image, accommodating a 38 x 38 network overlay. The blue point within the image signifies the center of the grid. Each grid center is associated with three anchor boxes and three squares of varying sizes, representing the original anchor boxes delineated in the image <span class="citation" data-cites="zhou2022visual"><a href="references.html#ref-zhou2022visual" role="doc-biblioref">[3]</a></span>.</p>
+</section>
+<section id="multi-task-loss-function" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="multi-task-loss-function"><span class="header-section-number">4.4</span> Multi-task Loss Function</h2>
+<p>RPNs use positive and negative values to assign anchors. A positive value represents a high Intersection-over-Union overlap between the anchor and the ground truth box <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[2]</a></span>. A negative value represents the dissociation of an anchor and a certain prediction. The higher the value, the more associated the anchor is to a certain prediction. These values are used in a multi-task loss function. This function will both train for classification and perform bounding box regression.</p>
+<p><span class="math display">\[
+L = L_{cls} + λ * L_{reg}
+\]</span></p>
+<p>Where the RPN consist of two losses.</p>
+<p><span class="math display">\[
+L = (1/N) * Σ[L_{cls}(p_i, p_i*) + λ * L_{reg}(t_i, t_i*)]
+\]</span></p>
 
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-girshick2015fastrcnn" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">R. Girshick, <span>“Fast r-CNN,”</span> in <em>2015 IEEE international conference on computer vision (ICCV)</em>, 2015, pp. 1440–1448. doi: <a href="https://doi.org/10.1109/ICCV.2015.169">10.1109/ICCV.2015.169</a></div>
+</div>
 <div id="ref-ren2015fasterrcnn" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015.</div>
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015.</div>
+</div>
+<div id="ref-zhou2022visual" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">Y. Zhou, X. Wang, and L. Zhang, <span>“Visual identification and pose estimation algorithm of nut tightening robot system.”</span> Feb. 2022. doi: <a href="https://doi.org/10.21203/rs.3.rs-1391065/v1">10.21203/rs.3.rs-1391065/v1</a></div>
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -427,15 +471,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./Literature-Review.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

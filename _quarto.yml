@@ -16,6 +16,7 @@ book:
     - intro.qmd
     - summary.qmd
     - Literature-Review.qmd
+    - methodology.qmd
     - references.qmd
 
 bibliography: references.bib
