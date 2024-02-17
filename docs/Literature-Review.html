@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -277,7 +277,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
 <p><img src="images/LR/LR-fig01-R-CNN-flow.png" class="img-fluid figure-img" alt="R-CNN Flowchart"></p>
-<figcaption class="figure-caption">Figure 1: Flowchart of R-CNN</figcaption>
+<figcaption class="figure-caption">Flowchart of R-CNN</figcaption>
 </figure>
 </div>
 </section>
@@ -289,7 +289,7 @@ div.csl-indent {
 <section id="fast-r-cnn" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="fast-r-cnn"><span class="header-section-number">2.2</span> Fast R-CNN</h2>
 <p>Fast R-CNN, a significant advancement in object detection, introduces several innovations enhancing both training and testing efficiency while improving detection accuracy. Unlike its predecessors, Fast R-CNN leverages the VGG16 network, achieving a remarkable 9x increase in training speed compared to R-CNN <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>. At test-time, Fast R-CNN demonstrates an impressive speed improvement of 213x, making it significantly faster and more practical for real-world applications. Additionally, Fast R-CNN outperforms previous methods in terms of mean Average Precision (mAP) on benchmark datasets like PASCAL VOC 2012 <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>.</p>
-<p>--Fast R-CNN represents a faster and more efficient iteration of the original R-CNN for object detection. It tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations and accelerates the inference process.--</p>
+<p>–Fast R-CNN represents a faster and more efficient iteration of the original R-CNN for object detection. It tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations and accelerates the inference process.–</p>
 <section id="architecture" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="architecture"><span class="header-section-number">2.2.1</span> Architecture</h3>
 <p>Expanding upon its architecture, Fast R-CNN incorporates several key components to achieve its performance gains. Fast R-CNN addresses the speed and efficiency limitations of R-CNN by proposing a unified architecture that integrates region proposal generation, feature extraction, and object classification into a single network.</p>
@@ -301,7 +301,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
 <p><img src="images/LR/LR-fig02-Fast-R-CNN.png" class="img-fluid figure-img" alt="Fast R-CNN Flowchart"></p>
-<figcaption class="figure-caption">Figure 2: Flowchart of Fast R-CNN</figcaption>
+<figcaption class="figure-caption">Flowchart of Fast R-CNN</figcaption>
 </figure>
 </div>
 </section>
@@ -344,7 +344,7 @@ div.csl-indent {
 <div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
 <p><img src="images/LR/LR-fig03-Faster-R-CNN.png" class="img-fluid figure-img" alt="Faster R-CNN Flowchart"></p>
-<figcaption class="figure-caption">Figure 3: Flowchart of Faster R-CNN <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[3]</a></span></figcaption>
+<figcaption class="figure-caption">Flowchart of Faster R-CNN @ren2015fasterrcnn</figcaption>
 </figure>
 </div>
 </section>
@@ -390,7 +390,7 @@ L = L_{cls} + L_{box} + L_{mask}
 <div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
 <p><img src="images/LR/LR-fig04-Mask-R-CNN.png" class="img-fluid figure-img" alt="Mask R-CNN framework for Instance Segmentation"></p>
-<figcaption class="figure-caption">Figure 4: Mask R-CNN framework for Instance Segmentation <span class="citation" data-cites="he2020maskrcnn"><a href="references.html#ref-he2020maskrcnn" role="doc-biblioref">[5]</a></span></figcaption>
+<figcaption class="figure-caption">Mask R-CNN framework for Instance Segmentation @he2020maskrcnn</figcaption>
 </figure>
 </div>
 </section>
@@ -417,9 +417,6 @@ L = L_{cls} + L_{box} + L_{mask}
 </div>
 <div id="ref-he2017maskrcnn" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[4] </div><div class="csl-right-inline">K. He, G. Gkioxari, P. Dollár, and R. Girshick, <span>“Mask r-CNN,”</span> in <em>Proceedings of the IEEE international conference on computer vision (ICCV)</em>, 2017, pp. 2961–2969. doi: <a href="https://doi.org/10.1109/ICCV.2017.322">10.1109/ICCV.2017.322</a></div>
-</div>
-<div id="ref-he2020maskrcnn" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline">K. He, G. Gkioxari, P. Dollár, and R. Girshick, <span>“Mask r-CNN,”</span> <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, vol. 42, no. 2, pp. 386–397, Feb. 2020, doi: <a href="https://doi.org/10.1109/TPAMI.2018.2844175">10.1109/TPAMI.2018.2844175</a></div>
 </div>
 </div>
 </section>

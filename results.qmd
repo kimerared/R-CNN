@@ -10,25 +10,27 @@ We used the Faster R-CNN model from TensorFlow Hub (Inception-ResNet-V2). Accord
 
 The Faster R-CNN results can be seen in images 1-4. In the first image, the model was fairly accurate in identifying individual chairs and a couple of the tables.
 
-![Figure 6: Faster R-CNN result 1](images/results/Image 1.png){style="text-align: center;" fig-alt="Faster R-CNN result 1" fig-align="center"}
+![Faster R-CNN result 1](images/results/Image%201.png){style="text-align: center;" fig-alt="Faster R-CNN result 1" fig-align="center"}
 
 {{< pagebreak >}}
 
 In the second image, Faster R-CNN correctly identified all beetles.
 
-![Figure 7: Faster R-CNN result 2](images/results/Image 2.png){style="text-align: center;" fig-alt="Faster R-CNN result 2"}
+![Faster R-CNN result 2](images/results/Image%202.png){style="text-align: center;" fig-alt="Faster R-CNN result 2"}
 
 {{< pagebreak >}}
 
 In the third image the model had some issues with misclassifications of the types of phones.
 
-![Figure 8: Faster R-CNN result 3](images/results/Image 3.png){style="text-align: center;" fig-alt="Faster R-CNN result 3" fig-align="center"}
+![Faster R-CNN result 3](images/results/Image%203.png){style="text-align: center;" fig-alt="Faster R-CNN result 3" fig-align="center"}
 
 {{< pagebreak >}}
 
 In the fourth image there seemed to be some confusion in the distinction between birds and animals in general.
 
-![Figure 9: Faster R-CNN result 4](images/results/Image 4.png){style="text-align: center;" fig-alt="Faster R-CNN result 4" fig-align="center"}
+![Faster R-CNN result 4](images/results/Image%204.png){style="text-align: center;" fig-alt="Faster R-CNN result 4" fig-align="center"}
+
+{{< pagebreak >}}
 
 ## Mask R-CNN
 
@@ -36,25 +38,28 @@ Images 5-7 are the results from the Mask R-CNN model that was trained from the C
 
 In image five, Mask R-CNN very accurately detected the giraffe and two zebras.
 
-![Figure 10: Mask R-CNN result 1](images/results/Image 5.png){style="text-align: center;" fig-alt="Mask R-CNN result 1" fig-align="center"}
+![Mask R-CNN result 1](images/results/Image%205.png){style="text-align: center;" fig-alt="Mask R-CNN result 1" fig-align="center"}
 
 {{< pagebreak >}}
+
 In image six, the model was able to clearly detect the objects with a high mean average precision.
 
-![Figure 11: Mask R-CNN result 2](images/results/Image 6.png){style="text-align: center;" fig-alt="Mask R-CNN result 2" fig-align="center"}
+![Mask R-CNN result 2](images/results/Image%206.png){style="text-align: center;" fig-alt="Mask R-CNN result 2" fig-align="center"}
 
-{{< pagebreak >}}
+
+
 Image seven comes from a video that was fed to the Mask R-CNN model. In this frame, the model did have some trouble identifying all the objects.
 
-![Figure 12: Mask R-CNN result 3](images/results/Image 7.png){style="text-align: center;" fig-alt="Mask R-CNN result 3" fig-align="center"}
+![Mask R-CNN result 3](images/results/Image%207.png){style="text-align: center;" fig-alt="Mask R-CNN result 3" fig-align="center"}
 
 {{< pagebreak >}}
+
 ## YOLOv8
 
 The last model used in our analysis was YOLOv8. This model also seemed to perform better than the Faster R-CNN model. Our YOLOv8 small (YOLOv8s) model was trained on a custom dataset that consisted of tanks and was subsequently tested on test photos of tanks. Images 8-10 show the results of the YOLOv8s model. The model accurately identified all of the tanks.
 
-![Figure 13: YOLOv8 result 1](images/results/Image 8.png){style="text-align: center;" fig-alt="YOLOv8 result 1" fig-align="center"}
+![YOLOv8 result 1](images/results/Image%208.png){style="text-align: center;" fig-alt="YOLOv8 result 1" fig-align="center"}
 
-![Figure 14: YOLOv8 result 2](images/results/Image 9.png){style="text-align: center;" fig-alt="YOLOv8 result 2"}
+![YOLOv8 result 2](images/results/Image%209.png){style="text-align: center;" fig-alt="YOLOv8 result 2"}
 
-![Figure 15: YOLOv8 result 3](images/results/Image 10.png){style="text-align: center;" fig-alt="YOLOv8 result 3" fig-align="center"}
+![YOLOv8 result 3](images/results/Image%2010.png){style="text-align: center;" fig-alt="YOLOv8 result 3" fig-align="center"}
