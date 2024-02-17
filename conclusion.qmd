@@ -1,0 +1,7 @@
+---
+jupyter: python3
+---
+
+# Conclusion
+
+The goal of this project is to review and test the methodology behind Faster R-CNN, and then evaluate alternative models such as Mask R-CNN and YOLOv8. Our analysis indicates that both Mask R-CNN, and YOLOv8 demonstrate superior performance compared to Faster R-CNN in terms of object detection accuracy and instance precision. Specifically, YOLOv8 proves to be a suitable model for real-time object detection tasks, offering efficient and rapid detection capabilities. On the other hand, Mask R-CNN exhibits higher accuracy in detecting objects within photos and videos, particularly when precise segmentation and detailed understanding of object shapes and boundaries are required. However, it is important to note that Mask R-CNN's performance may be contingent upon the availability of sufficient computational resources, given its more intensive processing requirements compared to YOLOv8.
