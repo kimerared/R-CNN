@@ -19,10 +19,12 @@ book:
     - references.qmd
 
 bibliography: references.bib
+csl: https://www.zotero.org/styles/ieee-with-url
 
 format:
   html:
     theme: cosmo
+    page-layout: full
   pdf:
     documentclass: scrreprt
 
