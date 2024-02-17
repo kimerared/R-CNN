@@ -14,13 +14,14 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
     - Literature-Review.qmd
     - methodology.qmd
     - analysis.qmd
     - results.qmd
     - conclusion.qmd
     - references.qmd
+  appendices: 
+    - contributions.qmd
 
 bibliography: references.bib
 csl: https://www.zotero.org/styles/ieee-with-url
