@@ -3,9 +3,13 @@ project:
   output-dir: docs
 
 book:
-  title: "R-CNN"
-  subtitle: "Computer Vision - Object Detection"
-  author: "Group 8"
+  title: "Computer Vision Object Detection"
+  subtitle: "Using Faster R-CNN, Mask R-CNN, and YOLOv8"
+  author:
+    - "Project Lead: Hector R. Gavilanes"
+    - "Deep Learning Architect: Jacob Knight"
+    - "Data Scientist: Kyle Knuth"
+    - "Software Engineer: Sai Meghana"
   date: "2/16/2024"
   chapters:
     - index.qmd
