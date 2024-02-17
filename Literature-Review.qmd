@@ -1,7 +1,43 @@
 # Literature Review
 
-The evolution from R-CNN to faster R-CNN represents a significant advancement in object detection algorithms, especially in terms of speed and efficiency. A brief history of the development progression of R-CNN, Fast R-CNN, and Faster R-CNN adds valuable context to our study on object detection architectures. It will help to understand the evolution of these models, the motivations behind their development, and the improvements made over time.
+The evolution from R-CNN to faster R-CNN represents a significant advancement in object detection algorithms, especially in speed and efficiency. A brief history of the development progression of R-CNN, Fast R-CNN, and Faster R-CNN adds valuable context to our study on object detection architectures. It will help to understand the evolution of these models, the motivations behind their development, and the improvements made over time.
 
-## R-CNN (Region based Convolutional Network)
+## R-CNN (Region-Based Convolutional Network)
 
-R-CNN was a breakthrough in object detection. It employed a multi stage approach that involved selective search for generating region proposals followed by a convolutional neural network for feature extraction and a support vector machine (SVM) for object classification within each region.
+R-CNN was a breakthrough in object detection. It employed a multi-stage approach that involved a selective search for generating region proposals followed by a convolutional neural network for feature extraction and a support vector machine (SVM) for object classification within each region.
+
+### Region Proposal Generation
+
+R-CNN began with generating region proposals using the selective search algorithm. Selective search is a method for identifying potential object regions in an image based on low-level features such as color, texture, and intensity. It produces a set of bounding boxes that mostly have objects.
+
+### Feature Extraction
+
+Following the generation of region proposals, R-CNN employed a pre-trained convolutional neural network to independently extract features from each region. Typically, the chosen CNN model was AlexNet, pre-trained on the ImageNet dataset specifically for image classification tasks.
+
+### Fine-tuning and Classification
+
+Following feature extraction, the extracted features were input into a distinct classifier to ascertain the presence of objects within the regions. R-CNN utilized a support vector machine (SVM) for this classification task. Each SVM was trained to discern whether the feature corresponded to a particular object or background.
+
+### Bounding Box Regression
+
+Following classification, R-CNN conducted bounding box regression to enhance the accuracy of the detected object locations. This process adjusts the bounding boxes produced by the region proposal algorithm to align more precisely with the actual object locations within the regions.
+
+### Non-Maximum Supression
+
+Lastly, R-CNN implemented non-maximum suppression to eliminate redundant detections, ensuring that each object is detected only once.
+
+*** Add Figure 1: Flowchart of R-CNN ***
+
+### Drawbacks
+
+An initial drawback of the R-CNN architecture was its computational inefficiency during inference, primarily stemming from its sequential processing of region proposals. Processing each region proposal independently led to redundant computations and prolonged inference times.
+
+## Fast R-CNN
+
+Fast R-CNN represents a faster and more efficient iteration of the original R-CNN for object detection. It tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations and accelerates the inference process.
+
+### Architecture
+
+Fast R-CNN employs a regional pattern network (RPN) to directly generate region proposals from the convolutional feature maps of the input image. This eliminates the necessity for external region proposals, such as selective search, as used in the original R-CNN.
+The RPN functions by sliding a small grid (essentially a compact CNN) across the evolving feature map to predict the spatial dimensions (bounding boxes) and associated probability scores for objects within each sliding window.
+Subsequently, these local parameters serve as inputs for the subsequent stage of the process.

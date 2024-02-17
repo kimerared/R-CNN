@@ -139,7 +139,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#r-cnn-region-based-convolutional-network" id="toc-r-cnn-region-based-convolutional-network" class="nav-link active" data-scroll-target="#r-cnn-region-based-convolutional-network"><span class="header-section-number">3.1</span> R-CNN (Region based Convolutional Network)</a></li>
+  <li><a href="#r-cnn-region-based-convolutional-network" id="toc-r-cnn-region-based-convolutional-network" class="nav-link active" data-scroll-target="#r-cnn-region-based-convolutional-network"><span class="header-section-number">3.1</span> R-CNN (Region-Based Convolutional Network)</a>
+  <ul class="collapse">
+  <li><a href="#region-proposal-generation" id="toc-region-proposal-generation" class="nav-link" data-scroll-target="#region-proposal-generation"><span class="header-section-number">3.1.1</span> Region Proposal Generation</a></li>
+  <li><a href="#feature-extraction" id="toc-feature-extraction" class="nav-link" data-scroll-target="#feature-extraction"><span class="header-section-number">3.1.2</span> Feature Extraction</a></li>
+  <li><a href="#fine-tuning-and-classification" id="toc-fine-tuning-and-classification" class="nav-link" data-scroll-target="#fine-tuning-and-classification"><span class="header-section-number">3.1.3</span> Fine-tuning and Classification</a></li>
+  <li><a href="#bounding-box-regression" id="toc-bounding-box-regression" class="nav-link" data-scroll-target="#bounding-box-regression"><span class="header-section-number">3.1.4</span> Bounding Box Regression</a></li>
+  <li><a href="#non-maximum-supression" id="toc-non-maximum-supression" class="nav-link" data-scroll-target="#non-maximum-supression"><span class="header-section-number">3.1.5</span> Non-Maximum Supression</a></li>
+  <li><a href="#drawbacks" id="toc-drawbacks" class="nav-link" data-scroll-target="#drawbacks"><span class="header-section-number">3.1.6</span> Drawbacks</a></li>
+  </ul></li>
+  <li><a href="#fast-r-cnn" id="toc-fast-r-cnn" class="nav-link" data-scroll-target="#fast-r-cnn"><span class="header-section-number">3.2</span> Fast R-CNN</a>
+  <ul class="collapse">
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture"><span class="header-section-number">3.2.1</span> Architecture</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -163,12 +175,45 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>The evolution from R-CNN to faster R-CNN represents a significant advancement in object detection algorithms, especially in terms of speed and efficiency. A brief history of the development progression of R-CNN, Fast R-CNN, and Faster R-CNN adds valuable context to our study on object detection architectures. It will help to understand the evolution of these models, the motivations behind their development, and the improvements made over time.</p>
+<p>The evolution from R-CNN to faster R-CNN represents a significant advancement in object detection algorithms, especially in speed and efficiency. A brief history of the development progression of R-CNN, Fast R-CNN, and Faster R-CNN adds valuable context to our study on object detection architectures. It will help to understand the evolution of these models, the motivations behind their development, and the improvements made over time.</p>
 <section id="r-cnn-region-based-convolutional-network" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="r-cnn-region-based-convolutional-network"><span class="header-section-number">3.1</span> R-CNN (Region based Convolutional Network)</h2>
-<p>R-CNN was a breakthrough in object detection. It employed a multi stage approach that involved selective search for generating region proposals followed by a convolutional neural network for feature extraction and a support vector machine (SVM) for object classification within each region.</p>
+<h2 data-number="3.1" class="anchored" data-anchor-id="r-cnn-region-based-convolutional-network"><span class="header-section-number">3.1</span> R-CNN (Region-Based Convolutional Network)</h2>
+<p>R-CNN was a breakthrough in object detection. It employed a multi-stage approach that involved a selective search for generating region proposals followed by a convolutional neural network for feature extraction and a support vector machine (SVM) for object classification within each region.</p>
+<section id="region-proposal-generation" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="region-proposal-generation"><span class="header-section-number">3.1.1</span> Region Proposal Generation</h3>
+<p>R-CNN began with generating region proposals using the selective search algorithm. Selective search is a method for identifying potential object regions in an image based on low-level features such as color, texture, and intensity. It produces a set of bounding boxes that mostly have objects.</p>
+</section>
+<section id="feature-extraction" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="feature-extraction"><span class="header-section-number">3.1.2</span> Feature Extraction</h3>
+<p>Following the generation of region proposals, R-CNN employed a pre-trained convolutional neural network to independently extract features from each region. Typically, the chosen CNN model was AlexNet, pre-trained on the ImageNet dataset specifically for image classification tasks.</p>
+</section>
+<section id="fine-tuning-and-classification" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="fine-tuning-and-classification"><span class="header-section-number">3.1.3</span> Fine-tuning and Classification</h3>
+<p>Following feature extraction, the extracted features were input into a distinct classifier to ascertain the presence of objects within the regions. R-CNN utilized a support vector machine (SVM) for this classification task. Each SVM was trained to discern whether the feature corresponded to a particular object or background.</p>
+</section>
+<section id="bounding-box-regression" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="bounding-box-regression"><span class="header-section-number">3.1.4</span> Bounding Box Regression</h3>
+<p>Following classification, R-CNN conducted bounding box regression to enhance the accuracy of the detected object locations. This process adjusts the bounding boxes produced by the region proposal algorithm to align more precisely with the actual object locations within the regions.</p>
+</section>
+<section id="non-maximum-supression" class="level3" data-number="3.1.5">
+<h3 data-number="3.1.5" class="anchored" data-anchor-id="non-maximum-supression"><span class="header-section-number">3.1.5</span> Non-Maximum Supression</h3>
+<p>Lastly, R-CNN implemented non-maximum suppression to eliminate redundant detections, ensuring that each object is detected only once.</p>
+<p>*** Add Figure 1: Flowchart of R-CNN ***</p>
+</section>
+<section id="drawbacks" class="level3" data-number="3.1.6">
+<h3 data-number="3.1.6" class="anchored" data-anchor-id="drawbacks"><span class="header-section-number">3.1.6</span> Drawbacks</h3>
+<p>An initial drawback of the R-CNN architecture was its computational inefficiency during inference, primarily stemming from its sequential processing of region proposals. Processing each region proposal independently led to redundant computations and prolonged inference times.</p>
+</section>
+</section>
+<section id="fast-r-cnn" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="fast-r-cnn"><span class="header-section-number">3.2</span> Fast R-CNN</h2>
+<p>Fast R-CNN represents a faster and more efficient iteration of the original R-CNN for object detection. It tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations and accelerates the inference process.</p>
+<section id="architecture" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="architecture"><span class="header-section-number">3.2.1</span> Architecture</h3>
+<p>Fast R-CNN employs a regional pattern network (RPN) to directly generate region proposals from the convolutional feature maps of the input image. This eliminates the necessity for external region proposals, such as selective search, as used in the original R-CNN. The RPN functions by sliding a small grid (essentially a compact CNN) across the evolving feature map to predict the spatial dimensions (bounding boxes) and associated probability scores for objects within each sliding window. Subsequently, these local parameters serve as inputs for the subsequent stage of the process.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
