@@ -13,3 +13,9 @@ In addition to Faster R-CNN, Mask R-CNN was employed, utilizing a pre-trained mo
 To configure the dataset appropriately for YOLOv8, a yaml file was created, specifying the dataset's structure. This file included details such as the overall path to the data, the locations of the training, validation, and test sets, and the names of the classes to be identified.
 
 Following data preprocessing, YOLOv8 training commenced using the tank training set. Initially, twenty epochs were employed with the medium model. However, during testing, Google Colab encountered stability issues, concluded in the selection of the small model, which resulted in smooth execution.
+
+{{< pagebreak >}}
+
+The following flowchart illustrates our process details for the custom military tank detector.
+
+![Custom Object Detector using YOLOv8](images/flowcharts/custom-YOLO-flowcharts.jpg){style="text-align: center;" fig-alt="Custom Object Detector using YOLOv8" fig-align="center"}

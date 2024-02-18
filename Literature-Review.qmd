@@ -2,7 +2,7 @@
 
 The evolution from R-CNN to faster R-CNN represents a significant advancement in object detection algorithms, especially in speed and efficiency. A brief history of the development progression of R-CNN, Fast R-CNN, and Faster R-CNN adds valuable context to our study on object detection architectures. It will help to understand the evolution of these models, the motivations behind their development, and the improvements made over time.
 
-## R-CNN (Region-Based Convolutional Network)
+## R-CNN (Region-based Convolutional Network)
 
 R-CNN was a breakthrough in object detection. It employed a multi-stage approach that involved a selective search for generating region proposals followed by a convolutional neural network for feature extraction and a support vector machine (SVM) for object classification within each region.
 
@@ -26,7 +26,7 @@ Following classification, R-CNN conducted bounding box regression to enhance the
 
 Lastly, R-CNN implemented non-maximum suppression to eliminate redundant detections, ensuring that each object is detected only once.
 
-![Flowchart of R-CNN](images/LR/LR-fig01-R-CNN-flow.png){style="text-align:center;" fig-alt="R-CNN Flowchart" fig-align="center"}
+![Flowchart of R-CNN](images/flowcharts/RCNN-flowcharts.jpg){style="text-align:center;" fig-alt="R-CNN Flowchart" fig-align="center"}
 
 ### Drawbacks
 
@@ -34,9 +34,9 @@ An initial drawback of the R-CNN architecture was its computational inefficiency
 
 ## Fast R-CNN
 
-Fast R-CNN, a significant advancement in object detection, introduces several innovations enhancing both training and testing efficiency while improving detection accuracy. Unlike its predecessors, Fast R-CNN leverages the VGG16 network, achieving a remarkable 9x increase in training speed compared to R-CNN @girshick2015fastrcnn. At test-time, Fast R-CNN demonstrates an impressive speed improvement of 213x, making it significantly faster and more practical for real-world applications. Additionally, Fast R-CNN outperforms previous methods in terms of mean Average Precision (mAP) on benchmark datasets like PASCAL VOC 2012 @girshick2015fastrcnn.
+Fast R-CNN, a significant advancement in object detection, introduces several innovations enhancing both training and testing efficiency while improving detection accuracy. Unlike its predecessors, Fast R-CNN leverages the VGG16 network, achieving a remarkable 9x increase in training speed compared to R-CNN @girshick2015fastrcnn. At test-time, Fast R-CNN demonstrates an impressive speed improvement of 213x, making it significantly faster, and more practical for real-world applications. Additionally, Fast R-CNN outperforms previous methods in terms of mean Average Precision (mAP) on benchmark datasets like PASCAL VOC 2012 @girshick2015fastrcnn.
 
---Fast R-CNN represents a faster and more efficient iteration of the original R-CNN for object detection. It tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations and accelerates the inference process.--
+Fast R-CNN tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations, and accelerates the inference process.
 
 ### Architecture
 
@@ -48,7 +48,7 @@ Firstly, it utilizes a Region Proposal Network (RPN) to generate region proposal
 
 The RoI pooling layer employs max pooling to transform features within any valid region of interest into a compact feature map with a fixed spatial extent of H × W (e.g., 7 × 7) @girshick2015fastrcnn, where H and W are layer hyper-parameters independent of any specific RoI. A more efficient training strategy leverages feature sharing throughout the process. During Fast R-CNN training, stochastic gradient descent (SGD) minibatches are hierarchically sampled: N images are initially sampled, followed by R/N RoIs from each image. Notably, both during forward and backward passes, ROIs from the same image share computation and memory. Fixed-size feature maps yielded from RoI pooling are input to fully connected layers for object classification and bounding-box regression. Feature classification aims to detect features and assign class probabilities for each proposed location, while bounding box regression seeks to enhance the localization accuracy of detected features. Fast R-CNN introduces multitasking loss functions that amalgamate classification and bounding box regression losses. This enables joint training of both tasks, ensuring the network learns to predict object location and precise bounding boxes concurrently.
 
-![Flowchart of Fast R-CNN](images/LR/LR-fig02-Fast-R-CNN.png){style="text-align: center;" fig-alt="Fast R-CNN Flowchart" fig-align="center"}
+![Flowchart of Fast R-CNN](images/flowcharts/fast-RCNN-flowcharts.jpg){style="text-align: center;" fig-alt="Fast R-CNN Flowchart" fig-align="center"}
 
 ### Advantages of Fast R-CNN
 
@@ -87,7 +87,7 @@ Following prediction, non-maximum suppression is employed to discard redundant a
 
 The final output comprises a collection of object detections alongside their bounding boxes and corresponding class labels.
 
-![Flowchart of Faster R-CNN \@ren2015fasterrcnn](images/LR/LR-fig03-Faster-R-CNN.png){style="text-align:center;" fig-alt="Faster R-CNN Flowchart" fig-align="center"}
+![Flowchart of Faster R-CNN \@ren2015fasterrcnn](images/flowcharts/faster-RCNN-flowcharts.jpg){style="text-align:center;" fig-alt="Faster R-CNN Flowchart" fig-align="center"}
 
 ### Advantages of Faster R-CNN
 
@@ -128,6 +128,8 @@ $$
 -   Training: The entire Mask R-CNN network is trained end-to-end using backpropagation with stochastic gradient descent (SGD) or other optimization algorithms, typically starting with pre-trained weights and fine-tuning for the specific task.
 
 ![Mask R-CNN framework for Instance Segmentation \@he2020maskrcnn](images/LR/LR-fig04-Mask-R-CNN.png){style="text-align:center;" fig-alt="Mask R-CNN framework for Instance Segmentation" fig-align="center"}
+
+{{< pagebreak >}}
 
 ### Advantages over Faster R-CNN
 

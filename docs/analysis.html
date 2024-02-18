@@ -222,6 +222,14 @@ div.csl-indent {
 <p>In addition to Faster R-CNN, Mask R-CNN was employed, utilizing a pre-trained model from the COCO dataset. This model underwent testing on both images, and a video dataset. Transitioning to YOLOv8, preparation of the data involved annotating the training set. Twenty images of tanks were manually annotated using CVAT.ai to draw bounding boxes around the targets. Subsequently, specific bounding box coordinates for YOLOv8 were obtained. Notably, all tank images for training and testing were sourced from Flickr.</p>
 <p>To configure the dataset appropriately for YOLOv8, a yaml file was created, specifying the dataset’s structure. This file included details such as the overall path to the data, the locations of the training, validation, and test sets, and the names of the classes to be identified.</p>
 <p>Following data preprocessing, YOLOv8 training commenced using the tank training set. Initially, twenty epochs were employed with the medium model. However, during testing, Google Colab encountered stability issues, concluded in the selection of the small model, which resulted in smooth execution.</p>
+<div style="page-break-after: always;"></div>
+<p>The following flowchart illustrates our process details for the custom military tank detector.</p>
+<div class="quarto-figure quarto-figure-center" style="text-align: center;">
+<figure class="figure">
+<p><img src="images/flowcharts/custom-YOLO-flowcharts.jpg" class="img-fluid figure-img" alt="Custom Object Detector using YOLOv8"></p>
+<figcaption class="figure-caption">Custom Object Detector using YOLOv8</figcaption>
+</figure>
+</div>
 
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">

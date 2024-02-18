@@ -201,7 +201,7 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#r-cnn-region-based-convolutional-network" id="toc-r-cnn-region-based-convolutional-network" class="nav-link active" data-scroll-target="#r-cnn-region-based-convolutional-network"><span class="header-section-number">2.1</span> R-CNN (Region-Based Convolutional Network)</a>
+  <li><a href="#r-cnn-region-based-convolutional-network" id="toc-r-cnn-region-based-convolutional-network" class="nav-link active" data-scroll-target="#r-cnn-region-based-convolutional-network"><span class="header-section-number">2.1</span> R-CNN (Region-based Convolutional Network)</a>
   <ul class="collapse">
   <li><a href="#region-proposal-generation" id="toc-region-proposal-generation" class="nav-link" data-scroll-target="#region-proposal-generation"><span class="header-section-number">2.1.1</span> Region Proposal Generation</a></li>
   <li><a href="#feature-extraction" id="toc-feature-extraction" class="nav-link" data-scroll-target="#feature-extraction"><span class="header-section-number">2.1.2</span> Feature Extraction</a></li>
@@ -259,7 +259,7 @@ div.csl-indent {
 
 <p>The evolution from R-CNN to faster R-CNN represents a significant advancement in object detection algorithms, especially in speed and efficiency. A brief history of the development progression of R-CNN, Fast R-CNN, and Faster R-CNN adds valuable context to our study on object detection architectures. It will help to understand the evolution of these models, the motivations behind their development, and the improvements made over time.</p>
 <section id="r-cnn-region-based-convolutional-network" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="r-cnn-region-based-convolutional-network"><span class="header-section-number">2.1</span> R-CNN (Region-Based Convolutional Network)</h2>
+<h2 data-number="2.1" class="anchored" data-anchor-id="r-cnn-region-based-convolutional-network"><span class="header-section-number">2.1</span> R-CNN (Region-based Convolutional Network)</h2>
 <p>R-CNN was a breakthrough in object detection. It employed a multi-stage approach that involved a selective search for generating region proposals followed by a convolutional neural network for feature extraction and a support vector machine (SVM) for object classification within each region.</p>
 <section id="region-proposal-generation" class="level3" data-number="2.1.1">
 <h3 data-number="2.1.1" class="anchored" data-anchor-id="region-proposal-generation"><span class="header-section-number">2.1.1</span> Region Proposal Generation</h3>
@@ -282,7 +282,7 @@ div.csl-indent {
 <p>Lastly, R-CNN implemented non-maximum suppression to eliminate redundant detections, ensuring that each object is detected only once.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
-<p><img src="images/LR/LR-fig01-R-CNN-flow.png" class="img-fluid figure-img" alt="R-CNN Flowchart"></p>
+<p><img src="images/flowcharts/RCNN-flowcharts.jpg" class="img-fluid figure-img" alt="R-CNN Flowchart"></p>
 <figcaption class="figure-caption">Flowchart of R-CNN</figcaption>
 </figure>
 </div>
@@ -294,8 +294,8 @@ div.csl-indent {
 </section>
 <section id="fast-r-cnn" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="fast-r-cnn"><span class="header-section-number">2.2</span> Fast R-CNN</h2>
-<p>Fast R-CNN, a significant advancement in object detection, introduces several innovations enhancing both training and testing efficiency while improving detection accuracy. Unlike its predecessors, Fast R-CNN leverages the VGG16 network, achieving a remarkable 9x increase in training speed compared to R-CNN <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>. At test-time, Fast R-CNN demonstrates an impressive speed improvement of 213x, making it significantly faster and more practical for real-world applications. Additionally, Fast R-CNN outperforms previous methods in terms of mean Average Precision (mAP) on benchmark datasets like PASCAL VOC 2012 <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>.</p>
-<p>–Fast R-CNN represents a faster and more efficient iteration of the original R-CNN for object detection. It tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations and accelerates the inference process.–</p>
+<p>Fast R-CNN, a significant advancement in object detection, introduces several innovations enhancing both training and testing efficiency while improving detection accuracy. Unlike its predecessors, Fast R-CNN leverages the VGG16 network, achieving a remarkable 9x increase in training speed compared to R-CNN <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>. At test-time, Fast R-CNN demonstrates an impressive speed improvement of 213x, making it significantly faster, and more practical for real-world applications. Additionally, Fast R-CNN outperforms previous methods in terms of mean Average Precision (mAP) on benchmark datasets like PASCAL VOC 2012 <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>.</p>
+<p>Fast R-CNN tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations, and accelerates the inference process.</p>
 <section id="architecture" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="architecture"><span class="header-section-number">2.2.1</span> Architecture</h3>
 <p>Expanding upon its architecture, Fast R-CNN incorporates several key components to achieve its performance gains. Fast R-CNN addresses the speed and efficiency limitations of R-CNN by proposing a unified architecture that integrates region proposal generation, feature extraction, and object classification into a single network.</p>
@@ -306,7 +306,7 @@ div.csl-indent {
 <p>The RoI pooling layer employs max pooling to transform features within any valid region of interest into a compact feature map with a fixed spatial extent of H × W (e.g., 7 × 7) <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>, where H and W are layer hyper-parameters independent of any specific RoI. A more efficient training strategy leverages feature sharing throughout the process. During Fast R-CNN training, stochastic gradient descent (SGD) minibatches are hierarchically sampled: N images are initially sampled, followed by R/N RoIs from each image. Notably, both during forward and backward passes, ROIs from the same image share computation and memory. Fixed-size feature maps yielded from RoI pooling are input to fully connected layers for object classification and bounding-box regression. Feature classification aims to detect features and assign class probabilities for each proposed location, while bounding box regression seeks to enhance the localization accuracy of detected features. Fast R-CNN introduces multitasking loss functions that amalgamate classification and bounding box regression losses. This enables joint training of both tasks, ensuring the network learns to predict object location and precise bounding boxes concurrently.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
-<p><img src="images/LR/LR-fig02-Fast-R-CNN.png" class="img-fluid figure-img" alt="Fast R-CNN Flowchart"></p>
+<p><img src="images/flowcharts/fast-RCNN-flowcharts.jpg" class="img-fluid figure-img" alt="Fast R-CNN Flowchart"></p>
 <figcaption class="figure-caption">Flowchart of Fast R-CNN</figcaption>
 </figure>
 </div>
@@ -349,7 +349,7 @@ div.csl-indent {
 <p>The final output comprises a collection of object detections alongside their bounding boxes and corresponding class labels.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
-<p><img src="images/LR/LR-fig03-Faster-R-CNN.png" class="img-fluid figure-img" alt="Faster R-CNN Flowchart"></p>
+<p><img src="images/flowcharts/faster-RCNN-flowcharts.jpg" class="img-fluid figure-img" alt="Faster R-CNN Flowchart"></p>
 <figcaption class="figure-caption">Flowchart of Faster R-CNN @ren2015fasterrcnn</figcaption>
 </figure>
 </div>
@@ -399,6 +399,7 @@ L = L_{cls} + L_{box} + L_{mask}
 <figcaption class="figure-caption">Mask R-CNN framework for Instance Segmentation @he2020maskrcnn</figcaption>
 </figure>
 </div>
+<div style="page-break-after: always;"></div>
 </section>
 <section id="advantages-over-faster-r-cnn" class="level3" data-number="2.4.5">
 <h3 data-number="2.4.5" class="anchored" data-anchor-id="advantages-over-faster-r-cnn"><span class="header-section-number">2.4.5</span> Advantages over Faster R-CNN</h3>

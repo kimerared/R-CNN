@@ -23,5 +23,9 @@ The initial objective of this research paper is to evaluate the performance of t
 | SVM      | Support Vector Machine                    |
 | mAP      | mean Average Precision                    |
 | COCO     | Microsoft Common Objects in Context       |
+| FC       | Fully Connected Layer                     |
+| FCN      | Fully Convolutional Network               |
+| NMS      | Non-Maximum Suppression                   |
+| SPP      | Spatial Pyramid Pooling                   |
 
 #  {.unnumbered}
