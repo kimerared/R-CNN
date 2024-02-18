@@ -1,3 +1,19 @@
 # Contributions
 
-Group Contribution by each member.
+
+### Hector Gavilanes -- Project Lead
+Prepared the GitHub repository and pages for hosting the research paper online. Proofread and edited all chapters for the final version of the research paper. Researched and implemented code for Faster R-CNN, Mask R-CNN, and YOLOv8 methodologies. Analyzed, experimented, and made inferences during training, validation, and test phases. Developed a custom class label for detecting military tanks using YOLOv8. Evaluated the performance between various object detection and segmentation models. Kept communication with the professor, and peers.
+
+
+### Jacob Knight -- Deep Learning Architect 
+Wrote about the different methodologies used, such as Region Proposal Network, Translation-Invariant Anchor, and back-propagation. Conducted peer reviews of others' work.
+
+
+### Kyle Knuth -- Data Scientist
+Wrote the objectives, introduction, metrics, analysis, and results. Helped gather training and testing images for the YOLOv8 model and assisted with the annotation of the training data. Assisted in the training and implementation of the YOLOv8 model.
+
+
+### Sai Meghana -- Software Engineer
+Researched and wrote the literature review chapter, and made comparison between different methodologies. Drafted flowcharts to explain the architecture of each model. Assisted in writing methodologies chapter. 
+
+

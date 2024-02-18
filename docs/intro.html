@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computer Vision Object Detection - 1&nbsp; Introduction</title>
+<title>Computer Vision Object Detection - 2&nbsp; Introduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,7 +50,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./Literature-Review.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./abstract.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +93,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -126,38 +126,44 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./abstract.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Abstract</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Literature-Review.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Literature Review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./methodology.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methodologies</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodologies</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Results</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -196,7 +202,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
 </div>
 
 
@@ -212,13 +218,20 @@ div.csl-indent {
 </header>
 
 <p>Object detection is a fundamental task in computer vision, playing a crucial role in various applications such as autonomous vehicles, surveillance systems, and medical imaging. Recent advancements in deep learning have led to the creation of sophisticated architectures such as Faster R-CNN, Mask R-CNN, and YOLO (You Only Look Once), all of which have substantially improved object detection performance. These architectures have revolutionized the field by achieving superior accuracy in detecting objects within images. However, despite significant advancements, a critical trade-off between accuracy and processing speed persists. It is essential to carefully consider this balance when selecting the most suitable model for practical applications.</p>
-<p>The efficiency of object detection models is essential, particularly in real-time applications where rapid decision-making is vital. Currently, object detection primarily relies on region proposal methods and region CNNs. For instance, Selective Search, a widely used region proposal method, exhibits a speed of 2 seconds per image when implemented on the CPU, which is considered slow for many real-world applications. On the other hand, EdgeBoxes, another region proposal method, offers improved speed, clocking in at 0.2 seconds per image. However, a notable constraint remains— even with advancements, the region proposal step still demands substantial computational resources when executed on the CPU rather than the GPU.</p>
-<p>Moreover, comparing the performance of Faster R-CNN with region proposal methods poses challenges. Since R-CNNs leverage GPU acceleration while region proposal methods primarily rely on CPU computation. A fair comparison between the two becomes challenging. To address this issue, Region Proposal Networks (RPNs) were introduced in 2015 as part of the Faster R-CNN framework <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[1]</a></span>. A novel approach that integrates the region proposal step directly into the object detection algorithm itself. This architectural innovation aims to streamline the object detection process and improve overall efficiency by leveraging GPU resources effectively.</p>
+<p>The efficiency of object detection models is essential, particularly in real-time applications where rapid decision-making is vital. Currently, object detection primarily relies on region proposal methods, and region CNNs. For instance, Selective Search, a widely used region proposal method, exhibits a speed of 3.9 seconds per class per image <span class="citation" data-cites="uijlings2013selective"><a href="references.html#ref-uijlings2013selective" role="doc-biblioref">[1]</a></span> when implemented on the CPU, which is considered slow for many real-world applications. On the other hand, Edge Boxes, another region proposal method, offers improved speed, clocking in at 0.25 seconds per image <span class="citation" data-cites="zitnick2014edge"><a href="references.html#ref-zitnick2014edge" role="doc-biblioref">[2]</a></span>. However, a notable constraint remains – even with advancements, the region proposal step still demands substantial computational resources when executed on the CPU rather than the GPU.</p>
+<p>Moreover, comparing the performance of Faster R-CNN with region proposal methods poses challenges. Since R-CNNs leverage GPU acceleration while region proposal methods primarily rely on CPU computation. A fair comparison between the two becomes challenging. To address this issue, Region Proposal Networks (RPNs) were introduced in 2015 as part of the Faster R-CNN framework <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[3]</a></span>. A novel approach that integrates the region proposal step directly into the object detection algorithm itself. This architectural innovation aims to streamline the object detection process and improve overall efficiency by leveraging GPU resources effectively.</p>
+<p>Nonetheless, the extensively utilized Faster R-CNN technique has served as the cornerstone for a highly advanced object recognition systems. Its robustness, and versatility have made significant contributions across diverse fields such as autonomous driving, where it aids in the detection of pedestrians, vehicles, and obstacles, ensuring safer navigation. In robotics, Faster R-CNN facilitates object identification and localization, enabling robots to perform intricate tasks with precision and efficiency. Moreover, in the realm of medical diagnostics, this technique plays a pivotal role in analyzing medical imagery, assisting healthcare professionals in accurate disease detection and treatment planning. Additionally, in video surveillance applications, Faster R-CNN enhances security measures by identifying and tracking suspicious activities, or individuals in real-time; thus, increasing overall safety, and surveillance effectiveness. Overall, the widespread adoption of Faster R-CNN underscores its profound impact, and indispensable role in advancing various technological domains.</p>
 
 
 <div id="refs" class="references csl-bib-body" role="list" style="display: none">
+<div id="ref-uijlings2013selective" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">J. R. R. Uijlings, K. E. A. van de Sande, T. Gevers, and A. W. M. Smeulders, <span>“Selective search for object recognition,”</span> <em>International Journal of Computer Vision</em>, vol. 104, no. 2, pp. 154–171, 2013.</div>
+</div>
+<div id="ref-zitnick2014edge" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[2] </div><div class="csl-right-inline">C. L. Zitnick and P. Dollár, <span>“Edge boxes: Locating object proposals from edges,”</span> in <em>European conference on computer vision</em>, 2014, pp. 391–405.</div>
+</div>
 <div id="ref-ren2015fasterrcnn" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015, pp. 91–99.</div>
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015, pp. 91–99.</div>
 </div>
 </div>
 
@@ -458,13 +471,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Objectives</span>
+      <a href="./abstract.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Abstract</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./Literature-Review.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Literature Review</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
