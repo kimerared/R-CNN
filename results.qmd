@@ -20,7 +20,7 @@ In the second image, Faster R-CNN correctly identified all beetles.
 
 {{< pagebreak >}}
 
-In the third image the model had some issues with misclassifications of the types of phones.
+In the third image the model was able to distinguish different types of phones.
 
 ![Faster R-CNN result 3](images/results/Image%203.png){style="text-align: center;" fig-alt="Faster R-CNN result 3" fig-align="center"}
 
@@ -46,7 +46,8 @@ In image six, the model was able to clearly detect the objects with a high mean 
 
 ![Mask R-CNN result 2](images/results/Image%206.png){style="text-align: center;" fig-alt="Mask R-CNN result 2" fig-align="center"}
 
-{{< pagebreak >}}
+{{< pagebreak >}} 
+
 Image seven comes from a video that was fed to the Mask R-CNN model. In this frame, the model did have some trouble identifying all the objects.
 
 ![Mask R-CNN result 3](images/results/Image%207.png){style="text-align: center;" fig-alt="Mask R-CNN result 3" fig-align="center"}

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computer Vision Object Detection - 3&nbsp; Literature Review</title>
+<title>Computer Vision Object Detection - 2&nbsp; Literature Review</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Literature-Review.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Literature-Review.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Literature Review</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -129,43 +129,43 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./abstract.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Abstract</span></span></a>
+ <span class="menu-text">Abstract</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Literature-Review.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Literature Review</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./methodology.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodologies</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methodologies</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./analysis.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Analysis</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Results</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -201,38 +201,38 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#r-cnn-region-based-convolutional-network" id="toc-r-cnn-region-based-convolutional-network" class="nav-link active" data-scroll-target="#r-cnn-region-based-convolutional-network"><span class="header-section-number">3.1</span> R-CNN (Region-Based Convolutional Network)</a>
+  <li><a href="#r-cnn-region-based-convolutional-network" id="toc-r-cnn-region-based-convolutional-network" class="nav-link active" data-scroll-target="#r-cnn-region-based-convolutional-network"><span class="header-section-number">2.1</span> R-CNN (Region-Based Convolutional Network)</a>
   <ul class="collapse">
-  <li><a href="#region-proposal-generation" id="toc-region-proposal-generation" class="nav-link" data-scroll-target="#region-proposal-generation"><span class="header-section-number">3.1.1</span> Region Proposal Generation</a></li>
-  <li><a href="#feature-extraction" id="toc-feature-extraction" class="nav-link" data-scroll-target="#feature-extraction"><span class="header-section-number">3.1.2</span> Feature Extraction</a></li>
-  <li><a href="#fine-tuning-and-classification" id="toc-fine-tuning-and-classification" class="nav-link" data-scroll-target="#fine-tuning-and-classification"><span class="header-section-number">3.1.3</span> Fine-tuning and Classification</a></li>
-  <li><a href="#bounding-box-regression" id="toc-bounding-box-regression" class="nav-link" data-scroll-target="#bounding-box-regression"><span class="header-section-number">3.1.4</span> Bounding Box Regression</a></li>
-  <li><a href="#non-maximum-suppression" id="toc-non-maximum-suppression" class="nav-link" data-scroll-target="#non-maximum-suppression"><span class="header-section-number">3.1.5</span> Non-Maximum Suppression</a></li>
-  <li><a href="#drawbacks" id="toc-drawbacks" class="nav-link" data-scroll-target="#drawbacks"><span class="header-section-number">3.1.6</span> Drawbacks</a></li>
+  <li><a href="#region-proposal-generation" id="toc-region-proposal-generation" class="nav-link" data-scroll-target="#region-proposal-generation"><span class="header-section-number">2.1.1</span> Region Proposal Generation</a></li>
+  <li><a href="#feature-extraction" id="toc-feature-extraction" class="nav-link" data-scroll-target="#feature-extraction"><span class="header-section-number">2.1.2</span> Feature Extraction</a></li>
+  <li><a href="#fine-tuning-and-classification" id="toc-fine-tuning-and-classification" class="nav-link" data-scroll-target="#fine-tuning-and-classification"><span class="header-section-number">2.1.3</span> Fine-tuning and Classification</a></li>
+  <li><a href="#bounding-box-regression" id="toc-bounding-box-regression" class="nav-link" data-scroll-target="#bounding-box-regression"><span class="header-section-number">2.1.4</span> Bounding Box Regression</a></li>
+  <li><a href="#non-maximum-suppression" id="toc-non-maximum-suppression" class="nav-link" data-scroll-target="#non-maximum-suppression"><span class="header-section-number">2.1.5</span> Non-Maximum Suppression</a></li>
+  <li><a href="#drawbacks" id="toc-drawbacks" class="nav-link" data-scroll-target="#drawbacks"><span class="header-section-number">2.1.6</span> Drawbacks</a></li>
   </ul></li>
-  <li><a href="#fast-r-cnn" id="toc-fast-r-cnn" class="nav-link" data-scroll-target="#fast-r-cnn"><span class="header-section-number">3.2</span> Fast R-CNN</a>
+  <li><a href="#fast-r-cnn" id="toc-fast-r-cnn" class="nav-link" data-scroll-target="#fast-r-cnn"><span class="header-section-number">2.2</span> Fast R-CNN</a>
   <ul class="collapse">
-  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture"><span class="header-section-number">3.2.1</span> Architecture</a></li>
-  <li><a href="#roi-pooling-layer" id="toc-roi-pooling-layer" class="nav-link" data-scroll-target="#roi-pooling-layer"><span class="header-section-number">3.2.2</span> RoI Pooling Layer</a></li>
-  <li><a href="#advantages-of-fast-r-cnn" id="toc-advantages-of-fast-r-cnn" class="nav-link" data-scroll-target="#advantages-of-fast-r-cnn"><span class="header-section-number">3.2.3</span> Advantages of Fast R-CNN</a></li>
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture"><span class="header-section-number">2.2.1</span> Architecture</a></li>
+  <li><a href="#roi-pooling-layer" id="toc-roi-pooling-layer" class="nav-link" data-scroll-target="#roi-pooling-layer"><span class="header-section-number">2.2.2</span> RoI Pooling Layer</a></li>
+  <li><a href="#advantages-of-fast-r-cnn" id="toc-advantages-of-fast-r-cnn" class="nav-link" data-scroll-target="#advantages-of-fast-r-cnn"><span class="header-section-number">2.2.3</span> Advantages of Fast R-CNN</a></li>
   </ul></li>
-  <li><a href="#faster-r-cnn" id="toc-faster-r-cnn" class="nav-link" data-scroll-target="#faster-r-cnn"><span class="header-section-number">3.3</span> Faster R-CNN</a>
+  <li><a href="#faster-r-cnn" id="toc-faster-r-cnn" class="nav-link" data-scroll-target="#faster-r-cnn"><span class="header-section-number">2.3</span> Faster R-CNN</a>
   <ul class="collapse">
-  <li><a href="#region-proposal-network-rpn" id="toc-region-proposal-network-rpn" class="nav-link" data-scroll-target="#region-proposal-network-rpn"><span class="header-section-number">3.3.1</span> Region Proposal Network (RPN)</a></li>
-  <li><a href="#anchor-boxes" id="toc-anchor-boxes" class="nav-link" data-scroll-target="#anchor-boxes"><span class="header-section-number">3.3.2</span> Anchor Boxes</a></li>
-  <li><a href="#region-of-interest-roi" id="toc-region-of-interest-roi" class="nav-link" data-scroll-target="#region-of-interest-roi"><span class="header-section-number">3.3.3</span> Region of Interest (RoI)</a></li>
-  <li><a href="#classifier-and-bounding-box-regressor" id="toc-classifier-and-bounding-box-regressor" class="nav-link" data-scroll-target="#classifier-and-bounding-box-regressor"><span class="header-section-number">3.3.4</span> Classifier and Bounding Box Regressor</a></li>
-  <li><a href="#non-maximum-suppression-nms" id="toc-non-maximum-suppression-nms" class="nav-link" data-scroll-target="#non-maximum-suppression-nms"><span class="header-section-number">3.3.5</span> Non-Maximum Suppression (NMS)</a></li>
-  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output"><span class="header-section-number">3.3.6</span> Output</a></li>
-  <li><a href="#advantages-of-faster-r-cnn" id="toc-advantages-of-faster-r-cnn" class="nav-link" data-scroll-target="#advantages-of-faster-r-cnn"><span class="header-section-number">3.3.7</span> Advantages of Faster R-CNN</a></li>
+  <li><a href="#region-proposal-network-rpn" id="toc-region-proposal-network-rpn" class="nav-link" data-scroll-target="#region-proposal-network-rpn"><span class="header-section-number">2.3.1</span> Region Proposal Network (RPN)</a></li>
+  <li><a href="#anchor-boxes" id="toc-anchor-boxes" class="nav-link" data-scroll-target="#anchor-boxes"><span class="header-section-number">2.3.2</span> Anchor Boxes</a></li>
+  <li><a href="#region-of-interest-roi" id="toc-region-of-interest-roi" class="nav-link" data-scroll-target="#region-of-interest-roi"><span class="header-section-number">2.3.3</span> Region of Interest (RoI)</a></li>
+  <li><a href="#classifier-and-bounding-box-regressor" id="toc-classifier-and-bounding-box-regressor" class="nav-link" data-scroll-target="#classifier-and-bounding-box-regressor"><span class="header-section-number">2.3.4</span> Classifier and Bounding Box Regressor</a></li>
+  <li><a href="#non-maximum-suppression-nms" id="toc-non-maximum-suppression-nms" class="nav-link" data-scroll-target="#non-maximum-suppression-nms"><span class="header-section-number">2.3.5</span> Non-Maximum Suppression (NMS)</a></li>
+  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output"><span class="header-section-number">2.3.6</span> Output</a></li>
+  <li><a href="#advantages-of-faster-r-cnn" id="toc-advantages-of-faster-r-cnn" class="nav-link" data-scroll-target="#advantages-of-faster-r-cnn"><span class="header-section-number">2.3.7</span> Advantages of Faster R-CNN</a></li>
   </ul></li>
-  <li><a href="#mask-r-cnn" id="toc-mask-r-cnn" class="nav-link" data-scroll-target="#mask-r-cnn"><span class="header-section-number">3.4</span> Mask R-CNN</a>
+  <li><a href="#mask-r-cnn" id="toc-mask-r-cnn" class="nav-link" data-scroll-target="#mask-r-cnn"><span class="header-section-number">2.4</span> Mask R-CNN</a>
   <ul class="collapse">
-  <li><a href="#backbone-cnn" id="toc-backbone-cnn" class="nav-link" data-scroll-target="#backbone-cnn"><span class="header-section-number">3.4.1</span> Backbone CNN</a></li>
-  <li><a href="#region-proposal-network-rpn-1" id="toc-region-proposal-network-rpn-1" class="nav-link" data-scroll-target="#region-proposal-network-rpn-1"><span class="header-section-number">3.4.2</span> Region Proposal Network (RPN)</a></li>
-  <li><a href="#region-of-interest-align-roialign" id="toc-region-of-interest-align-roialign" class="nav-link" data-scroll-target="#region-of-interest-align-roialign"><span class="header-section-number">3.4.3</span> Region of interest Align (RoIAlign)</a></li>
-  <li><a href="#parallel-branches" id="toc-parallel-branches" class="nav-link" data-scroll-target="#parallel-branches"><span class="header-section-number">3.4.4</span> Parallel Branches</a></li>
-  <li><a href="#advantages-over-faster-r-cnn" id="toc-advantages-over-faster-r-cnn" class="nav-link" data-scroll-target="#advantages-over-faster-r-cnn"><span class="header-section-number">3.4.5</span> Advantages over Faster R-CNN</a></li>
+  <li><a href="#backbone-cnn" id="toc-backbone-cnn" class="nav-link" data-scroll-target="#backbone-cnn"><span class="header-section-number">2.4.1</span> Backbone CNN</a></li>
+  <li><a href="#region-proposal-network-rpn-1" id="toc-region-proposal-network-rpn-1" class="nav-link" data-scroll-target="#region-proposal-network-rpn-1"><span class="header-section-number">2.4.2</span> Region Proposal Network (RPN)</a></li>
+  <li><a href="#region-of-interest-align-roialign" id="toc-region-of-interest-align-roialign" class="nav-link" data-scroll-target="#region-of-interest-align-roialign"><span class="header-section-number">2.4.3</span> Region of interest Align (RoIAlign)</a></li>
+  <li><a href="#parallel-branches" id="toc-parallel-branches" class="nav-link" data-scroll-target="#parallel-branches"><span class="header-section-number">2.4.4</span> Parallel Branches</a></li>
+  <li><a href="#advantages-over-faster-r-cnn" id="toc-advantages-over-faster-r-cnn" class="nav-link" data-scroll-target="#advantages-over-faster-r-cnn"><span class="header-section-number">2.4.5</span> Advantages over Faster R-CNN</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -242,7 +242,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature Review</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Literature Review</span></h1>
 </div>
 
 
@@ -258,27 +258,27 @@ div.csl-indent {
 </header>
 
 <p>The evolution from R-CNN to faster R-CNN represents a significant advancement in object detection algorithms, especially in speed and efficiency. A brief history of the development progression of R-CNN, Fast R-CNN, and Faster R-CNN adds valuable context to our study on object detection architectures. It will help to understand the evolution of these models, the motivations behind their development, and the improvements made over time.</p>
-<section id="r-cnn-region-based-convolutional-network" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="r-cnn-region-based-convolutional-network"><span class="header-section-number">3.1</span> R-CNN (Region-Based Convolutional Network)</h2>
+<section id="r-cnn-region-based-convolutional-network" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="r-cnn-region-based-convolutional-network"><span class="header-section-number">2.1</span> R-CNN (Region-Based Convolutional Network)</h2>
 <p>R-CNN was a breakthrough in object detection. It employed a multi-stage approach that involved a selective search for generating region proposals followed by a convolutional neural network for feature extraction and a support vector machine (SVM) for object classification within each region.</p>
-<section id="region-proposal-generation" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="region-proposal-generation"><span class="header-section-number">3.1.1</span> Region Proposal Generation</h3>
+<section id="region-proposal-generation" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="region-proposal-generation"><span class="header-section-number">2.1.1</span> Region Proposal Generation</h3>
 <p>R-CNN began with generating region proposals using the selective search algorithm <span class="citation" data-cites="girshick2014rich"><a href="references.html#ref-girshick2014rich" role="doc-biblioref">[1]</a></span>. Selective search is a method for identifying potential object regions in an image based on low-level features such as color, texture, and intensity. It produces a set of bounding boxes that mostly have objects.</p>
 </section>
-<section id="feature-extraction" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="feature-extraction"><span class="header-section-number">3.1.2</span> Feature Extraction</h3>
+<section id="feature-extraction" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="feature-extraction"><span class="header-section-number">2.1.2</span> Feature Extraction</h3>
 <p>Following the generation of region proposals, R-CNN employed a pre-trained convolutional neural network to independently extract features from each region. Typically, the chosen CNN model was AlexNet, pre-trained on the ImageNet dataset specifically for image classification tasks.</p>
 </section>
-<section id="fine-tuning-and-classification" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="fine-tuning-and-classification"><span class="header-section-number">3.1.3</span> Fine-tuning and Classification</h3>
+<section id="fine-tuning-and-classification" class="level3" data-number="2.1.3">
+<h3 data-number="2.1.3" class="anchored" data-anchor-id="fine-tuning-and-classification"><span class="header-section-number">2.1.3</span> Fine-tuning and Classification</h3>
 <p>Following feature extraction, the extracted features were input into a distinct classifier to ascertain the presence of objects within the regions. R-CNN utilized a support vector machine (SVM) <span class="citation" data-cites="girshick2014rich"><a href="references.html#ref-girshick2014rich" role="doc-biblioref">[1]</a></span> for this classification task. Each SVM was trained to discern whether the feature corresponded to a particular object or background.</p>
 </section>
-<section id="bounding-box-regression" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="bounding-box-regression"><span class="header-section-number">3.1.4</span> Bounding Box Regression</h3>
+<section id="bounding-box-regression" class="level3" data-number="2.1.4">
+<h3 data-number="2.1.4" class="anchored" data-anchor-id="bounding-box-regression"><span class="header-section-number">2.1.4</span> Bounding Box Regression</h3>
 <p>Following classification, R-CNN conducted bounding box regression to enhance the accuracy of the detected object locations. This process adjusts the bounding boxes produced by the region proposal algorithm to align more precisely with the actual object locations within the regions.</p>
 </section>
-<section id="non-maximum-suppression" class="level3" data-number="3.1.5">
-<h3 data-number="3.1.5" class="anchored" data-anchor-id="non-maximum-suppression"><span class="header-section-number">3.1.5</span> Non-Maximum Suppression</h3>
+<section id="non-maximum-suppression" class="level3" data-number="2.1.5">
+<h3 data-number="2.1.5" class="anchored" data-anchor-id="non-maximum-suppression"><span class="header-section-number">2.1.5</span> Non-Maximum Suppression</h3>
 <p>Lastly, R-CNN implemented non-maximum suppression to eliminate redundant detections, ensuring that each object is detected only once.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
@@ -287,22 +287,22 @@ div.csl-indent {
 </figure>
 </div>
 </section>
-<section id="drawbacks" class="level3" data-number="3.1.6">
-<h3 data-number="3.1.6" class="anchored" data-anchor-id="drawbacks"><span class="header-section-number">3.1.6</span> Drawbacks</h3>
+<section id="drawbacks" class="level3" data-number="2.1.6">
+<h3 data-number="2.1.6" class="anchored" data-anchor-id="drawbacks"><span class="header-section-number">2.1.6</span> Drawbacks</h3>
 <p>An initial drawback of the R-CNN architecture was its computational inefficiency during inference, primarily stemming from its sequential processing of region proposals. Processing each region proposal independently led to redundant computations and prolonged inference times.</p>
 </section>
 </section>
-<section id="fast-r-cnn" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="fast-r-cnn"><span class="header-section-number">3.2</span> Fast R-CNN</h2>
+<section id="fast-r-cnn" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="fast-r-cnn"><span class="header-section-number">2.2</span> Fast R-CNN</h2>
 <p>Fast R-CNN, a significant advancement in object detection, introduces several innovations enhancing both training and testing efficiency while improving detection accuracy. Unlike its predecessors, Fast R-CNN leverages the VGG16 network, achieving a remarkable 9x increase in training speed compared to R-CNN <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>. At test-time, Fast R-CNN demonstrates an impressive speed improvement of 213x, making it significantly faster and more practical for real-world applications. Additionally, Fast R-CNN outperforms previous methods in terms of mean Average Precision (mAP) on benchmark datasets like PASCAL VOC 2012 <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>.</p>
 <p>–Fast R-CNN represents a faster and more efficient iteration of the original R-CNN for object detection. It tackles the computational inefficiencies of R-CNN by introducing a unified architecture that consolidates region proposal generation, feature extraction, and object classification into a single network. This approach dramatically reduces redundant computations and accelerates the inference process.–</p>
-<section id="architecture" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="architecture"><span class="header-section-number">3.2.1</span> Architecture</h3>
+<section id="architecture" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="architecture"><span class="header-section-number">2.2.1</span> Architecture</h3>
 <p>Expanding upon its architecture, Fast R-CNN incorporates several key components to achieve its performance gains. Fast R-CNN addresses the speed and efficiency limitations of R-CNN by proposing a unified architecture that integrates region proposal generation, feature extraction, and object classification into a single network.</p>
 <p>Firstly, it utilizes a Region Proposal Network (RPN) to generate region proposals directly from the convolutional feature maps, eliminating the need for external proposal methods like selective search. The RPN functions by sliding a small grid (essentially a compact CNN) across the evolving feature map to predict the spatial dimensions (bounding boxes) and associated probability scores for objects within each sliding window. This streamlines the detection process and enhances efficiency. Furthermore, Fast R-CNN introduces the Region of Interest (RoI) pooling layer <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>, allowing feature extraction from region proposals of varying sizes without the need for expensive resizing operations. This enables precise alignment of features with the corresponding regions of interest, leading to improved localization accuracy. Moreover, Fast R-CNN adopts a unified network architecture, enabling end-to-end training of both the region proposal and object detection tasks. This approach ensures better optimization, and facilitates seamless integration of different components, contributing to the overall efficiency and effectiveness of the model.</p>
 </section>
-<section id="roi-pooling-layer" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="roi-pooling-layer"><span class="header-section-number">3.2.2</span> RoI Pooling Layer</h3>
+<section id="roi-pooling-layer" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="roi-pooling-layer"><span class="header-section-number">2.2.2</span> RoI Pooling Layer</h3>
 <p>The RoI pooling layer employs max pooling to transform features within any valid region of interest into a compact feature map with a fixed spatial extent of H × W (e.g., 7 × 7) <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[2]</a></span>, where H and W are layer hyper-parameters independent of any specific RoI. A more efficient training strategy leverages feature sharing throughout the process. During Fast R-CNN training, stochastic gradient descent (SGD) minibatches are hierarchically sampled: N images are initially sampled, followed by R/N RoIs from each image. Notably, both during forward and backward passes, ROIs from the same image share computation and memory. Fixed-size feature maps yielded from RoI pooling are input to fully connected layers for object classification and bounding-box regression. Feature classification aims to detect features and assign class probabilities for each proposed location, while bounding box regression seeks to enhance the localization accuracy of detected features. Fast R-CNN introduces multitasking loss functions that amalgamate classification and bounding box regression losses. This enables joint training of both tasks, ensuring the network learns to predict object location and precise bounding boxes concurrently.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
@@ -311,41 +311,41 @@ div.csl-indent {
 </figure>
 </div>
 </section>
-<section id="advantages-of-fast-r-cnn" class="level3" data-number="3.2.3">
-<h3 data-number="3.2.3" class="anchored" data-anchor-id="advantages-of-fast-r-cnn"><span class="header-section-number">3.2.3</span> Advantages of Fast R-CNN</h3>
+<section id="advantages-of-fast-r-cnn" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="advantages-of-fast-r-cnn"><span class="header-section-number">2.2.3</span> Advantages of Fast R-CNN</h3>
 <p>In contrast to R-CNN, which comprises multiple independent steps (such as region proposal generation, feature extraction, classification, and bounding box regression), Fast R-CNN integrates these processes within a unified network architecture. This enables end-to-end training of the entire pipeline, leading to improved optimization and potentially higher accuracy. Fast R-CNN achieves variable sharing across all spatial dimensions of an image. Unlike R-CNN, which extracts features independently for each image, Fast R-CNN performs feature extraction on the entire image only once. This shared computation across convolutional features significantly minimizes redundant calculations, expediting the inference process.</p>
 </section>
 </section>
-<section id="faster-r-cnn" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="faster-r-cnn"><span class="header-section-number">3.3</span> Faster R-CNN</h2>
+<section id="faster-r-cnn" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="faster-r-cnn"><span class="header-section-number">2.3</span> Faster R-CNN</h2>
 <p>Compared to preceding methodologies, Faster R-CNN achieves more efficient object recognition by seamlessly integrating regional proposal steps directly into the network architecture. Subsequent advancements have expanded upon this framework, establishing it as a fundamental component in object recognition. The architecture commences with a feature extraction backbone, typically a convolutional neural network (CNN) pre-trained on extensive datasets such as ImageNet. This backbone extracts pertinent features from the input image.</p>
-<section id="region-proposal-network-rpn" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="region-proposal-network-rpn"><span class="header-section-number">3.3.1</span> Region Proposal Network (RPN)</h3>
+<section id="region-proposal-network-rpn" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="region-proposal-network-rpn"><span class="header-section-number">2.3.1</span> Region Proposal Network (RPN)</h3>
 <p>Faster R-CNN further improves the efficiency of object detection by introducing the Region Proposal Network (RPN), which generates region proposals directly from the convolutional feature maps. It eliminates the need for external region proposal methods like Selective Search, resulting in faster and more accurate proposal generation.</p>
 <p>The feature maps derived from the backbone network are input to a Region Proposal Network (RPN) <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[3]</a></span>. The RPN, a compact fully convolutional network, employs a sliding window approach (typically 3x3) over the feature maps to generate region proposals. The RPN yields a collection of bounding box proposals accompanied by objectness scores, indicating the probability of containing an object. These proposals are generated by leveraging predefined anchor boxes of varying scales and aspect ratios.</p>
 </section>
-<section id="anchor-boxes" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="anchor-boxes"><span class="header-section-number">3.3.2</span> Anchor Boxes</h3>
+<section id="anchor-boxes" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="anchor-boxes"><span class="header-section-number">2.3.2</span> Anchor Boxes</h3>
 <p>The RPN generates region proposals by predicting offsets and scales for a predefined set of anchor boxes at each spatial position in the feature maps. These anchor boxes, varying in size and aspect ratio, serve as reference boxes for the proposal generation process.</p>
 </section>
-<section id="region-of-interest-roi" class="level3" data-number="3.3.3">
-<h3 data-number="3.3.3" class="anchored" data-anchor-id="region-of-interest-roi"><span class="header-section-number">3.3.3</span> Region of Interest (RoI)</h3>
+<section id="region-of-interest-roi" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="region-of-interest-roi"><span class="header-section-number">2.3.3</span> Region of Interest (RoI)</h3>
 <p>Region of Interest (RoI) refers to a specific area or region within an image that is selected for further analysis or processing. In the context of object detection and image segmentation tasks, RoIs typically represent regions where objects of interest are located.</p>
 </section>
-<section id="classifier-and-bounding-box-regressor" class="level3" data-number="3.3.4">
-<h3 data-number="3.3.4" class="anchored" data-anchor-id="classifier-and-bounding-box-regressor"><span class="header-section-number">3.3.4</span> Classifier and Bounding Box Regressor</h3>
+<section id="classifier-and-bounding-box-regressor" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="classifier-and-bounding-box-regressor"><span class="header-section-number">2.3.4</span> Classifier and Bounding Box Regressor</h3>
 <p>The RoI-pooled or RoIAlign features are separately input into branches for classification and bounding box regression.</p>
 <ul>
 <li><strong>Classification:</strong> The features traverse a classifier (e.g., fully connected layers followed by softmax) to predict the probability of each region proposal belonging to different object classes. Bounding Box Regression: Another set of fully connected layers predicts refined bounding box coordinates for each region proposal.</li>
 <li><strong>Loss Function:</strong> The network undergoes end-to-end training using a multi-task loss function, which combines losses from the RPN (objectness score prediction and bounding box regression) with those from the classification and bounding box regression branches.</li>
 </ul>
 </section>
-<section id="non-maximum-suppression-nms" class="level3" data-number="3.3.5">
-<h3 data-number="3.3.5" class="anchored" data-anchor-id="non-maximum-suppression-nms"><span class="header-section-number">3.3.5</span> Non-Maximum Suppression (NMS)</h3>
+<section id="non-maximum-suppression-nms" class="level3" data-number="2.3.5">
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="non-maximum-suppression-nms"><span class="header-section-number">2.3.5</span> Non-Maximum Suppression (NMS)</h3>
 <p>Following prediction, non-maximum suppression is employed to discard redundant and overlapping detections based on their confidence scores and bounding box coordinates.</p>
 </section>
-<section id="output" class="level3" data-number="3.3.6">
-<h3 data-number="3.3.6" class="anchored" data-anchor-id="output"><span class="header-section-number">3.3.6</span> Output</h3>
+<section id="output" class="level3" data-number="2.3.6">
+<h3 data-number="2.3.6" class="anchored" data-anchor-id="output"><span class="header-section-number">2.3.6</span> Output</h3>
 <p>The final output comprises a collection of object detections alongside their bounding boxes and corresponding class labels.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
@@ -354,8 +354,8 @@ div.csl-indent {
 </figure>
 </div>
 </section>
-<section id="advantages-of-faster-r-cnn" class="level3" data-number="3.3.7">
-<h3 data-number="3.3.7" class="anchored" data-anchor-id="advantages-of-faster-r-cnn"><span class="header-section-number">3.3.7</span> Advantages of Faster R-CNN</h3>
+<section id="advantages-of-faster-r-cnn" class="level3" data-number="2.3.7">
+<h3 data-number="2.3.7" class="anchored" data-anchor-id="advantages-of-faster-r-cnn"><span class="header-section-number">2.3.7</span> Advantages of Faster R-CNN</h3>
 <ul>
 <li><strong>Efficient Region Proposal Generation:</strong> The Region Proposal Network (RPN) significantly reduces the computational load of region proposal methods, enabling nearly cost-free region proposals by sharing convolutional features.</li>
 <li><strong>End-to-End Training:</strong> RPN and Fast R-CNN can be jointly trained to share convolutional features, leading to a unified network architecture.</li>
@@ -364,24 +364,24 @@ div.csl-indent {
 </ul>
 </section>
 </section>
-<section id="mask-r-cnn" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="mask-r-cnn"><span class="header-section-number">3.4</span> Mask R-CNN</h2>
+<section id="mask-r-cnn" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="mask-r-cnn"><span class="header-section-number">2.4</span> Mask R-CNN</h2>
 <p>Mask R-CNN extends Faster R-CNN by adding a branch to predict the segmentation mask at each Region of Interest (RoI), alongside existing branches for classification and bounding box regression. This is achieved by introducing a small, fully convolutional network on top of each RoI. Below we briefly describe the architecture components.</p>
-<section id="backbone-cnn" class="level3" data-number="3.4.1">
-<h3 data-number="3.4.1" class="anchored" data-anchor-id="backbone-cnn"><span class="header-section-number">3.4.1</span> Backbone CNN</h3>
+<section id="backbone-cnn" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="backbone-cnn"><span class="header-section-number">2.4.1</span> Backbone CNN</h3>
 <p>Similar to Faster R-CNN, Mask R-CNN begins with a backbone that extracts features from the input image. This backbone network is typically pre-trained on a large dataset like ImageNet to learn generic image features.</p>
 </section>
-<section id="region-proposal-network-rpn-1" class="level3" data-number="3.4.2">
-<h3 data-number="3.4.2" class="anchored" data-anchor-id="region-proposal-network-rpn-1"><span class="header-section-number">3.4.2</span> Region Proposal Network (RPN)</h3>
+<section id="region-proposal-network-rpn-1" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="region-proposal-network-rpn-1"><span class="header-section-number">2.4.2</span> Region Proposal Network (RPN)</h3>
 <p>The RPN takes feature maps from the backbone network and generates region proposals using anchor boxes, refined based on their likelihood of containing objects. The region proposals generated by the RPN are subsequently used for both object detection, and instance segmentation in the Mask R-CNN framework.</p>
 </section>
-<section id="region-of-interest-align-roialign" class="level3" data-number="3.4.3">
-<h3 data-number="3.4.3" class="anchored" data-anchor-id="region-of-interest-align-roialign"><span class="header-section-number">3.4.3</span> Region of interest Align (RoIAlign)</h3>
+<section id="region-of-interest-align-roialign" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="region-of-interest-align-roialign"><span class="header-section-number">2.4.3</span> Region of interest Align (RoIAlign)</h3>
 <p>For each region proposal generated by the RPN, features are extracted from the feature maps using RoIAlign. RoIAlign is a technique used in CNNs for object detection tasks. RoIAlign improves upon RoIPool, a previous method, by eliminating the quantization step in the pooling operation, resulting in more accurate feature extraction from regions of interest <span class="citation" data-cites="he2017maskrcnn"><a href="references.html#ref-he2017maskrcnn" role="doc-biblioref">[4]</a></span>. It precisely aligns features extracted from arbitrary-shaped regions with the spatial layout of the feature map, enabling more accurate object localization and segmentation.</p>
 <p>The RoIAlign layer extracts features from each region proposal, preserving spatial information better than previous pooling methods, ensuring accurate alignment of features with the region of interest.</p>
 </section>
-<section id="parallel-branches" class="level3" data-number="3.4.4">
-<h3 data-number="3.4.4" class="anchored" data-anchor-id="parallel-branches"><span class="header-section-number">3.4.4</span> Parallel Branches</h3>
+<section id="parallel-branches" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="parallel-branches"><span class="header-section-number">2.4.4</span> Parallel Branches</h3>
 <p>Mask R-CNN introduces parallel branches for object detection and instance segmentation.</p>
 <ul>
 <li>Object Detection Branch: Determines the class of each object within the region proposal and refines bounding box coordinates through classification and regression. – Mask Prediction Branch: Predicts segmentation masks for each object within the region proposal, generating pixel-level masks for object instances using a small fully convolutional network applied to each RoI.</li>
@@ -400,8 +400,8 @@ L = L_{cls} + L_{box} + L_{mask}
 </figure>
 </div>
 </section>
-<section id="advantages-over-faster-r-cnn" class="level3" data-number="3.4.5">
-<h3 data-number="3.4.5" class="anchored" data-anchor-id="advantages-over-faster-r-cnn"><span class="header-section-number">3.4.5</span> Advantages over Faster R-CNN</h3>
+<section id="advantages-over-faster-r-cnn" class="level3" data-number="2.4.5">
+<h3 data-number="2.4.5" class="anchored" data-anchor-id="advantages-over-faster-r-cnn"><span class="header-section-number">2.4.5</span> Advantages over Faster R-CNN</h3>
 <ul>
 <li>Offers pixel-level segmentation alongside object detection and bounding box regression.</li>
 <li>Facilitates instance segmentation, segmenting each object instance in an image separately.</li>
@@ -665,12 +665,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./methodology.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Methodologies</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Methodologies</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
