@@ -139,3 +139,35 @@ $$
 -   Despite increased complexity, maintains comparable speed and efficiency, particularly in scenarios necessitating instance-level segmentation.
 
 Overall, Mask R-CNN represents a substantial advancement over previous methods by integrating object detection and instance segmentation into a unified architecture, rendering it a versatile solution for diverse computer vision applications.
+
+## YOLO
+
+YOLO (You Only Look Once) is a popular object detection algorithm that revolutionized the field of computer vision due to its speed and accuracy @redmon2018yolov3. YOLO processes images in a single pass through a neural network, enabling real-time object detection. YOLOv8 is one of the iterations of the YOLO algorithm, incorporating various improvements over its predecessors to enhance performance and efficiency.
+
+### Architecture
+
+The architecture of YOLO consists of a backbone network, detection head, and output layers. The backbone network, typically based on Darknet or CSPDarknet, extracts features from the input image @bochkovskiy2020yolov4. These features are then processed by the detection head, which predicts bounding boxes, confidence scores, and class probabilities for detected objects. Earlier YOLO models utilizes anchor boxes @bochkovskiy2020yolov4 to improve localization accuracy and efficiency. Finally, the output layers produce the final detection and confidence scores.
+
+### Anchor-Free Approach
+
+YOLOv8 employs an anchor-free approach @yolov8_ultralytics, eliminating the need for predefined anchor boxes. This simplifies the training process and improves model flexibility.
+
+### Efficient Backbone
+
+YOLO utilizes lightweight backbone networks such as CSPDarknet53, which strikes a balance between performance and computational efficiency
+
+### Improved Object Detection
+
+YOLO incorporates advanced techniques such as focal loss, which helps to address class imbalance and improve object detection accuracy @tian2019fcos.
+
+### Real-Time Performance
+
+YOLOv8 is optimized for real-time object detection applications @yolov8_ultralytics, offering fast inference speeds without compromising accuracy.
+
+### Advantages over Mask R-CNN
+
+Both Mask R-CNN and YOLOv8 are instance segmentation models; however, Mask R-CNN is better suited for semantic segmentation while YOLOv8 is not initially designed for that purpose. Both models are pre-trained on the MS-COCO dataset. Mask R-CNN is an improved version of Faster R-CNN and uses ResNet-101 as its backbone and has the addition of the prediction of object masks. YOLOv8 uses CSPDarknet53 as its backbone, which has 53 convolutional layers.
+
+The main difference between YOLOv8 and Mask R-CNN is the region proposal network. YOLOv8 is an anchor free model so it does not need a region proposal network. Another difference between the two models is that Mask R-CNN is a two stage model and YOLOv8 is a one stage model. The first stage of Mask R-CNN is the application of the region proposal network and the second stage executes “bounding box regression, classification, and mask prediction” @ameli2024.
+
+On the other hand, YOLOv8 has one stage that consists of “directly \[predicting\] bounding boxes and class labels for objects in an image” @ameli2024. YOLOv8 and Mask R-CNN also differ in their loss functions. YOLOv8 uses complete intersection over union loss, distribution focal loss, and binary cross entropy. Mask R-CNN uses classification loss, regression loss, and mask loss. In addition YOLOv8 is best used for real time object detection with low latency @ameli2024. 

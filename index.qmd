@@ -27,5 +27,6 @@ The initial objective of this research paper is to evaluate the performance of t
 | FCN      | Fully Convolutional Network               |
 | NMS      | Non-Maximum Suppression                   |
 | SPP      | Spatial Pyramid Pooling                   |
+| DFL      | Distribution Focal Loss                   |
 
 #  {.unnumbered}

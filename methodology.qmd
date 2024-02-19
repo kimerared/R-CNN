@@ -60,9 +60,61 @@ The authors describe this backward function as @girshick2015fastrcnn, "In words,
 
 This formula represents the accumulation of partial derivatives with respect to the output units of the RoI pooling layer during backpropagation. It describes how the gradients of the loss function with respect to the outputs of the RoI pooling layer are computed and accumulated during the backward pass of the neural network training process. It helps us understand how the network learns from its mistakes and improves its predictions over time.
 
+## YOLO (You Only Look Once)
+
+YOLOv8 employs a cross-stage partial bottleneck with two convolutions, which is called C2f module. @terven2023comprehensive Using YOLOv7’s ELAN structure, YOLOv8 uses one standard convolutional layer and maximizes the Bottleneck module to enhance the gradient branch. @wang2023bl This keeps YOLOv8 lightweight while also capturing more gradient flow information.
+
+YOLOv8 incorporates an anchor-free model @wang2023bl with a decoupled head. This allows for independent processing of objectness, classification, and regression tasks. The anchor-free model @terven2023comprehensive design utilizes multiple branches, each of which focus on a single task. This is vital in improving the accuracy of the model.
+
+YOLOv8 uses a sigmoid activation function as well as a softmax function for class probabilities. The loss functions used for bounding box loss and binary cross-entropy are the Complete IoU Loss, and the Distribution Focal Loss. Complete IoU uses Distance-IoU while taking aspect ratios into consideration @terven2023comprehensive. Firstly, DIoU is IoU when trying to minimize the normalized distance between central points of two bounding boxes @zheng2020distance.
+
+When taking aspect ratios into account, the CIoU loss fun
+
+tion is defined as:
+
+$$
+CIoU_{loss} = 1 - IoU + {\rho^2 (b, b^{gt}) \over c^2} + av
+$$
+
+Alpha here is defined as:
+
+$$
+\alpha = { v \over (1 - IoU) + v}
+$$
+
+The optimization function for CIoU @zheng2020distance is the following partial derivatives:
+
+$$
+CIoU_{loss} = IoU_{loss} - v \cdot \left( \frac{d(x, y)}{c} \right) - \arctan \left( \frac{w_a}{h_a} - \frac{w_b}{h_b} \right) + v \cdot \left( \frac{C}{c^2} \right)
+$$
+
+$$
+\frac{\partial CIoU_{loss}}{\partial x} = \frac{\partial IoU_{loss}}{\partial x} - v \cdot \frac{\partial}{\partial x} \left( \frac{d(x, y)}{c} \right) - \arctan \left( \frac{w_a}{h_a} - \frac{w_b}{h_b} \right) + v \cdot \frac{\partial}{\partial x} \left( \frac{C}{c^2} \right)
+$$
+
+Distribution Focal Loss originates from Focal Loss @li2021generalized, which was initially developed for one-stage object detection tasks. These tasks commonly encounter a significant class imbalance between foreground and background classes throughout the training process.
+
+The Focal Loss function is defined as:
+
+$$
+FL(p_t) = - (1 - p_t)^\gamma \cdot \log(p_t)
+$$
+
+$$
+p_t = \left\{ \begin{array}{ll}p & \text{when } y = 1 \\1 - p & \text{when } y = 0\end{array} \right.
+$$
+
+Li @li2021generalized describes Distribution Focal Loss (DFL) as FL that “forces the network to rapidly focus on the values near label y, by explicitly enlarging the probabilities of yi and yi+1 (nearest two to y, yi ≤ y ≤ yi+1).”
+
+The DFL function between two stages is define below:
+
+$$
+\text{DFL}(S_i, S_{i+1}) = -(y_{i+1}) \log(S_i) + (y - y_i) \log(S_{i+1})
+$$
+
 ## Metrics
 
-One data metric utilized in the chosen paper, and that will also be used in the analysis, is the mean average precision (mAP). This evaluation metric is typically used for object detection, and consists of multiple sub-metrics such as the confusion matrix, recall, precision, and the intersection over union. mAP is mathematically defined as, n is the number of classes, and APk is the average precision of the current class (k). Mean average precision basically takes an established ground truth box around the target and compares it to the detected box from the deep learning model, yielding an accuracy score. A higher accuracy score implies that the deep learning model is accurate with its detection.
+\[One data metric utilized in the chosen paper, and that will also be used in the analysis, is the mean average precision (mAP). This evaluation metric is typically used for object detection, and consists of multiple sub-metrics such as the confusion matrix, recall, precision, and the intersection over union. mAP is mathematically defined as, n is the number of classes, and APk is the average precision of the current class (k). Mean average precision basically takes an established ground truth box around the target and compares it to the detected box from the deep learning model, yielding an accuracy score. A higher accuracy score implies that the deep learning model is accurate with its detection.
 
 $$
 mAP = (1/n) * \sum_{k=1}^{k=n}(AP_k)
