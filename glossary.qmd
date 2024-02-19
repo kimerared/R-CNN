@@ -1,0 +1,28 @@
+---
+jupyter: python3
+---
+
+# Glossary {.unnumbered}
+
+| Term     | Definition                                |
+|----------|-------------------------------------------|
+| CNN      | Convolutional Neural Network              |
+| COCO     | Microsoft Common Objects in Context       |
+| CPU      | Central Processing Unit                   |
+| DFL      | Distribution Focal Loss                   |
+| FC       | Fully Connected Layer                     |
+| FCN      | Fully Convolutional Network               |
+| GPU      | Graphics Processing Unit                  |
+| IoU      | Intersection over Union                   |
+| mAP      | mean Average Precision                    |
+| NMS      | Non-Maximum Suppression                   |
+| ReLU     | Rectified Linear Unit                     |
+| RoI      | Region of Interest                        |
+| RoIAlign | Region of Interest Align                  |
+| R-CNN    | Region-based Convolutional Neural Network |
+| RPN      | Region Proposal Network                   |
+| SPP      | Spatial Pyramid Pooling                   |
+| SVM      | Support Vector Machine                    |
+| YOLOv8   | You Only Look Once, version 8             |
+
+#  {.unnumbered}

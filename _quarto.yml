@@ -3,17 +3,20 @@ project:
   output-dir: docs
 
 book:
-  title: "Computer Vision Object Detection"
-  subtitle: "Using Faster R-CNN, Mask R-CNN, and YOLOv8"
+  title: "Computer Vision: Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8"
+  subtitle: "University of West Florida"
   author:
     - "Project Lead: Hector R. Gavilanes"
     - "Deep Learning Architect: Jacob Knight"
     - "Data Scientist: Kyle Knuth"
     - "Software Engineer: Sai Meghana"
-  date: "2/16/2024"
+  date: "February 16, 2024"
+  repo-url: https://github.com/kimerared/R-CNN.git
+  downloads: [pdf]
   chapters:
     - index.qmd
-    - abstract.qmd
+    - glossary.qmd
+    - summary.qmd
     - intro.qmd
     - Literature-Review.qmd
     - methodology.qmd
@@ -23,6 +26,7 @@ book:
     - references.qmd
   appendices: 
     - contributions.qmd
+    - documentation.qmd
 
 bibliography: references.bib
 csl: https://www.zotero.org/styles/ieee-with-url
@@ -35,4 +39,4 @@ format:
     documentclass: scrreprt
 
 editor: visual
-
+reference-location: section
