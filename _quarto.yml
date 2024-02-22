@@ -10,7 +10,6 @@ book:
     - "Deep Learning Architect: Jacob Knight"
     - "Data Scientist: Kyle Knuth"
     - "Software Engineer: Sai Devarashetty"
-    - "Software Engineer: Sai Meghana"
   date: "February 16, 2024"
   repo-url: https://github.com/kimerared/R-CNN.git
   downloads: [pdf]
@@ -38,8 +37,12 @@ format:
   html:
     theme: cosmo
     page-layout: full
+    citation-location: margin
   pdf:
     documentclass: scrreprt
+    reference-location: document
+    chapters:
+      order: [cover.qmd, index.qmd, glossary.qmd, summary.qmd, intro.qmd, Literature-Review.qmd, methodology.qmd, analysis.qmd, results.qmd, conclusion.qmd, references.qmd, contributions.qmd, documentation.qmd]
 
 editor: visual
-reference-location: section
+

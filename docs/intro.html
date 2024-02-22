@@ -92,7 +92,7 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -224,11 +224,11 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content page-columns page-full column-body" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -237,7 +237,7 @@ div.csl-indent {
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-body">
 
     
   
@@ -250,25 +250,20 @@ div.csl-indent {
 
 
 <p>Object detection is a fundamental task in computer vision, playing a crucial role in various applications such as autonomous vehicles, surveillance systems, and medical imaging. Recent advancements in deep learning have led to the creation of sophisticated architectures such as Faster R-CNN, Mask R-CNN, and YOLO (You Only Look Once) <span class="citation" data-cites="yolov8_ultralytics"><a href="references.html#ref-yolov8_ultralytics" role="doc-biblioref">[1]</a></span>, all of which have substantially improved object detection performance. These architectures have revolutionized the field by achieving superior accuracy in detecting objects within images. However, despite significant advancements, a critical trade-off between accuracy and processing speed persists. It is essential to carefully consider this balance when selecting the most suitable model for practical applications.</p>
-<p>The efficiency of object detection models is essential, particularly in real-time applications where rapid decision-making is vital. Currently, object detection primarily relies on region proposal methods, and region CNNs. For instance, Selective Search, a widely used region proposal method, exhibits a speed of 3.9 seconds per class per image <span class="citation" data-cites="uijlings2013selective"><a href="references.html#ref-uijlings2013selective" role="doc-biblioref">[2]</a></span> when implemented on the CPU, which is considered slow for many real-world applications. On the other hand, Edge Boxes, another region proposal method, offers improved speed, clocking in at 0.25 seconds per image <span class="citation" data-cites="zitnick2014edge"><a href="references.html#ref-zitnick2014edge" role="doc-biblioref">[3]</a></span>. However, a notable constraint remains – even with advancements, the region proposal step still demands substantial computational resources when executed on the CPU rather than the GPU.</p>
-<p>Moreover, comparing the performance of Faster R-CNN with region proposal methods poses challenges. Since R-CNNs leverage GPU acceleration while region proposal methods primarily rely on CPU computation. A fair comparison between the two becomes challenging. To address this issue, Region Proposal Networks (RPNs) were introduced in 2015 as part of the Faster R-CNN framework <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[4]</a></span>. A novel approach that integrates the region proposal step directly into the object detection algorithm itself. This architectural innovation aims to streamline the object detection process and improve overall efficiency by leveraging GPU resources effectively.</p>
-<p>Nonetheless, to mitigate this challenge, the introduction of Region Proposal Networks (RPNs) within the Faster R-CNN framework in 2015 marks a pivotal innovation. By integrating the region proposal step directly into the object detection algorithm, RPNs aim to streamline the process, optimizing resource utilization, and enhancing overall efficiency. This architectural advancement underscores the ongoing efforts to strike a balance between accuracy and speed, heralding a promising future for real-time object detection in diverse applications.</p>
-
-
-<div id="refs" class="references csl-bib-body" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-yolov8_ultralytics" class="csl-entry" role="listitem">
+<div class="no-row-height column-margin column-container"><div id="ref-yolov8_ultralytics" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[1] </div><div class="csl-right-inline">G. Jocher, A. Chaurasia, and J. Qiu, <span>“Ultralytics YOLOv8.”</span> 2023. Available: <a href="https://github.com/ultralytics/ultralytics">https://github.com/ultralytics/ultralytics</a></div>
-</div>
-<div id="ref-uijlings2013selective" class="csl-entry" role="listitem">
+</div><div id="ref-uijlings2013selective" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[2] </div><div class="csl-right-inline">J. R. R. Uijlings, K. E. A. van de Sande, T. Gevers, and A. W. M. Smeulders, <span>“Selective search for object recognition,”</span> <em>International Journal of Computer Vision</em>, vol. 104, no. 2, pp. 154–171, 2013.</div>
-</div>
-<div id="ref-zitnick2014edge" class="csl-entry" role="listitem">
+</div><div id="ref-zitnick2014edge" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[3] </div><div class="csl-right-inline">C. L. Zitnick and P. Dollár, <span>“Edge boxes: Locating object proposals from edges,”</span> in <em>European conference on computer vision</em>, 2014, pp. 391–405.</div>
-</div>
-<div id="ref-ren2015fasterrcnn" class="csl-entry" role="listitem">
+</div></div><p>The efficiency of object detection models is essential, particularly in real-time applications where rapid decision-making is vital. Currently, object detection primarily relies on region proposal methods, and region CNNs. For instance, Selective Search, a widely used region proposal method, exhibits a speed of 3.9 seconds per class per image <span class="citation" data-cites="uijlings2013selective"><a href="references.html#ref-uijlings2013selective" role="doc-biblioref">[2]</a></span> when implemented on the CPU, which is considered slow for many real-world applications. On the other hand, Edge Boxes, another region proposal method, offers improved speed, clocking in at 0.25 seconds per image <span class="citation" data-cites="zitnick2014edge"><a href="references.html#ref-zitnick2014edge" role="doc-biblioref">[3]</a></span>. However, a notable constraint remains – even with advancements, the region proposal step still demands substantial computational resources when executed on the CPU rather than the GPU.</p>
+<p>Moreover, comparing the performance of Faster R-CNN with region proposal methods poses challenges. Since R-CNNs leverage GPU acceleration while region proposal methods primarily rely on CPU computation. A fair comparison between the two becomes challenging. To address this issue, Region Proposal Networks (RPNs) were introduced in 2015 as part of the Faster R-CNN framework <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[4]</a></span>. A novel approach that integrates the region proposal step directly into the object detection algorithm itself. This architectural innovation aims to streamline the object detection process and improve overall efficiency by leveraging GPU resources effectively.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-ren2015fasterrcnn" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[4] </div><div class="csl-right-inline">S. Ren, K. He, R. Girshick, and J. Sun, <span>“Faster r-CNN: Towards real-time object detection with region proposal networks,”</span> in <em>Advances in neural information processing systems</em>, 2015, pp. 91–99.</div>
-</div>
-</div>
+</div></div><p>Nonetheless, to mitigate this challenge, the introduction of Region Proposal Networks (RPNs) within the Faster R-CNN framework in 2015 marks a pivotal innovation. By integrating the region proposal step directly into the object detection algorithm, RPNs aim to streamline the process, optimizing resource utilization, and enhancing overall efficiency. This architectural advancement underscores the ongoing efforts to strike a balance between accuracy and speed, heralding a promising future for real-time object detection in diverse applications.</p>
+
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -658,7 +653,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
+<nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
       <a href="./summary.html" class="pagination-link" aria-label="Summary">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Summary</span>
