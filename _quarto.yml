@@ -9,11 +9,14 @@ book:
     - "Project Lead: Hector R. Gavilanes"
     - "Deep Learning Architect: Jacob Knight"
     - "Data Scientist: Kyle Knuth"
+    - "Software Engineer: Sai Devarashetty"
     - "Software Engineer: Sai Meghana"
   date: "February 16, 2024"
   repo-url: https://github.com/kimerared/R-CNN.git
   downloads: [pdf]
+
   chapters:
+    - cover.qmd
     - index.qmd
     - glossary.qmd
     - summary.qmd
