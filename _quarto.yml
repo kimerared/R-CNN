@@ -15,8 +15,8 @@ book:
   downloads: [pdf]
 
   chapters:
-    - cover.qmd
     - index.qmd
+    - cover.qmd
     - glossary.qmd
     - summary.qmd
     - intro.qmd
