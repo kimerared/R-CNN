@@ -4,13 +4,9 @@ jupyter: python3
 
 # Methodologies
 
-## Fast R-CNN Training
-
-Fast R-CNN follows a single-stage training process @girshick2015fastrcnn. It begins by processing the image through convolutional and max pooling layers, resulting in a convolutional feature map. Each object proposal then undergoes region of interest pooling, generating fixed-length feature vectors. These feature vectors are fed through fully connected layers, leading to two output layers: one for object class probabilities and the other for real-valued object coordinates. Fast R-CNN's training approach enables higher detection quality, updates all layers during training, and eliminates the need for disk storage for feature caching, contributing to its efficiency and accuracy @girshick2015fastrcnn.
-
 ## Faster R-CNN Training
 
-On the other hand, Faster R-CNN training is a two-stage process, jointly training a Region Proposal Network (RPN) and a Fast R-CNN detector @ren2015fasterrcnn . In the first stage, the RPN generates region proposals by sliding a small network over the convolutional feature map, refining them, and assigning scores based on their likelihood of containing objects. These proposals serve as input for the second stage, where the convolutional feature map undergoes region of interest (RoI) pooling. This process results in fixed-length feature vectors for each proposal, which are then processed through fully connected layers to predict object class probabilities and refine object bounding box coordinates [@ren2015fasterrcnn, @girshick2015fastrcnn]. This joint training approach allows Faster R-CNN to produce high-quality region proposals and accurately classify and localize objects in images.
+Faster R-CNN training is a two-stage process, jointly training a Region Proposal Network (RPN) and a Fast R-CNN detector @ren2015fasterrcnn . In the first stage, the RPN generates region proposals by sliding a small network over the convolutional feature map, refining them, and assigning scores based on their likelihood of containing objects. These proposals serve as input for the second stage, where the convolutional feature map undergoes region of interest (RoI) pooling. This process results in fixed-length feature vectors for each proposal, which are then processed through fully connected layers to predict object class probabilities and refine object bounding box coordinates [@ren2015fasterrcnn, @girshick2015fastrcnn]. This joint training approach allows Faster R-CNN to produce high-quality region proposals and accurately classify and localize objects in images.
 
 ### Region Proposal Network (RPN)
 
@@ -60,17 +56,49 @@ The authors describe this backward function as @girshick2015fastrcnn, "In words,
 
 This formula represents the accumulation of partial derivatives with respect to the output units of the RoI pooling layer during backpropagation. It describes how the gradients of the loss function with respect to the outputs of the RoI pooling layer are computed and accumulated during the backward pass of the neural network training process. It helps us understand how the network learns from its mistakes and improves its predictions over time.
 
+## Mask R-CNN
+
+Mask R-CNN is a framework for object instance segmentation that efficiently detects objects in an image while generating high-quality segmentation masks for each instance. This method extends Faster R-CNN by incorporating a branch for predicting object masks alongside the existing branch for bounding box recognition @he2017maskrcnn.
+
+### Two-Stage Process 
+
+Mask R-CNN utilizes a two-stage target detection method. The first stage involves obtaining proposals through the Region Proposal Network (RPN), while the second stage processes features of target locations based on the proposals and regions of interest generated in the first stage, performing classification, localization, and mask prediction @fang2023improved.
+
+Feature Extraction Network: The feature extraction network of Mask R-CNN consists of bottom-up and top-down paths. The bottom-up path, composed of residual structures of different sizes like ResNet-101, is responsible for image feature extraction @fang2023improved.
+
+### Loss Function 
+
+The loss function in Mask R-CNN includes components for class label, bounding box, and mask. Lclass is a classification loss, while Lmask uses binary cross-entropy loss for mask prediction @he2017maskrcnn.
+
+The components are as follow:
+
+-   $L_{class}$ = Classification loss to determine if an object exists.
+
+-   $L_{mask}$ = Binary cross-entropy loss used for mask prediction.
+
+### RoI Align
+
+RoI Align, short for Region of Interest Align, is a technique used in object detection and segmentation tasks to extract a small feature map from each Region of Interest (RoI) with improved accuracy compared to RoI Pooling. RoI Align overcomes the quantization issues of RoI Pooling by employing bilinear interpolation to compute precise values at four regularly sampled locations within each RoI bin, ensuring better alignment with the input features @he2017maskrcnn, @erdem2020understanding.
+
+#### Bilinear Interpolation
+
+RoI Align utilizes bilinear interpolation to calculate exact feature values at four regularly sampled locations within each RoI bin, enhancing the alignment of extracted features with the input data @erdem2020understanding.
+
+#### Quantization Improvement
+
+Unlike RoI Pooling, which suffers from quantization errors, RoI Align avoids quantization issues by using bilinear interpolation to maintain accurate spatial information during feature extraction @erdem2020understanding.
+
+The RoI Align operation involves computing the exact values of input features at four regularly sampled locations within each RoI bin using bilinear interpolation @erdem2020understanding. This precise alignment enhances the accuracy of feature extraction for each region proposal
+
 ## YOLO (You Only Look Once)
 
 YOLOv8 employs a cross-stage partial bottleneck with two convolutions, which is called C2f module. @terven2023comprehensive Using YOLOv7’s ELAN structure, YOLOv8 uses one standard convolutional layer and maximizes the Bottleneck module to enhance the gradient branch. @wang2023bl This keeps YOLOv8 lightweight while also capturing more gradient flow information.
 
 YOLOv8 incorporates an anchor-free model @wang2023bl with a decoupled head. This allows for independent processing of objectness, classification, and regression tasks. The anchor-free model @terven2023comprehensive design utilizes multiple branches, each of which focus on a single task. This is vital in improving the accuracy of the model.
 
-YOLOv8 uses a sigmoid activation function as well as a softmax function for class probabilities. The loss functions used for bounding box loss and binary cross-entropy are the Complete IoU Loss, and the Distribution Focal Loss. Complete IoU uses Distance-IoU while taking aspect ratios into consideration @terven2023comprehensive. Firstly, DIoU is IoU when trying to minimize the normalized distance between central points of two bounding boxes @zheng2020distance.
+YOLOv8 uses a sigmoid activation function as well as a softmax function for class probabilities. The loss functions used for bounding box loss and binary cross-entropy are the Complete IoU Loss, and the Distribution Focal Loss (DFL). Complete IoU uses Distance-IoU while taking aspect ratios into consideration @terven2023comprehensive. Firstly, DIoU is IoU when trying to minimize the normalized distance between central points of two bounding boxes @zheng2020distance.
 
-When taking aspect ratios into account, the CIoU loss fun
-
-tion is defined as:
+When taking aspect ratios into account, the CIoU loss funtion is defined as:
 
 $$
 CIoU_{loss} = 1 - IoU + {\rho^2 (b, b^{gt}) \over c^2} + av

@@ -6,9 +6,11 @@ jupyter: python3
 
 | Term     | Definition                                |
 |----------|-------------------------------------------|
+| CIoU     | Complete Intersection over Union          |
 | CNN      | Convolutional Neural Network              |
 | COCO     | Microsoft Common Objects in Context       |
 | CPU      | Central Processing Unit                   |
+| DIoU     | Distance Intersection over Union          |
 | DFL      | Distribution Focal Loss                   |
 | FC       | Fully Connected Layer                     |
 | FCN      | Fully Convolutional Network               |
@@ -24,4 +26,3 @@ jupyter: python3
 | SPP      | Spatial Pyramid Pooling                   |
 | SVM      | Support Vector Machine                    |
 | YOLOv8   | You Only Look Once, version 8             |
-

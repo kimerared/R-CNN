@@ -14,6 +14,10 @@ R-CNN began with generating region proposals using the selective search algorith
 
 Following the generation of region proposals, R-CNN employed a pre-trained convolutional neural network to independently extract features from each region. Typically, the chosen CNN model was AlexNet, pre-trained on the ImageNet dataset specifically for image classification tasks.
 
+### Selective Search
+
+Selective search employs a Hierarchical Grouping algorithm to detect objects with diverse characteristics such as scales, colors, textures, and enclosures. Initially, the method utilizes the Felzenszwalb and Huttenlocher @felzenszwalbmethod approach to segment the image into regions and obtain a set of initial regions. The grouping algorithm is detailed in the provided Algorithm.
+
 ### Fine-tuning and Classification
 
 Following feature extraction, the extracted features were input into a distinct classifier to ascertain the presence of objects within the regions. R-CNN utilized a support vector machine (SVM) @girshick2014rich for this classification task. Each SVM was trained to discern whether the feature corresponded to a particular object or background.
@@ -26,11 +30,15 @@ Following classification, R-CNN conducted bounding box regression to enhance the
 
 Lastly, R-CNN implemented non-maximum suppression to eliminate redundant detections, ensuring that each object is detected only once.
 
-![Flowchart of R-CNN](images/flowcharts/RCNN-flowcharts.jpg){style="text-align:center;" fig-alt="R-CNN Flowchart" fig-align="center"}
-
 ### Drawbacks
 
 An initial drawback of the R-CNN architecture was its computational inefficiency during inference, primarily stemming from its sequential processing of region proposals. Processing each region proposal independently led to redundant computations and prolonged inference times.
+
+{{< pagebreak >}}
+
+![Flowchart of R-CNN](images/flowcharts/RCNN-flowcharts.jpg){style="text-align:center;" fig-alt="R-CNN Flowchart" fig-align="center"}
+
+{{< pagebreak >}}
 
 ## Fast R-CNN
 
@@ -74,7 +82,7 @@ Region of Interest (RoI) refers to a specific area or region within an image tha
 
 ### Classifier and Bounding Box Regressor
 
-The RoI-pooled or RoIAlign features are separately input into branches for classification and bounding box regression.
+The RoI-pooled features are separately input into branches for classification and bounding box regression.
 
 -   **Classification:** The features traverse a classifier (e.g., fully connected layers followed by softmax) to predict the probability of each region proposal belonging to different object classes. Bounding Box Regression: Another set of fully connected layers predicts refined bounding box coordinates for each region proposal.
 -   **Loss Function:** The network undergoes end-to-end training using a multi-task loss function, which combines losses from the RPN (objectness score prediction and bounding box regression) with those from the classification and bounding box regression branches.

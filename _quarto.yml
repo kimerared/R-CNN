@@ -28,6 +28,7 @@ book:
     - conclusion.qmd
     - references.qmd
   appendices: 
+    - yolov9.qmd
     - contributions.qmd
     - resources.qmd
     - slides.qmd
