@@ -140,10 +140,24 @@
     "text": "A.0.1 Hector Gavilanes – Project Lead\nPrepared the GitHub repository and pages for hosting the research paper online. Proofread and edited all chapters for the final version of the research paper. Researched and implemented code for Faster R-CNN, Mask R-CNN, and YOLOv8 methodologies. Analyzed, experimented, and made inferences during training, validation, and test phases. Developed a custom class label for detecting military tanks using YOLOv8. Evaluated the performance between various object detection and segmentation models. Kept communication with the professor, and peers.\n\n\nA.0.2 Jacob Knight – Deep Learning Architect\nWrote about the different methodologies used, such as Region Proposal Network, Translation-Invariant Anchor, and back-propagation. Conducted peer reviews of others’ work.\n\n\nA.0.3 Kyle Knuth – Data Scientist\nWrote the objectives, introduction, metrics, analysis, and results. Helped gather training and testing images for the YOLOv8 model and assisted with the annotation of the training data. Assisted in the training and implementation of the YOLOv8 model.\n\n\nA.0.4 Sai Meghana – Software Engineer\nResearched and wrote the literature review chapter, and made comparison between different methodologies. Drafted flowcharts to explain the architecture of each model. Assisted in writing methodologies chapter."
   },
   {
-    "objectID": "documentation.html",
-    "href": "documentation.html",
-    "title": "Appendix B — Documentation",
+    "objectID": "resources.html#repositories",
+    "href": "resources.html#repositories",
+    "title": "Appendix B — Resources",
+    "section": "B.1 Repositories",
+    "text": "B.1 Repositories\n\nOnline Report - GitHub repository\nProject code - Google Colab"
+  },
+  {
+    "objectID": "resources.html#web-applications",
+    "href": "resources.html#web-applications",
+    "title": "Appendix B — Resources",
+    "section": "B.2 Web Applications",
+    "text": "B.2 Web Applications\n\nRCNN - Webcam app\nRCNN - YOLOv8 Models"
+  },
+  {
+    "objectID": "slides.html",
+    "href": "slides.html",
+    "title": "Appendix C — Slides",
     "section": "",
-    "text": "For your convenience, we have provided the following links accompanying the book report and referencing the code used for the projects.\n\nOnline Report - GitHub repository\nProject code - Google Colab\nReport - PDF version"
+    "text": "Use the “m” key to access the menu.\nUse the “f” key to view the presentation in full-screen.\nUse the left and right arrow keys to navigate the presentation.\nUse the “Esc” key to exit full-screen mode."
   }
 ]

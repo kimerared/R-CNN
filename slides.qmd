@@ -1,0 +1,17 @@
+---
+jupyter: python3
+---
+
+# Slides
+
+<iframe width="100%" height="66%" iframe class="slide-deck" src="https://docs.google.com/presentation/d/1bqLu6jGNnmvb7GSqfZbr3w0Kanybfyua/edit?usp=sharing&ouid=104177930300504184167&rtpof=true&sd=true">
+
+</iframe>
+
+-   Use the "m" key to access the menu.
+
+-   Use the "f" key to view the presentation in full-screen.
+
+-   Use the left and right arrow keys to navigate the presentation.
+
+-   Use the "Esc" key to exit full-screen mode.

@@ -4,13 +4,13 @@ jupyter: python3
 
 # Resources
 
-For your convenience, we have provided the following links accompanying the book report and referencing the code used for the projects.
+For your convenience, we have provided the following links accompanying the book report referencing the code notebooks used for the projects, and web applications.
+
+## Repositories
 
 -   [Online Report - GitHub repository](https://github.com/kimerared/R-CNN.git)
 
 -   [Project code - Google Colab](https://colab.research.google.com/drive/1k9wyFE_wHk_ojreXbK_bkvf0ZZ1nM_AV#scrollTo=Gwa9XlpVCxhR)
-
--   [Report - PDF version](report/Computer-Vision-Object-Detection.pdf)
 
 ## Web Applications
 
