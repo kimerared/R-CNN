@@ -5,6 +5,7 @@ project:
 book:
   title: "Computer Vision: Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8"
   subtitle: "University of West Florida"
+  favicon: 'book-favicon-512.png'
   author:
     - "Project Lead: Hector R. Gavilanes"
     - "Deep Learning Architect: Jacob Knight"
@@ -28,7 +29,7 @@ book:
     - references.qmd
   appendices: 
     - contributions.qmd
-    - documentation.qmd
+    - resources.qmd
 
 bibliography: references.bib
 csl: https://www.zotero.org/styles/ieee-with-url

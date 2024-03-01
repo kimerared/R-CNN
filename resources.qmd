@@ -2,7 +2,7 @@
 jupyter: python3
 ---
 
-# Documentation
+# Resources
 
 For your convenience, we have provided the following links accompanying the book report and referencing the code used for the projects.
 
@@ -11,3 +11,9 @@ For your convenience, we have provided the following links accompanying the book
 -   [Project code - Google Colab](https://colab.research.google.com/drive/1k9wyFE_wHk_ojreXbK_bkvf0ZZ1nM_AV#scrollTo=Gwa9XlpVCxhR)
 
 -   [Report - PDF version](report/Computer-Vision-Object-Detection.pdf)
+
+## Web Applications
+
+-   [RCNN - Webcam app](https://kimerared.github.io/RCNN-webcam/)
+
+-   [RCNN - YOLOv8 Models](https://huggingface.co/spaces/hectorgav/RCNN-YOLOv8)
