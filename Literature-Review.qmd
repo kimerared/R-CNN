@@ -80,6 +80,8 @@ The RPN generates region proposals by predicting offsets and scales for a predef
 
 Region of Interest (RoI) refers to a specific area or region within an image that is selected for further analysis or processing. In the context of object detection and image segmentation tasks, RoIs typically represent regions where objects of interest are located.
 
+## Feature Pyramid Network (FPN)
+
 ### Classifier and Bounding Box Regressor
 
 The RoI-pooled features are separately input into branches for classification and bounding box regression.

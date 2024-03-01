@@ -80,13 +80,9 @@ The components are as follow:
 
 RoI Align, short for Region of Interest Align, is a technique used in object detection and segmentation tasks to extract a small feature map from each Region of Interest (RoI) with improved accuracy compared to RoI Pooling. RoI Align overcomes the quantization issues of RoI Pooling by employing bilinear interpolation to compute precise values at four regularly sampled locations within each RoI bin, ensuring better alignment with the input features @he2017maskrcnn, @erdem2020understanding.
 
-#### Bilinear Interpolation
+-   **Bilinear Interpolation:** RoI Align utilizes bilinear interpolation to calculate exact feature values at four regularly sampled locations within each RoI bin, enhancing the alignment of extracted features with the input data @erdem2020understanding.
 
-RoI Align utilizes bilinear interpolation to calculate exact feature values at four regularly sampled locations within each RoI bin, enhancing the alignment of extracted features with the input data @erdem2020understanding.
-
-#### Quantization Improvement
-
-Unlike RoI Pooling, which suffers from quantization errors, RoI Align avoids quantization issues by using bilinear interpolation to maintain accurate spatial information during feature extraction @erdem2020understanding.
+-   **Quantization Improvement:** Unlike RoI Pooling, which suffers from quantization errors, RoI Align avoids quantization issues by using bilinear interpolation to maintain accurate spatial information during feature extraction @erdem2020understanding.
 
 The RoI Align operation involves computing the exact values of input features at four regularly sampled locations within each RoI bin using bilinear interpolation @erdem2020understanding. This precise alignment enhances the accuracy of feature extraction for each region proposal
 

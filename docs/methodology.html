@@ -348,17 +348,13 @@ L = (1/N) * Σ[L_{cls}(p_i, p_i*) + λ * L_{reg}(t_i, t_i*)]
 <p>RoI Align, short for Region of Interest Align, is a technique used in object detection and segmentation tasks to extract a small feature map from each Region of Interest (RoI) with improved accuracy compared to RoI Pooling. RoI Align overcomes the quantization issues of RoI Pooling by employing bilinear interpolation to compute precise values at four regularly sampled locations within each RoI bin, ensuring better alignment with the input features <span class="citation" data-cites="he2017maskrcnn"><a href="references.html#ref-he2017maskrcnn" role="doc-biblioref">[4]</a></span>, <span class="citation" data-cites="erdem2020understanding"><a href="references.html#ref-erdem2020understanding" role="doc-biblioref">[6]</a></span>.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-he2017maskrcnn" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[4] </div><div class="csl-right-inline">K. He, G. Gkioxari, P. Dollár, and R. Girshick, <span>“Mask r-CNN,”</span> in <em>Proceedings of the IEEE international conference on computer vision (ICCV)</em>, 2017, pp. 2961–2969. doi: <a href="https://doi.org/10.1109/ICCV.2017.322">10.1109/ICCV.2017.322</a></div>
-</div></div><section id="bilinear-interpolation" class="level4 page-columns page-full" data-number="3.2.3.1">
-<h4 data-number="3.2.3.1" class="anchored" data-anchor-id="bilinear-interpolation"><span class="header-section-number">3.2.3.1</span> Bilinear Interpolation</h4>
-<p>RoI Align utilizes bilinear interpolation to calculate exact feature values at four regularly sampled locations within each RoI bin, enhancing the alignment of extracted features with the input data <span class="citation" data-cites="erdem2020understanding"><a href="references.html#ref-erdem2020understanding" role="doc-biblioref">[6]</a></span>.</p>
-<div class="no-row-height column-margin column-container"></div></section>
-<section id="quantization-improvement" class="level4 page-columns page-full" data-number="3.2.3.2">
-<h4 data-number="3.2.3.2" class="anchored" data-anchor-id="quantization-improvement"><span class="header-section-number">3.2.3.2</span> Quantization Improvement</h4>
-<p>Unlike RoI Pooling, which suffers from quantization errors, RoI Align avoids quantization issues by using bilinear interpolation to maintain accurate spatial information during feature extraction <span class="citation" data-cites="erdem2020understanding"><a href="references.html#ref-erdem2020understanding" role="doc-biblioref">[6]</a></span>.</p>
+</div></div><ul>
+<li><p><strong>Bilinear Interpolation:</strong> RoI Align utilizes bilinear interpolation to calculate exact feature values at four regularly sampled locations within each RoI bin, enhancing the alignment of extracted features with the input data <span class="citation" data-cites="erdem2020understanding"><a href="references.html#ref-erdem2020understanding" role="doc-biblioref">[6]</a></span>.</p></li>
+<li><p><strong>Quantization Improvement:</strong> Unlike RoI Pooling, which suffers from quantization errors, RoI Align avoids quantization issues by using bilinear interpolation to maintain accurate spatial information during feature extraction <span class="citation" data-cites="erdem2020understanding"><a href="references.html#ref-erdem2020understanding" role="doc-biblioref">[6]</a></span>.</p></li>
+</ul>
 <div class="no-row-height column-margin column-container"><div id="ref-erdem2020understanding" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[6] </div><div class="csl-right-inline">K. Erdem, <span>“Understanding region of interest - part 2 (RoI align),”</span> <em>Journal Name</em>, 2020.</div>
 </div></div><p>The RoI Align operation involves computing the exact values of input features at four regularly sampled locations within each RoI bin using bilinear interpolation <span class="citation" data-cites="erdem2020understanding"><a href="references.html#ref-erdem2020understanding" role="doc-biblioref">[6]</a></span>. This precise alignment enhances the accuracy of feature extraction for each region proposal</p>
-</section>
 </section>
 </section>
 <section id="yolo-you-only-look-once" class="level2 page-columns page-full" data-number="3.3">
