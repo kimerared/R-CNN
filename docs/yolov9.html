@@ -291,7 +291,7 @@ X^{l+1} = X^l + f_{\theta}^{l+1} (X^l)
 <p>YOLOv9 incorporates an auxiliary reversible branch to further optimize gradient information flow and improve the overall training process.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
-<p><img src="images/clipboard-1619052285.png" class="img-fluid figure-img"></p>
+<p><img src="images/architecture/yolov9-auxiliary-branch.png" class="img-fluid figure-img" alt="Multi-Level Auxiliary Information"></p>
 <figcaption class="figure-caption">Multi-Level Auxiliary Information</figcaption>
 </figure>
 </div>
@@ -301,7 +301,7 @@ X^{l+1} = X^l + f_{\theta}^{l+1} (X^l)
 <p>CSPNet + ELAN: GELAN combines CSPNet with ELAN to enhance feature extraction and improve model efficiency. This fusion allows for more effective utilization of parameters and computational resources within the network architecture. Gradient Path Planning: GELAN’s architecture focuses on gradient path planning to optimize information flow and ensure that gradient updates are efficiently utilized throughout the network, leading to improved performance in object detection tasks.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full" style="text-align: center;">
 <figure class="figure page-columns page-full">
-<p><img src="images/clipboard-16151015.png" class="img-fluid figure-img"></p>
+<p><img src="images/architecture/GELAN.png" class="img-fluid figure-img" alt="The architecture of GELAN: (a) CSPNet @wang2020cspnet, (b) ELAN @wang2023designing , and (c) proposed GELAN."></p>
 <figcaption class="figure-caption">The architecture of GELAN: (a) CSPNet <span class="citation" data-cites="wang2020cspnet"><a href="references.html#ref-wang2020cspnet" role="doc-biblioref">[2]</a></span>, (b) ELAN <span class="citation" data-cites="wang2023designing"><a href="references.html#ref-wang2023designing" role="doc-biblioref">[3]</a></span> , and (c) proposed GELAN.</figcaption>
 <div class="no-row-height column-margin column-container"><div id="ref-wang2020cspnet" class="csl-entry" role="listitem">
 <div class="csl-left-margin">[2] </div><div class="csl-right-inline">C.-Y. Wang, H.-Y. M. Liao, I.-H. Yeh, Y.-H. Wu, P.-Y. Chen, and J.-W. Hsieh, <span>“CSPNet: A new backbone that can enhance learning capability of CNN,”</span> in <em>Proceedings of the IEEE/CVF conference on computer vision and pattern recognition workshops (CVPRW)</em>, 2020, pp. 390–391.</div>

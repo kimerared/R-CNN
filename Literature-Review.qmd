@@ -34,9 +34,10 @@ Lastly, R-CNN implemented non-maximum suppression to eliminate redundant detecti
 
 An initial drawback of the R-CNN architecture was its computational inefficiency during inference, primarily stemming from its sequential processing of region proposals. Processing each region proposal independently led to redundant computations and prolonged inference times.
 
-{{< pagebreak >}}
-
 ![Flowchart of R-CNN](images/flowcharts/RCNN-flowcharts.jpg){style="text-align:center;" fig-alt="R-CNN Flowchart" fig-align="center"}
+
+{{< pagebreak >}}
+{{< pagebreak >}}
 
 ## Fast R-CNN
 
@@ -82,11 +83,11 @@ Region of Interest (RoI) refers to a specific area or region within an image tha
 
 Feature Pyramid Network (FPN) stands as a pivotal advancement in object detection methodologies, offering a robust solution for handling objects of varying scales and complexities. FPN, introduced by Facebook AI Research (FAIR), Cornell University, and Cornell Tech, integrates a pyramidal feature hierarchy that combines low-resolution, semantically strong features with high-resolution, semantically weak features through top-down pathways and lateral connections.
 
-![Feature Pyramid Network (FPN) @lin2016feature](images/clipboard-3141593540.png){style="text-align: center;"}
+![Feature Pyramid Network (FPN) @lin2016feature](images/architecture/pyramid-network-diagram.png){style="text-align: center;" fig-alt="Feature Pyramid Network (FPN)"}
 
 This innovative approach ensures rich semantic information at all levels without compromising speed or memory efficiency. The FPN architecture has demonstrated superior performance in region proposal networks (RPN) and detection networks, showcasing remarkable improvements in detecting small objects and enhancing robustness to scale variations.
 
-![Faster R-CNN different stages @ren2015fasterrcnn](images/clipboard-551064974.png){style="text-align:center;"}
+![Faster R-CNN different stages @ren2015fasterrcnn](images/architecture/RPN-diagram.png){style="text-align:center;" fig-alt="RPN diagram" fig-align="center"}
 
 ### Classifier and Bounding Box Regressor
 
@@ -103,7 +104,7 @@ Following prediction, non-maximum suppression is employed to discard redundant a
 
 The final output comprises a collection of object detections alongside their bounding boxes and corresponding class labels.
 
-![Flowchart of Faster R-CNN \@ren2015fasterrcnn](images/flowcharts/faster-RCNN-flowcharts.jpg){style="text-align:center;" fig-alt="Faster R-CNN Flowchart" fig-align="center"}
+![Flowchart of Faster R-CNN @ren2015fasterrcnn](images/flowcharts/faster-RCNN-flowcharts.jpg){style="text-align:center;" fig-alt="Faster R-CNN Flowchart" fig-align="center"}
 
 ### Advantages of Faster R-CNN
 
@@ -143,7 +144,7 @@ $$
 
 -   Training: The entire Mask R-CNN network is trained end-to-end using backpropagation with stochastic gradient descent (SGD) or other optimization algorithms, typically starting with pre-trained weights and fine-tuning for the specific task.
 
-![Mask R-CNN framework for Instance Segmentation \@he2020maskrcnn](images/LR/LR-fig04-Mask-R-CNN.png){style="text-align:center;" fig-alt="Mask R-CNN framework for Instance Segmentation" fig-align="center"}
+![Mask R-CNN framework with RoIAlign @he2020maskrcnn](images/architecture/Mask-R-CNN.png){style="text-align:center;" fig-alt="Mask R-CNN framework with RoIAlign" fig-align="center"}
 
 {{< pagebreak >}}
 
@@ -164,7 +165,7 @@ YOLO (You Only Look Once) is a popular object detection algorithm that revolutio
 
 The architecture of YOLO consists of a backbone network, detection head, and output layers. The backbone network, typically based on Darknet or CSPDarknet, extracts features from the input image @bochkovskiy2020yolov4. These features are then processed by the detection head, which predicts bounding boxes, confidence scores, and class probabilities for detected objects. Earlier YOLO models utilizes anchor boxes @bochkovskiy2020yolov4 to improve localization accuracy and efficiency. Finally, the output layers produce the final detection and confidence scores.
 
-![YOLOv8 architecture @zhang2023dcf-yolov8](images/clipboard-3305870797.png){style="text-align:center;" fig-align="center"}
+![YOLOv8 architecture @zhang2023dcf-yolov8](images/architecture/yolov8-architecture.jpg){style="text-align:center;" fig-alt="Yolov8 architecture" fig-align="center"}
 
 ### Anchor-Free Approach
 

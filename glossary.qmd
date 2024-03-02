@@ -24,5 +24,6 @@ jupyter: python3
 | RoIAlign | Region of Interest Align                  |
 | R-CNN    | Region-based Convolutional Neural Network |
 | RPN      | Region Proposal Network                   |
+| SAM      | Segment Anything Model                    |
 | SVM      | Support Vector Machine                    |
 | YOLO     | You Only Look Once                        |
