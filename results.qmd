@@ -64,8 +64,6 @@ The last model used in our analysis was YOLOv8. This model also seemed to perfor
 
 ![YOLOv8 result 3](images/results/Image%2010.png){style="text-align: center;" fig-alt="YOLOv8 result 3" fig-align="center"}
 
-{{< pagebreak >}}
-{{< pagebreak >}}
-The last test was a real-time capture using a webcam using the original YOLOv8 Nano. The pre-trained model was able to detect and label correctly all the class objects in the room.
+{{< pagebreak >}} {{< pagebreak >}} The last test was a real-time capture using a webcam using the original YOLOv8 Nano. The pre-trained model was able to detect and label correctly all the class objects in the room.
 
 ![Real-Time Object Detection and Classification](images/results/webcam.png){style="text-align: center;" fig-alt="Real-Time Object Detection and Classification"}

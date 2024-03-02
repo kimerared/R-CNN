@@ -10,10 +10,10 @@ For your convenience, we have provided the following links accompanying the book
 
 -   [Online Report - GitHub repository](https://github.com/kimerared/R-CNN.git)
 
--   [Project code - Google Colab](https://colab.research.google.com/drive/1k9wyFE_wHk_ojreXbK_bkvf0ZZ1nM_AV#scrollTo=Gwa9XlpVCxhR)
+-   [Code Notebooks - GitHub repository](https://github.com/kimerared/RCNN-notebooks)
 
 ## Web Applications
 
--   [R-CNN - Webcam app](https://kimerared.github.io/RCNN-webcam/)
+-   [R-CNN - Webcam App](https://kimerared.github.io/RCNN-webcam/)
 
--   [R-CNN - YOLOv8 Models](https://huggingface.co/spaces/hectorgav/RCNN-YOLOv8)
+-   [R-CNN - YOLOv8 App](https://huggingface.co/spaces/hectorgav/RCNN-YOLOv8)

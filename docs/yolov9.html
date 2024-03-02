@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computer Vision: Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8 - Appendix A — YOLOv9</title>
+<title>Computer Vision: Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8 - Appendix A — YOLOv9</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,10 +111,10 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Computer Vision: Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8</a> 
+      <a href="./">Computer Vision: Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/kimerared/R-CNN.git" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Computer-Vision--Object-Detection-using-Faster-R-CNN,-Mask-R-CNN,-and-YOLOv8.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="./Computer-Vision--Exploring-Object-Detection-and-Segmentation-using-Faster-R-CNN,-Mask-R-CNN,-and-YOLOv8.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -181,8 +181,14 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./videos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Video</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -261,7 +267,7 @@ div.csl-indent {
 
 </header>
 
-<p>YOLOv9, the latest iteration in the YOLO (You Only Look Once) series of object detection models, published in February 2024, represents a significant advancement in the field of computer vision. Building upon the strengths of predecessors models, Wang and colleagues in the paper titled “<strong>YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information”</strong> introduce novel methodologies and enhancements aimed at improving detection accuracy, speed, and efficiency. With a focus on addressing data loss through an information bottleneck, incorporating programmable gradient information for reliable weight updates, and integrating Generalized ELAN (GELAN) <span class="citation" data-cites="wang2024yolov9"><a href="references.html#ref-wang2024yolov9" role="doc-biblioref">[1]</a></span> for enhanced feature extraction. YOLOv9 stands at the forefront of cutting-edge object detection technology. This introduction sets the stage for exploring the innovations that define YOLOv9 as a state-of-the-art solution for object detection tasks.</p>
+<p>YOLOv9, the latest iteration in the YOLO (You Only Look Once) series of object detection models, published in February 2024, represents a significant advancement in the field of computer vision. Building upon the strengths of predecessors models, Wang and colleagues in the paper titled “<em>YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information</em>” introduce novel methodologies and enhancements aimed at improving detection accuracy, speed, and efficiency. With a focus on addressing data loss through an information bottleneck, incorporating programmable gradient information for reliable weight updates, and integrating Generalized ELAN (GELAN) <span class="citation" data-cites="wang2024yolov9"><a href="references.html#ref-wang2024yolov9" role="doc-biblioref">[1]</a></span> for enhanced feature extraction. YOLOv9 stands at the forefront of cutting-edge object detection technology. This introduction sets the stage for exploring the innovations that define YOLOv9 as a state-of-the-art solution for object detection tasks.</p>
 <div class="no-row-height column-margin column-container"></div><section id="information-bottleneck" class="level2 page-columns page-full" data-number="A.1">
 <h2 data-number="A.1" class="anchored" data-anchor-id="information-bottleneck"><span class="header-section-number">A.1</span> Information Bottleneck</h2>
 <section id="addresses-data-loss" class="level3 page-columns page-full" data-number="A.1.1">
@@ -285,6 +291,7 @@ X^{l+1} = X^l + f_{\theta}^{l+1} (X^l)
 <section id="programmable-gradient-information-pgi" class="level2" data-number="A.2">
 <h2 data-number="A.2" class="anchored" data-anchor-id="programmable-gradient-information-pgi"><span class="header-section-number">A.2</span> Programmable Gradient Information (PGI)</h2>
 <p>Reliable Gradient Information: PGI is introduced to ensure reliable gradient information is available for updating network weights. By providing complete input information for target tasks, PGI facilitates accurate gradient calculations essential for weight updates. Update Network Weights: The availability of reliable gradient information through PGI enables effective updating of network weights, enhancing the learning process and model performance. Auxiliary</p>
+<div style="page-break-after: always;"></div>
 </section>
 <section id="reversible-branch" class="level2" data-number="A.3">
 <h2 data-number="A.3" class="anchored" data-anchor-id="reversible-branch"><span class="header-section-number">A.3</span> Reversible Branch</h2>
@@ -295,6 +302,7 @@ X^{l+1} = X^l + f_{\theta}^{l+1} (X^l)
 <figcaption class="figure-caption">Multi-Level Auxiliary Information</figcaption>
 </figure>
 </div>
+<p></p><div style="page-break-after: always;"></div> <div style="page-break-after: always;"></div><p></p>
 </section>
 <section id="generalized-elan-gelan" class="level2 page-columns page-full" data-number="A.4">
 <h2 data-number="A.4" class="anchored" data-anchor-id="generalized-elan-gelan"><span class="header-section-number">A.4</span> Generalized ELAN (GELAN)</h2>

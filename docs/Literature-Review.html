@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computer Vision: Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8 - 2&nbsp; Literature Review</title>
+<title>Computer Vision: Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8 - 2&nbsp; Literature Review</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,10 +111,10 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Computer Vision: Object Detection using Faster R-CNN, Mask R-CNN, and YOLOv8</a> 
+      <a href="./">Computer Vision: Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/kimerared/R-CNN.git" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Computer-Vision--Object-Detection-using-Faster-R-CNN,-Mask-R-CNN,-and-YOLOv8.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="./Computer-Vision--Exploring-Object-Detection-and-Segmentation-using-Faster-R-CNN,-Mask-R-CNN,-and-YOLOv8.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -181,8 +181,14 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./videos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Video</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conclusion</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -338,8 +344,7 @@ div.csl-indent {
 <figcaption class="figure-caption">Flowchart of R-CNN</figcaption>
 </figure>
 </div>
-<div style="page-break-after: always;"></div>
-<div style="page-break-after: always;"></div>
+<p></p><div style="page-break-after: always;"></div> <div style="page-break-after: always;"></div><p></p>
 </section>
 </section>
 <section id="fast-r-cnn" class="level2 page-columns page-full" data-number="2.2">
@@ -350,22 +355,25 @@ div.csl-indent {
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="architecture"><span class="header-section-number">2.2.1</span> Architecture</h3>
 <p>Expanding upon its architecture, Fast R-CNN incorporates several key components to achieve its performance gains. Fast R-CNN addresses the speed and efficiency limitations of R-CNN by proposing a unified architecture that integrates region proposal generation, feature extraction, and object classification into a single network.</p>
 <p>Firstly, it utilizes a Region Proposal Network (RPN) to generate region proposals directly from the convolutional feature maps, eliminating the need for external proposal methods like selective search. The RPN functions by sliding a small grid (essentially a compact CNN) across the evolving feature map to predict the spatial dimensions (bounding boxes) and associated probability scores for objects within each sliding window. This streamlines the detection process and enhances efficiency. Furthermore, Fast R-CNN introduces the Region of Interest (RoI) pooling layer <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[3]</a></span>, allowing feature extraction from region proposals of varying sizes without the need for expensive resizing operations. This enables precise alignment of features with the corresponding regions of interest, leading to improved localization accuracy. Moreover, Fast R-CNN adopts a unified network architecture, enabling end-to-end training of both the region proposal and object detection tasks. This approach ensures better optimization, and facilitates seamless integration of different components, contributing to the overall efficiency and effectiveness of the model.</p>
-<div class="no-row-height column-margin column-container"></div></section>
-<section id="roi-pooling-layer" class="level3 page-columns page-full" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="roi-pooling-layer"><span class="header-section-number">2.2.2</span> RoI Pooling Layer</h3>
-<p>The RoI pooling layer employs max pooling to transform features within any valid region of interest into a compact feature map with a fixed spatial extent of H × W (e.g., 7 × 7) <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[3]</a></span>, where H and W are layer hyper-parameters independent of any specific RoI. A more efficient training strategy leverages feature sharing throughout the process. During Fast R-CNN training, stochastic gradient descent (SGD) minibatches are hierarchically sampled: N images are initially sampled, followed by R/N RoIs from each image. Notably, both during forward and backward passes, ROIs from the same image share computation and memory. Fixed-size feature maps yielded from RoI pooling are input to fully connected layers for object classification and bounding-box regression. Feature classification aims to detect features and assign class probabilities for each proposed location, while bounding box regression seeks to enhance the localization accuracy of detected features. Fast R-CNN introduces multitasking loss functions that amalgamate classification and bounding box regression losses. This enables joint training of both tasks, ensuring the network learns to predict object location and precise bounding boxes concurrently.</p>
-<div class="no-row-height column-margin column-container"><div id="ref-girshick2015fastrcnn" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[3] </div><div class="csl-right-inline">R. Girshick, <span>“Fast r-CNN,”</span> in <em>2015 IEEE international conference on computer vision (ICCV)</em>, 2015, pp. 1440–1448. doi: <a href="https://doi.org/10.1109/ICCV.2015.169">10.1109/ICCV.2015.169</a></div>
-</div></div><div class="quarto-figure quarto-figure-center" style="text-align: center;">
+<div class="no-row-height column-margin column-container"></div><div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
 <p><img src="images/flowcharts/fast-RCNN-flowcharts.jpg" class="img-fluid figure-img" alt="Fast R-CNN Flowchart"></p>
 <figcaption class="figure-caption">Flowchart of Fast R-CNN</figcaption>
 </figure>
 </div>
+<p></p><div style="page-break-after: always;"></div> <div style="page-break-after: always;"></div><p></p>
+</section>
+<section id="roi-pooling-layer" class="level3 page-columns page-full" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="roi-pooling-layer"><span class="header-section-number">2.2.2</span> RoI Pooling Layer</h3>
+<p>The RoI pooling layer employs max pooling to transform features within any valid region of interest into a compact feature map with a fixed spatial extent of H × W (e.g., 7 × 7) <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[3]</a></span>, where H and W are layer hyper-parameters independent of any specific RoI.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-girshick2015fastrcnn" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[3] </div><div class="csl-right-inline">R. Girshick, <span>“Fast r-CNN,”</span> in <em>2015 IEEE international conference on computer vision (ICCV)</em>, 2015, pp. 1440–1448. doi: <a href="https://doi.org/10.1109/ICCV.2015.169">10.1109/ICCV.2015.169</a></div>
+</div></div><p>A more efficient training strategy leverages feature sharing throughout the process. During Fast R-CNN training, stochastic gradient descent (SGD) minibatches are hierarchically sampled: N images are initially sampled, followed by R/N RoIs from each image. Notably, both during forward and backward passes, ROIs from the same image share computation and memory. Fixed-size feature maps yielded from RoI pooling are input to fully connected layers for object classification and bounding-box regression. Feature classification aims to detect features and assign class probabilities for each proposed location, while bounding box regression seeks to enhance the localization accuracy of detected features. Fast R-CNN introduces multitasking loss functions that amalgamate classification and bounding box regression losses. This enables joint training of both tasks, ensuring the network learns to predict object location and precise bounding boxes concurrently.</p>
 </section>
 <section id="advantages-of-fast-r-cnn" class="level3" data-number="2.2.3">
 <h3 data-number="2.2.3" class="anchored" data-anchor-id="advantages-of-fast-r-cnn"><span class="header-section-number">2.2.3</span> Advantages of Fast R-CNN</h3>
 <p>In contrast to R-CNN, which comprises multiple independent steps (such as region proposal generation, feature extraction, classification, and bounding box regression), Fast R-CNN integrates these processes within a unified network architecture. This enables end-to-end training of the entire pipeline, leading to improved optimization and potentially higher accuracy. Fast R-CNN achieves variable sharing across all spatial dimensions of an image. Unlike R-CNN, which extracts features independently for each image, Fast R-CNN performs feature extraction on the entire image only once. This shared computation across convolutional features significantly minimizes redundant calculations, expediting the inference process.</p>
+<div style="page-break-after: always;"></div>
 </section>
 </section>
 <section id="faster-r-cnn" class="level2 page-columns page-full" data-number="2.3">
@@ -375,7 +383,13 @@ div.csl-indent {
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="region-proposal-network-rpn"><span class="header-section-number">2.3.1</span> Region Proposal Network (RPN)</h3>
 <p>Faster R-CNN further improves the efficiency of object detection by introducing the Region Proposal Network (RPN), which generates region proposals directly from the convolutional feature maps. It eliminates the need for external region proposal methods like Selective Search, resulting in faster and more accurate proposal generation.</p>
 <p>The feature maps derived from the backbone network are input to a Region Proposal Network (RPN) <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[4]</a></span>. The RPN, a compact fully convolutional network, employs a sliding window approach (typically 3x3) over the feature maps to generate region proposals. The RPN yields a collection of bounding box proposals accompanied by objectness scores, indicating the probability of containing an object. These proposals are generated by leveraging predefined anchor boxes of varying scales and aspect ratios.</p>
-<div class="no-row-height column-margin column-container"></div></section>
+<div class="no-row-height column-margin column-container"></div><div class="quarto-figure quarto-figure-center page-columns page-full" style="text-align:center;">
+<figure class="figure page-columns page-full">
+<p><img src="images/architecture/RPN-diagram.png" class="img-fluid figure-img" alt="RPN diagram" width="295"></p>
+<figcaption class="figure-caption">Faster R-CNN different stages <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[4]</a></span></figcaption>
+<div class="no-row-height column-margin column-container"></div></figure>
+</div>
+</section>
 <section id="anchor-boxes" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="anchor-boxes"><span class="header-section-number">2.3.2</span> Anchor Boxes</h3>
 <p>The RPN generates region proposals by predicting offsets and scales for a predefined set of anchor boxes at each spatial position in the feature maps. These anchor boxes, varying in size and aspect ratio, serve as reference boxes for the proposal generation process.</p>
@@ -396,12 +410,6 @@ div.csl-indent {
 </div></div></figure>
 </div>
 <p>This innovative approach ensures rich semantic information at all levels without compromising speed or memory efficiency. The FPN architecture has demonstrated superior performance in region proposal networks (RPN) and detection networks, showcasing remarkable improvements in detecting small objects and enhancing robustness to scale variations.</p>
-<div class="quarto-figure quarto-figure-center page-columns page-full" style="text-align:center;">
-<figure class="figure page-columns page-full">
-<p><img src="images/architecture/RPN-diagram.png" class="img-fluid figure-img" alt="RPN diagram"></p>
-<figcaption class="figure-caption">Faster R-CNN different stages <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[4]</a></span></figcaption>
-<div class="no-row-height column-margin column-container"></div></figure>
-</div>
 </section>
 <section id="classifier-and-bounding-box-regressor" class="level3" data-number="2.3.5">
 <h3 data-number="2.3.5" class="anchored" data-anchor-id="classifier-and-bounding-box-regressor"><span class="header-section-number">2.3.5</span> Classifier and Bounding Box Regressor</h3>
@@ -476,7 +484,6 @@ L = L_{cls} + L_{box} + L_{mask}
 <div class="csl-left-margin">[7] </div><div class="csl-right-inline">K. He, G. Gkioxari, P. Dollár, and R. Girshick, <span>“Mask r-CNN,”</span> <em>IEEE Transactions on Pattern Analysis and Machine Intelligence</em>, vol. 42, no. 2, pp. 386–397, Feb. 2020, doi: <a href="https://doi.org/10.1109/TPAMI.2018.2844175">10.1109/TPAMI.2018.2844175</a></div>
 </div></div></figure>
 </div>
-<div style="page-break-after: always;"></div>
 </section>
 <section id="advantages-over-faster-r-cnn" class="level3" data-number="2.4.5">
 <h3 data-number="2.4.5" class="anchored" data-anchor-id="advantages-over-faster-r-cnn"><span class="header-section-number">2.4.5</span> Advantages over Faster R-CNN</h3>
@@ -487,6 +494,7 @@ L = L_{cls} + L_{box} + L_{mask}
 <li>Despite increased complexity, maintains comparable speed and efficiency, particularly in scenarios necessitating instance-level segmentation.</li>
 </ul>
 <p>Overall, Mask R-CNN represents a substantial advancement over previous methods by integrating object detection and instance segmentation into a unified architecture, rendering it a versatile solution for diverse computer vision applications.</p>
+<div style="page-break-after: always;"></div>
 </section>
 </section>
 <section id="yolo-you-only-look-once" class="level2 page-columns page-full" data-number="2.5">

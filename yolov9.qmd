@@ -4,7 +4,7 @@ jupyter: python3
 
 # YOLOv9
 
-YOLOv9, the latest iteration in the YOLO (You Only Look Once) series of object detection models, published in February 2024, represents a significant advancement in the field of computer vision. Building upon the strengths of predecessors models, Wang and colleagues in the paper titled "**YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information"** introduce novel methodologies and enhancements aimed at improving detection accuracy, speed, and efficiency. With a focus on addressing data loss through an information bottleneck, incorporating programmable gradient information for reliable weight updates, and integrating Generalized ELAN (GELAN) @wang2024yolov9 for enhanced feature extraction. YOLOv9 stands at the forefront of cutting-edge object detection technology. This introduction sets the stage for exploring the innovations that define YOLOv9 as a state-of-the-art solution for object detection tasks.
+YOLOv9, the latest iteration in the YOLO (You Only Look Once) series of object detection models, published in February 2024, represents a significant advancement in the field of computer vision. Building upon the strengths of predecessors models, Wang and colleagues in the paper titled "*YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information*" introduce novel methodologies and enhancements aimed at improving detection accuracy, speed, and efficiency. With a focus on addressing data loss through an information bottleneck, incorporating programmable gradient information for reliable weight updates, and integrating Generalized ELAN (GELAN) @wang2024yolov9 for enhanced feature extraction. YOLOv9 stands at the forefront of cutting-edge object detection technology. This introduction sets the stage for exploring the innovations that define YOLOv9 as a state-of-the-art solution for object detection tasks.
 
 ## Information Bottleneck
 
@@ -34,11 +34,15 @@ $$
 
 Reliable Gradient Information: PGI is introduced to ensure reliable gradient information is available for updating network weights. By providing complete input information for target tasks, PGI facilitates accurate gradient calculations essential for weight updates. Update Network Weights: The availability of reliable gradient information through PGI enables effective updating of network weights, enhancing the learning process and model performance. Auxiliary
 
+{{< pagebreak >}}
+
 ## Reversible Branch
 
 YOLOv9 incorporates an auxiliary reversible branch to further optimize gradient information flow and improve the overall training process.
 
 ![Multi-Level Auxiliary Information](images/architecture/yolov9-auxiliary-branch.png){style="text-align: center;" fig-alt="Multi-Level Auxiliary Information"}
+
+{{< pagebreak >}} {{< pagebreak >}}
 
 ## Generalized ELAN (GELAN)
 

@@ -44,4 +44,3 @@
 
 -   Contributed to the training and implementation of the SAM (Segment Anything model).
 
-### 

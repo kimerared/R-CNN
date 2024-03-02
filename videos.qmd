@@ -1,0 +1,9 @@
+---
+title: "Video"
+jupyter: python3
+---
+
+The video showcases object detection and segmentation utilizing Mask R-CNN and pre-trained YOLOv8 models. Military tanks are categorized as either trucks or cars due to the absence of a specific tank label in the COCO dataset. This initial discrepancy served as the primary motivation to train a model with custom object classes.
+
+{{< video https://youtu.be/-0Tg7233hDE >}}
+
