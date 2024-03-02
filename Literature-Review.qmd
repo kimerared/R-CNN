@@ -166,7 +166,7 @@ YOLO (You Only Look Once) is a popular object detection algorithm that revolutio
 
 The architecture of YOLO consists of a backbone network, detection head, and output layers. The backbone network, typically based on Darknet or CSPDarknet, extracts features from the input image @bochkovskiy2020yolov4. These features are then processed by the detection head, which predicts bounding boxes, confidence scores, and class probabilities for detected objects. Earlier YOLO models utilizes anchor boxes @bochkovskiy2020yolov4 to improve localization accuracy and efficiency. Finally, the output layers produce the final detection and confidence scores.
 
-![YOLOv8 architecture](images/clipboard-3305870797.png){style="text-align:center;"}
+![YOLOv8 architecture @zhang2023dcf-yolov8](images/clipboard-3305870797.png){style="text-align:center;" fig-align="center"}
 
 ### Anchor-Free Approach
 
@@ -190,4 +190,4 @@ Both Mask R-CNN and YOLOv8 are instance segmentation models; however, Mask R-CNN
 
 The main difference between YOLOv8 and Mask R-CNN is the region proposal network. YOLOv8 is an anchor free model so it does not need a region proposal network. Another difference between the two models is that Mask R-CNN is a two stage model and YOLOv8 is a one stage model. The first stage of Mask R-CNN is the application of the region proposal network and the second stage executes “bounding box regression, classification, and mask prediction” @ameli2024.
 
-On the other hand, YOLOv8 has one stage that consists of “directly \[predicting\] bounding boxes and class labels for objects in an image” @ameli2024. YOLOv8 and Mask R-CNN also differ in their loss functions. YOLOv8 uses complete intersection over union loss, distribution focal loss, and binary cross entropy. Mask R-CNN uses classification loss, regression loss, and mask loss. In addition YOLOv8 is best used for real time object detection with low latency @ameli2024. 
+On the other hand, YOLOv8 has one stage that consists of “directly predicting bounding boxes and class labels for objects in an image” @ameli2024. YOLOv8 and Mask R-CNN also differ in their loss functions. YOLOv8 uses complete intersection over union loss, distribution focal loss, and binary cross entropy. Mask R-CNN uses classification loss, regression loss, and mask loss. In addition YOLOv8 is best used for real time object detection with low latency @ameli2024. 
