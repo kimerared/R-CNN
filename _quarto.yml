@@ -31,7 +31,6 @@ book:
     - yolov9.qmd
     - contributions.qmd
     - resources.qmd
-    - slides.qmd
 
 bibliography: references.bib
 csl: https://www.zotero.org/styles/ieee-with-url

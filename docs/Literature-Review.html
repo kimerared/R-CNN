@@ -218,12 +218,6 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Resources</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Slides</span></span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -257,10 +251,11 @@ div.csl-indent {
   <li><a href="#region-proposal-network-rpn" id="toc-region-proposal-network-rpn" class="nav-link" data-scroll-target="#region-proposal-network-rpn"><span class="header-section-number">2.3.1</span> Region Proposal Network (RPN)</a></li>
   <li><a href="#anchor-boxes" id="toc-anchor-boxes" class="nav-link" data-scroll-target="#anchor-boxes"><span class="header-section-number">2.3.2</span> Anchor Boxes</a></li>
   <li><a href="#region-of-interest-roi" id="toc-region-of-interest-roi" class="nav-link" data-scroll-target="#region-of-interest-roi"><span class="header-section-number">2.3.3</span> Region of Interest (RoI)</a></li>
-  <li><a href="#classifier-and-bounding-box-regressor" id="toc-classifier-and-bounding-box-regressor" class="nav-link" data-scroll-target="#classifier-and-bounding-box-regressor"><span class="header-section-number">2.3.4</span> Classifier and Bounding Box Regressor</a></li>
-  <li><a href="#non-maximum-suppression-nms" id="toc-non-maximum-suppression-nms" class="nav-link" data-scroll-target="#non-maximum-suppression-nms"><span class="header-section-number">2.3.5</span> Non-Maximum Suppression (NMS)</a></li>
-  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output"><span class="header-section-number">2.3.6</span> Output</a></li>
-  <li><a href="#advantages-of-faster-r-cnn" id="toc-advantages-of-faster-r-cnn" class="nav-link" data-scroll-target="#advantages-of-faster-r-cnn"><span class="header-section-number">2.3.7</span> Advantages of Faster R-CNN</a></li>
+  <li><a href="#feature-pyramid-network-fpn" id="toc-feature-pyramid-network-fpn" class="nav-link" data-scroll-target="#feature-pyramid-network-fpn"><span class="header-section-number">2.3.4</span> Feature Pyramid Network (FPN)</a></li>
+  <li><a href="#classifier-and-bounding-box-regressor" id="toc-classifier-and-bounding-box-regressor" class="nav-link" data-scroll-target="#classifier-and-bounding-box-regressor"><span class="header-section-number">2.3.5</span> Classifier and Bounding Box Regressor</a></li>
+  <li><a href="#non-maximum-suppression-nms" id="toc-non-maximum-suppression-nms" class="nav-link" data-scroll-target="#non-maximum-suppression-nms"><span class="header-section-number">2.3.6</span> Non-Maximum Suppression (NMS)</a></li>
+  <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output"><span class="header-section-number">2.3.7</span> Output</a></li>
+  <li><a href="#advantages-of-faster-r-cnn" id="toc-advantages-of-faster-r-cnn" class="nav-link" data-scroll-target="#advantages-of-faster-r-cnn"><span class="header-section-number">2.3.8</span> Advantages of Faster R-CNN</a></li>
   </ul></li>
   <li><a href="#mask-r-cnn" id="toc-mask-r-cnn" class="nav-link" data-scroll-target="#mask-r-cnn"><span class="header-section-number">2.4</span> Mask R-CNN</a>
   <ul class="collapse">
@@ -389,20 +384,39 @@ div.csl-indent {
 <h3 data-number="2.3.3" class="anchored" data-anchor-id="region-of-interest-roi"><span class="header-section-number">2.3.3</span> Region of Interest (RoI)</h3>
 <p>Region of Interest (RoI) refers to a specific area or region within an image that is selected for further analysis or processing. In the context of object detection and image segmentation tasks, RoIs typically represent regions where objects of interest are located.</p>
 </section>
-<section id="classifier-and-bounding-box-regressor" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4" class="anchored" data-anchor-id="classifier-and-bounding-box-regressor"><span class="header-section-number">2.3.4</span> Classifier and Bounding Box Regressor</h3>
+<section id="feature-pyramid-network-fpn" class="level3 page-columns page-full" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="feature-pyramid-network-fpn"><span class="header-section-number">2.3.4</span> Feature Pyramid Network (FPN)</h3>
+<p>Feature Pyramid Network (FPN) stands as a pivotal advancement in object detection methodologies, offering a robust solution for handling objects of varying scales and complexities. FPN, introduced by Facebook AI Research (FAIR), Cornell University, and Cornell Tech, integrates a pyramidal feature hierarchy that combines low-resolution, semantically strong features with high-resolution, semantically weak features through top-down pathways and lateral connections.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full" style="text-align: center;">
+<figure class="figure page-columns page-full">
+<p><img src="images/clipboard-3141593540.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Feature Pyramid Network (FPN) <span class="citation" data-cites="lin2016feature"><a href="references.html#ref-lin2016feature" role="doc-biblioref">[5]</a></span></figcaption>
+<div class="no-row-height column-margin column-container"><div id="ref-lin2016feature" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[5] </div><div class="csl-right-inline">T.-Y. Lin, P. Dollár, R. B. Girshick, K. He, B. Hariharan, and S. J. Belongie, <span>“Feature pyramid networks for object detection,”</span> <em>2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</em>, pp. 936–944, 2016, Available: <a href="https://api.semanticscholar.org/CorpusID:10716717">https://api.semanticscholar.org/CorpusID:10716717</a></div>
+</div></div></figure>
+</div>
+<p>This innovative approach ensures rich semantic information at all levels without compromising speed or memory efficiency. The FPN architecture has demonstrated superior performance in region proposal networks (RPN) and detection networks, showcasing remarkable improvements in detecting small objects and enhancing robustness to scale variations.</p>
+<div class="quarto-figure quarto-figure-center page-columns page-full" style="text-align:center;">
+<figure class="figure page-columns page-full">
+<p><img src="images/clipboard-551064974.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Faster R-CNN different stages <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[4]</a></span></figcaption>
+<div class="no-row-height column-margin column-container"></div></figure>
+</div>
+</section>
+<section id="classifier-and-bounding-box-regressor" class="level3" data-number="2.3.5">
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="classifier-and-bounding-box-regressor"><span class="header-section-number">2.3.5</span> Classifier and Bounding Box Regressor</h3>
 <p>The RoI-pooled features are separately input into branches for classification and bounding box regression.</p>
 <ul>
 <li><strong>Classification:</strong> The features traverse a classifier (e.g., fully connected layers followed by softmax) to predict the probability of each region proposal belonging to different object classes. Bounding Box Regression: Another set of fully connected layers predicts refined bounding box coordinates for each region proposal.</li>
 <li><strong>Loss Function:</strong> The network undergoes end-to-end training using a multi-task loss function, which combines losses from the RPN (objectness score prediction and bounding box regression) with those from the classification and bounding box regression branches.</li>
 </ul>
 </section>
-<section id="non-maximum-suppression-nms" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5" class="anchored" data-anchor-id="non-maximum-suppression-nms"><span class="header-section-number">2.3.5</span> Non-Maximum Suppression (NMS)</h3>
+<section id="non-maximum-suppression-nms" class="level3" data-number="2.3.6">
+<h3 data-number="2.3.6" class="anchored" data-anchor-id="non-maximum-suppression-nms"><span class="header-section-number">2.3.6</span> Non-Maximum Suppression (NMS)</h3>
 <p>Following prediction, non-maximum suppression is employed to discard redundant and overlapping detections based on their confidence scores and bounding box coordinates.</p>
 </section>
-<section id="output" class="level3" data-number="2.3.6">
-<h3 data-number="2.3.6" class="anchored" data-anchor-id="output"><span class="header-section-number">2.3.6</span> Output</h3>
+<section id="output" class="level3" data-number="2.3.7">
+<h3 data-number="2.3.7" class="anchored" data-anchor-id="output"><span class="header-section-number">2.3.7</span> Output</h3>
 <p>The final output comprises a collection of object detections alongside their bounding boxes and corresponding class labels.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
@@ -411,8 +425,8 @@ div.csl-indent {
 </figure>
 </div>
 </section>
-<section id="advantages-of-faster-r-cnn" class="level3 page-columns page-full" data-number="2.3.7">
-<h3 data-number="2.3.7" class="anchored" data-anchor-id="advantages-of-faster-r-cnn"><span class="header-section-number">2.3.7</span> Advantages of Faster R-CNN</h3>
+<section id="advantages-of-faster-r-cnn" class="level3 page-columns page-full" data-number="2.3.8">
+<h3 data-number="2.3.8" class="anchored" data-anchor-id="advantages-of-faster-r-cnn"><span class="header-section-number">2.3.8</span> Advantages of Faster R-CNN</h3>
 <ul>
 <li><strong>Efficient Region Proposal Generation:</strong> The Region Proposal Network (RPN) significantly reduces the computational load of region proposal methods, enabling nearly cost-free region proposals by sharing convolutional features.</li>
 <li><strong>End-to-End Training:</strong> RPN and Fast R-CNN can be jointly trained to share convolutional features, leading to a unified network architecture.</li>
@@ -436,9 +450,9 @@ div.csl-indent {
 </section>
 <section id="region-of-interest-align-roialign" class="level3 page-columns page-full" data-number="2.4.3">
 <h3 data-number="2.4.3" class="anchored" data-anchor-id="region-of-interest-align-roialign"><span class="header-section-number">2.4.3</span> Region of interest Align (RoIAlign)</h3>
-<p>For each region proposal generated by the RPN, features are extracted from the feature maps using RoIAlign. RoIAlign is a technique used in CNNs for object detection tasks. RoIAlign improves upon RoIPool, a previous method, by eliminating the quantization step in the pooling operation, resulting in more accurate feature extraction from regions of interest <span class="citation" data-cites="he2017maskrcnn"><a href="references.html#ref-he2017maskrcnn" role="doc-biblioref">[5]</a></span>. It precisely aligns features extracted from arbitrary-shaped regions with the spatial layout of the feature map, enabling more accurate object localization and segmentation.</p>
+<p>For each region proposal generated by the RPN, features are extracted from the feature maps using RoIAlign. RoIAlign is a technique used in CNNs for object detection tasks. RoIAlign improves upon RoIPool, a previous method, by eliminating the quantization step in the pooling operation, resulting in more accurate feature extraction from regions of interest <span class="citation" data-cites="he2017maskrcnn"><a href="references.html#ref-he2017maskrcnn" role="doc-biblioref">[6]</a></span>. It precisely aligns features extracted from arbitrary-shaped regions with the spatial layout of the feature map, enabling more accurate object localization and segmentation.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-he2017maskrcnn" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[5] </div><div class="csl-right-inline">K. He, G. Gkioxari, P. Dollár, and R. Girshick, <span>“Mask r-CNN,”</span> in <em>Proceedings of the IEEE international conference on computer vision (ICCV)</em>, 2017, pp. 2961–2969. doi: <a href="https://doi.org/10.1109/ICCV.2017.322">10.1109/ICCV.2017.322</a></div>
+<div class="csl-left-margin">[6] </div><div class="csl-right-inline">K. He, G. Gkioxari, P. Dollár, and R. Girshick, <span>“Mask r-CNN,”</span> in <em>Proceedings of the IEEE international conference on computer vision (ICCV)</em>, 2017, pp. 2961–2969. doi: <a href="https://doi.org/10.1109/ICCV.2017.322">10.1109/ICCV.2017.322</a></div>
 </div></div><p>The RoIAlign layer extracts features from each region proposal, preserving spatial information better than previous pooling methods, ensuring accurate alignment of features with the region of interest.</p>
 </section>
 <section id="parallel-branches" class="level3" data-number="2.4.4">
@@ -475,18 +489,24 @@ L = L_{cls} + L_{box} + L_{mask}
 </section>
 <section id="yolo-you-only-look-once" class="level2 page-columns page-full" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="yolo-you-only-look-once"><span class="header-section-number">2.5</span> YOLO (You Only Look Once)</h2>
-<p>YOLO (You Only Look Once) is a popular object detection algorithm that revolutionized the field of computer vision due to its speed and accuracy <span class="citation" data-cites="redmon2018yolov3"><a href="references.html#ref-redmon2018yolov3" role="doc-biblioref">[6]</a></span>. YOLO processes images in a single pass through a neural network, enabling real-time object detection. YOLOv8 is one of the iterations of the YOLO algorithm, incorporating various improvements over its predecessors to enhance performance and efficiency.</p>
+<p>YOLO (You Only Look Once) is a popular object detection algorithm that revolutionized the field of computer vision due to its speed and accuracy <span class="citation" data-cites="redmon2018yolov3"><a href="references.html#ref-redmon2018yolov3" role="doc-biblioref">[7]</a></span>. YOLO processes images in a single pass through a neural network, enabling real-time object detection. YOLOv8 is one of the iterations of the YOLO algorithm, incorporating various improvements over its predecessors to enhance performance and efficiency.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-redmon2018yolov3" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[6] </div><div class="csl-right-inline">J. Redmon and A. Farhadi, <span>“Yolov3: An incremental improvement,”</span> <em>arXiv preprint arXiv:1804.02767</em>, 2018.</div>
+<div class="csl-left-margin">[7] </div><div class="csl-right-inline">J. Redmon and A. Farhadi, <span>“Yolov3: An incremental improvement,”</span> <em>arXiv preprint arXiv:1804.02767</em>, 2018.</div>
 </div></div><section id="architecture-1" class="level3 page-columns page-full" data-number="2.5.1">
 <h3 data-number="2.5.1" class="anchored" data-anchor-id="architecture-1"><span class="header-section-number">2.5.1</span> Architecture</h3>
-<p>The architecture of YOLO consists of a backbone network, detection head, and output layers. The backbone network, typically based on Darknet or CSPDarknet, extracts features from the input image <span class="citation" data-cites="bochkovskiy2020yolov4"><a href="references.html#ref-bochkovskiy2020yolov4" role="doc-biblioref">[7]</a></span>. These features are then processed by the detection head, which predicts bounding boxes, confidence scores, and class probabilities for detected objects. Earlier YOLO models utilizes anchor boxes <span class="citation" data-cites="bochkovskiy2020yolov4"><a href="references.html#ref-bochkovskiy2020yolov4" role="doc-biblioref">[7]</a></span> to improve localization accuracy and efficiency. Finally, the output layers produce the final detection and confidence scores.</p>
+<p>The architecture of YOLO consists of a backbone network, detection head, and output layers. The backbone network, typically based on Darknet or CSPDarknet, extracts features from the input image <span class="citation" data-cites="bochkovskiy2020yolov4"><a href="references.html#ref-bochkovskiy2020yolov4" role="doc-biblioref">[8]</a></span>. These features are then processed by the detection head, which predicts bounding boxes, confidence scores, and class probabilities for detected objects. Earlier YOLO models utilizes anchor boxes <span class="citation" data-cites="bochkovskiy2020yolov4"><a href="references.html#ref-bochkovskiy2020yolov4" role="doc-biblioref">[8]</a></span> to improve localization accuracy and efficiency. Finally, the output layers produce the final detection and confidence scores.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-bochkovskiy2020yolov4" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[7] </div><div class="csl-right-inline">A. Bochkovskiy <em>et al.</em>, <span>“YOLOv4: Optimal speed and accuracy of object detection,”</span> <em>arXiv preprint arXiv:2004.10934</em>, 2020.</div>
-</div></div></section>
+<div class="csl-left-margin">[8] </div><div class="csl-right-inline">A. Bochkovskiy <em>et al.</em>, <span>“YOLOv4: Optimal speed and accuracy of object detection,”</span> <em>arXiv preprint arXiv:2004.10934</em>, 2020.</div>
+</div></div><div class="quarto-figure quarto-figure-center" style="text-align:center;">
+<figure class="figure">
+<p><img src="images/clipboard-3305870797.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">YOLOv8 architecture</figcaption>
+</figure>
+</div>
+</section>
 <section id="anchor-free-approach" class="level3 page-columns page-full" data-number="2.5.2">
 <h3 data-number="2.5.2" class="anchored" data-anchor-id="anchor-free-approach"><span class="header-section-number">2.5.2</span> Anchor-Free Approach</h3>
-<p>YOLOv8 employs an anchor-free approach <span class="citation" data-cites="yolov8_ultralytics"><a href="references.html#ref-yolov8_ultralytics" role="doc-biblioref">[8]</a></span>, eliminating the need for predefined anchor boxes. This simplifies the training process and improves model flexibility.</p>
+<p>YOLOv8 employs an anchor-free approach <span class="citation" data-cites="yolov8_ultralytics"><a href="references.html#ref-yolov8_ultralytics" role="doc-biblioref">[9]</a></span>, eliminating the need for predefined anchor boxes. This simplifies the training process and improves model flexibility.</p>
 <div class="no-row-height column-margin column-container"></div></section>
 <section id="efficient-backbone" class="level3" data-number="2.5.3">
 <h3 data-number="2.5.3" class="anchored" data-anchor-id="efficient-backbone"><span class="header-section-number">2.5.3</span> Efficient Backbone</h3>
@@ -494,23 +514,23 @@ L = L_{cls} + L_{box} + L_{mask}
 </section>
 <section id="improved-object-detection" class="level3 page-columns page-full" data-number="2.5.4">
 <h3 data-number="2.5.4" class="anchored" data-anchor-id="improved-object-detection"><span class="header-section-number">2.5.4</span> Improved Object Detection</h3>
-<p>YOLO incorporates advanced techniques such as focal loss, which helps to address class imbalance and improve object detection accuracy <span class="citation" data-cites="tian2019fcos"><a href="references.html#ref-tian2019fcos" role="doc-biblioref">[9]</a></span>.</p>
+<p>YOLO incorporates advanced techniques such as focal loss, which helps to address class imbalance and improve object detection accuracy <span class="citation" data-cites="tian2019fcos"><a href="references.html#ref-tian2019fcos" role="doc-biblioref">[10]</a></span>.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-tian2019fcos" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[9] </div><div class="csl-right-inline">Z. Tian, C. Shen, H. Chen, and T. He, <span>“FCOS: Fully convolutional one-stage object detection,”</span> <em>Proceedings of the IEEE/CVF International Conference on Computer Vision</em>, pp. 9627–9636, 2019.</div>
+<div class="csl-left-margin">[10] </div><div class="csl-right-inline">Z. Tian, C. Shen, H. Chen, and T. He, <span>“FCOS: Fully convolutional one-stage object detection,”</span> <em>Proceedings of the IEEE/CVF International Conference on Computer Vision</em>, pp. 9627–9636, 2019.</div>
 </div></div></section>
 <section id="real-time-performance" class="level3 page-columns page-full" data-number="2.5.5">
 <h3 data-number="2.5.5" class="anchored" data-anchor-id="real-time-performance"><span class="header-section-number">2.5.5</span> Real-Time Performance</h3>
-<p>YOLOv8 is optimized for real-time object detection applications <span class="citation" data-cites="yolov8_ultralytics"><a href="references.html#ref-yolov8_ultralytics" role="doc-biblioref">[8]</a></span>, offering fast inference speeds without compromising accuracy.</p>
+<p>YOLOv8 is optimized for real-time object detection applications <span class="citation" data-cites="yolov8_ultralytics"><a href="references.html#ref-yolov8_ultralytics" role="doc-biblioref">[9]</a></span>, offering fast inference speeds without compromising accuracy.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-yolov8_ultralytics" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[8] </div><div class="csl-right-inline">G. Jocher, A. Chaurasia, and J. Qiu, <span>“Ultralytics YOLOv8.”</span> 2023. Available: <a href="https://github.com/ultralytics/ultralytics">https://github.com/ultralytics/ultralytics</a></div>
+<div class="csl-left-margin">[9] </div><div class="csl-right-inline">G. Jocher, A. Chaurasia, and J. Qiu, <span>“Ultralytics YOLOv8.”</span> 2023. Available: <a href="https://github.com/ultralytics/ultralytics">https://github.com/ultralytics/ultralytics</a></div>
 </div></div></section>
 <section id="advantages-over-mask-r-cnn" class="level3 page-columns page-full" data-number="2.5.6">
 <h3 data-number="2.5.6" class="anchored" data-anchor-id="advantages-over-mask-r-cnn"><span class="header-section-number">2.5.6</span> Advantages over Mask R-CNN</h3>
 <p>Both Mask R-CNN and YOLOv8 are instance segmentation models; however, Mask R-CNN is better suited for semantic segmentation while YOLOv8 is not initially designed for that purpose. Both models are pre-trained on the MS-COCO dataset. Mask R-CNN is an improved version of Faster R-CNN and uses ResNet-101 as its backbone and has the addition of the prediction of object masks. YOLOv8 uses CSPDarknet53 as its backbone, which has 53 convolutional layers.</p>
-<p>The main difference between YOLOv8 and Mask R-CNN is the region proposal network. YOLOv8 is an anchor free model so it does not need a region proposal network. Another difference between the two models is that Mask R-CNN is a two stage model and YOLOv8 is a one stage model. The first stage of Mask R-CNN is the application of the region proposal network and the second stage executes “bounding box regression, classification, and mask prediction” <span class="citation" data-cites="ameli2024"><a href="references.html#ref-ameli2024" role="doc-biblioref">[10]</a></span>.</p>
+<p>The main difference between YOLOv8 and Mask R-CNN is the region proposal network. YOLOv8 is an anchor free model so it does not need a region proposal network. Another difference between the two models is that Mask R-CNN is a two stage model and YOLOv8 is a one stage model. The first stage of Mask R-CNN is the application of the region proposal network and the second stage executes “bounding box regression, classification, and mask prediction” <span class="citation" data-cites="ameli2024"><a href="references.html#ref-ameli2024" role="doc-biblioref">[11]</a></span>.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-ameli2024" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[10] </div><div class="csl-right-inline">Z. Ameli, S. J. Nesheli, and E. N. Landis, <span>“Deep learning-based steel bridge corrosion segmentation and condition rating using mask RCNN and YOLOv8,”</span> <em>Infrastructures</em>, vol. 9, no. 1, 2024, doi: <a href="https://doi.org/10.3390/infrastructures9010003">10.3390/infrastructures9010003</a>. Available: <a href="https://www.mdpi.com/2412-3811/9/1/3">https://www.mdpi.com/2412-3811/9/1/3</a></div>
-</div></div><p>On the other hand, YOLOv8 has one stage that consists of “directly [predicting] bounding boxes and class labels for objects in an image” <span class="citation" data-cites="ameli2024"><a href="references.html#ref-ameli2024" role="doc-biblioref">[10]</a></span>. YOLOv8 and Mask R-CNN also differ in their loss functions. YOLOv8 uses complete intersection over union loss, distribution focal loss, and binary cross entropy. Mask R-CNN uses classification loss, regression loss, and mask loss. In addition YOLOv8 is best used for real time object detection with low latency <span class="citation" data-cites="ameli2024"><a href="references.html#ref-ameli2024" role="doc-biblioref">[10]</a></span>.&nbsp;</p>
+<div class="csl-left-margin">[11] </div><div class="csl-right-inline">Z. Ameli, S. J. Nesheli, and E. N. Landis, <span>“Deep learning-based steel bridge corrosion segmentation and condition rating using mask RCNN and YOLOv8,”</span> <em>Infrastructures</em>, vol. 9, no. 1, 2024, doi: <a href="https://doi.org/10.3390/infrastructures9010003">10.3390/infrastructures9010003</a>. Available: <a href="https://www.mdpi.com/2412-3811/9/1/3">https://www.mdpi.com/2412-3811/9/1/3</a></div>
+</div></div><p>On the other hand, YOLOv8 has one stage that consists of “directly [predicting] bounding boxes and class labels for objects in an image” <span class="citation" data-cites="ameli2024"><a href="references.html#ref-ameli2024" role="doc-biblioref">[11]</a></span>. YOLOv8 and Mask R-CNN also differ in their loss functions. YOLOv8 uses complete intersection over union loss, distribution focal loss, and binary cross entropy. Mask R-CNN uses classification loss, regression loss, and mask loss. In addition YOLOv8 is best used for real time object detection with low latency <span class="citation" data-cites="ameli2024"><a href="references.html#ref-ameli2024" role="doc-biblioref">[11]</a></span>.&nbsp;</p>
 
 
 
