@@ -14,6 +14,6 @@ For your convenience, we have provided the following links accompanying the book
 
 ## Web Applications
 
--   [RCNN - Webcam app](https://kimerared.github.io/RCNN-webcam/)
+-   [R-CNN - Webcam app](https://kimerared.github.io/RCNN-webcam/)
 
--   [RCNN - YOLOv8 Models](https://huggingface.co/spaces/hectorgav/RCNN-YOLOv8)
+-   [R-CNN - YOLOv8 Models](https://huggingface.co/spaces/hectorgav/RCNN-YOLOv8)

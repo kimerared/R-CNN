@@ -1,19 +1,45 @@
 # Contributions
 
+### Hector Gavilanes, Project Lead
 
-### Hector Gavilanes -- Project Lead
-Prepared the GitHub repository and pages for hosting the research paper online. Proofread and edited all chapters for the final version of the research paper. Researched and implemented code for Faster R-CNN, Mask R-CNN, and YOLOv8 methodologies. Analyzed, experimented, and made inferences during training, validation, and test phases. Developed a custom class label for detecting military tanks using YOLOv8. Evaluated the performance between various object detection and segmentation models. Kept communication with the professor, and peers.
+-   Conducted comprehensive proofreading and editing of all paper chapters for the final version.
 
+-   Researched and implemented code for Faster R-CNN, Mask R-CNN, and YOLOv8 methodologies.
 
-### Jacob Knight -- Deep Learning Architect 
-Wrote about the different methodologies used, such as Region Proposal Network, Translation-Invariant Anchor, and back-propagation. Conducted peer reviews of others' work.
+-   Analyzed, experimented, and drew conclusions throughout training, validation, and testing phases.
 
+-   Developed a specialized class label for military tank detection using YOLOv8.
 
-### Kyle Knuth -- Data Scientist
-Wrote the objectives, introduction, metrics, analysis, and results. Helped gather training and testing images for the YOLOv8 model and assisted with the annotation of the training data. Assisted in the training and implementation of the YOLOv8 model.
+-   Evaluated performance across various object detection and segmentation models.
 
+-   Maintained consistent communication with the professor and peers.
 
-### Sai Meghana -- Software Engineer
-Researched and wrote the literature review chapter, and made comparison between different methodologies. Drafted flowcharts to explain the architecture of each model. Assisted in writing methodologies chapter. 
+-   Prepared the GitHub repository and associated pages for online hosting of the research paper.
 
+-   Deployed two web applications: one for live-feed capture from a webcam using a pre-trained model, and another enabling end-users to upload photos for object detection and segmentation inference.
 
+### Jacob Knight, Deep Learning Architect
+
+-   Authored sections detailing methodologies such as Region Proposal Network, Translation-Invariant Anchor, and back-propagation.
+
+-   Conducted peer reviews of colleagues' work.
+
+### Kyle Knuth, Data Scientist
+
+-   Wrote sections covering objectives, introduction, metrics, analysis, and results.
+
+-   Assisted in collecting training and testing images for the YOLOv8 model.
+
+-   Aided in manual and auto-annotations for training data.
+
+-   Contributed to the training and implementation of the SAM (Segment Anything model).
+
+### Sai Devarashetty, Software Engineer
+
+-   Conducted research and composed the literature review chapter.
+
+-   Conducted comparative analyses of different methodologies.
+
+-   Created explanatory flowcharts illustrating each model's architecture.
+
+-   Assisted in drafting the methodologies chapter.

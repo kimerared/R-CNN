@@ -218,12 +218,6 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Resources</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./slides.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Slides</span></span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -267,16 +261,14 @@ div.csl-indent {
 
 </header>
 
-<p>YOLOv9, the latest iteration in the YOLO (You Only Look Once) series of object detection models, published in February 2024, represents a significant advancement in the field of computer vision. Building upon the strengths of its predecessors, The authors of the paper titled “<strong>YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information”</strong> introduce novel methodologies and enhancements aimed at improving detection accuracy, speed, and efficiency. With a focus on addressing data loss through an information bottleneck, incorporating programmable gradient information for reliable weight updates, and integrating Generalized ELAN (GELAN) <span class="citation" data-cites="wang2024yolov9"><a href="references.html#ref-wang2024yolov9" role="doc-biblioref">[1]</a></span> for enhanced feature extraction, YOLOv9 stands at the forefront of cutting-edge object detection technology. This introduction sets the stage for exploring the intricacies and innovations that define YOLOv9 as a state-of-the-art solution for object detection tasks.</p>
+<p>YOLOv9, the latest iteration in the YOLO (You Only Look Once) series of object detection models, published in February 2024, represents a significant advancement in the field of computer vision. Building upon the strengths of predecessors models, Wang and colleagues in the paper titled “<strong>YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information”</strong> introduce novel methodologies and enhancements aimed at improving detection accuracy, speed, and efficiency. With a focus on addressing data loss through an information bottleneck, incorporating programmable gradient information for reliable weight updates, and integrating Generalized ELAN (GELAN) <span class="citation" data-cites="wang2024yolov9"><a href="references.html#ref-wang2024yolov9" role="doc-biblioref">[1]</a></span> for enhanced feature extraction. YOLOv9 stands at the forefront of cutting-edge object detection technology. This introduction sets the stage for exploring the innovations that define YOLOv9 as a state-of-the-art solution for object detection tasks.</p>
 <div class="no-row-height column-margin column-container"></div><section id="information-bottleneck" class="level2 page-columns page-full" data-number="A.1">
 <h2 data-number="A.1" class="anchored" data-anchor-id="information-bottleneck"><span class="header-section-number">A.1</span> Information Bottleneck</h2>
 <section id="addresses-data-loss" class="level3 page-columns page-full" data-number="A.1.1">
 <h3 data-number="A.1.1" class="anchored" data-anchor-id="addresses-data-loss"><span class="header-section-number">A.1.1</span> Addresses Data Loss</h3>
 <p>YOLOv9 tackles the issue of data loss during deep network transmission by introducing the concept of an information bottleneck. This bottleneck aims to minimize the loss of information as data passes through the network layers.</p>
 <p>According to information bottleneck principle <span class="citation" data-cites="wang2024yolov9"><a href="references.html#ref-wang2024yolov9" role="doc-biblioref">[1]</a></span>, we know that data&nbsp;<span class="math inline">\(X\)</span>&nbsp;may cause information loss when going through transformation, as shown below:</p>
-<div class="no-row-height column-margin column-container"><div id="ref-wang2024yolov9" class="csl-entry" role="listitem">
-<div class="csl-left-margin">[1] </div><div class="csl-right-inline">C.-Y. Wang, I.-H. Yeh, and H.-Y. M. Liao, <span>“YOLOv9: Learning what you want to learn using programmable gradient information.”</span> 2024. Available: <a href="https://arxiv.org/abs/2402.13616">https://arxiv.org/abs/2402.13616</a></div>
-</div></div><p><span class="math display">\[
+<div class="no-row-height column-margin column-container"></div><p><span class="math display">\[
 I(X,X) \ge I(X, f_{\theta}(X)) \ge I(X, g_{\phi}(f_{\theta}(X)))
 \]</span></p>
 <p>The authors stated that as the number of network layer increases, the original data have high probability to be lost.</p>
@@ -317,9 +309,12 @@ X^{l+1} = X^l + f_{\theta}^{l+1} (X^l)
 <div class="csl-left-margin">[3] </div><div class="csl-right-inline">C.-Y. Wang, H.-Y. M. Liao, and I.-H. Yeh, <span>“Designing network design strategies through gradient path analysis,”</span> <em>Journal of Information Science and Engineering (JISE)</em>, vol. 39, no. 4, pp. 975–995, 2023.</div>
 </div></div></figure>
 </div>
+<p>Utilizing Progressive Group Integration (PGI) to address the information bottleneck challenge and mitigate the incompatibility of deep supervision mechanisms with lightweight neural networks. Wang and colleagues developed GELAN, a notably efficient and lightweight neural network. The integration of PGI and GELAN in the creation of YOLOv9 has demonstrated competitive effectiveness. Noteworthy for its superior design, YOLOv9 achieves a reduction of 49% in parameter count and 43% in computational workload compared to YOLOv8, while concurrently exhibiting a 0.6% Average Precision (AP) <span class="citation" data-cites="wang2024yolov9"><a href="references.html#ref-wang2024yolov9" role="doc-biblioref">[1]</a></span> enhancement on the MS COCO dataset.</p>
 
 
-
+<div class="no-row-height column-margin column-container"><div id="ref-wang2024yolov9" class="csl-entry" role="listitem">
+<div class="csl-left-margin">[1] </div><div class="csl-right-inline">C.-Y. Wang, I.-H. Yeh, and H.-Y. M. Liao, <span>“YOLOv9: Learning what you want to learn using programmable gradient information.”</span> 2024. Available: <a href="https://arxiv.org/abs/2402.13616">https://arxiv.org/abs/2402.13616</a></div>
+</div></div>
 </section>
 
 </main> <!-- /main -->
