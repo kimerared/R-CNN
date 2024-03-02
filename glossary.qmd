@@ -25,4 +25,4 @@ jupyter: python3
 | R-CNN    | Region-based Convolutional Neural Network |
 | RPN      | Region Proposal Network                   |
 | SVM      | Support Vector Machine                    |
-| YOLOv8   | You Only Look Once, version 8             |
+| YOLO     | You Only Look Once                        |

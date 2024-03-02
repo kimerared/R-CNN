@@ -1,5 +1,15 @@
 # Contributions
 
+### Sai Devarashetty, Software Engineer
+
+-   Conducted research and composed the literature review chapter.
+
+-   Conducted comparative analyses of different methodologies.
+
+-   Created explanatory flowcharts illustrating each model's architecture.
+
+-   Assisted in drafting the methodologies chapter.
+
 ### Hector Gavilanes, Project Lead
 
 -   Conducted comprehensive proofreading and editing of all paper chapters for the final version.
@@ -34,12 +44,4 @@
 
 -   Contributed to the training and implementation of the SAM (Segment Anything model).
 
-### Sai Devarashetty, Software Engineer
-
--   Conducted research and composed the literature review chapter.
-
--   Conducted comparative analyses of different methodologies.
-
--   Created explanatory flowcharts illustrating each model's architecture.
-
--   Assisted in drafting the methodologies chapter.
+### 
