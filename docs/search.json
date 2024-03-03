@@ -175,17 +175,24 @@
     "text": "B.0.1 Sai Devarashetty, Software Engineer\n\nConducted research and composed the literature review chapter.\nConducted comparative analyses of different methodologies.\nCreated explanatory flowcharts illustrating each model’s architecture.\nAssisted in drafting the methodologies chapter.\n\n\n\nB.0.2 Hector Gavilanes, Project Lead\n\nConducted comprehensive proofreading and editing of all paper chapters for the final version.\nResearched and implemented code for Faster R-CNN, Mask R-CNN, and YOLOv8 methodologies.\nAnalyzed, experimented, and drew conclusions throughout training, validation, and testing phases.\nDeveloped a specialized class label for military tank detection using YOLOv8.\nEvaluated performance across various object detection and segmentation models.\nMaintained consistent communication with the professor and peers.\nPrepared the GitHub repository and associated pages for online hosting of the research paper.\nDeployed two web applications: one for live-feed capture from a webcam using a pre-trained model, and another enabling end-users to upload photos for object detection and segmentation inference.\n\n\n\nB.0.3 Jacob Knight, Deep Learning Architect\n\nAuthored sections detailing methodologies such as Region Proposal Network, Translation-Invariant Anchor, and back-propagation.\nConducted peer reviews of colleagues’ work.\n\n\n\nB.0.4 Kyle Knuth, Data Scientist\n\nWrote sections covering objectives, introduction, metrics, analysis, and results.\nAssisted in collecting training and testing images for the YOLOv8 model.\nAided in manual and auto-annotations for training data.\nContributed to the training and implementation of the SAM (Segment Anything model)."
   },
   {
+    "objectID": "resources.html#pdf-file",
+    "href": "resources.html#pdf-file",
+    "title": "Appendix C — Resources",
+    "section": "C.1 PDF file",
+    "text": "C.1 PDF file\n\nR-CNN Report"
+  },
+  {
     "objectID": "resources.html#repositories",
     "href": "resources.html#repositories",
     "title": "Appendix C — Resources",
-    "section": "C.1 Repositories",
-    "text": "C.1 Repositories\n\nOnline Report - GitHub repository\nCode Notebooks - GitHub repository"
+    "section": "C.2 Repositories",
+    "text": "C.2 Repositories\n\nOnline Report - GitHub repository\nCode Notebooks - GitHub repository"
   },
   {
     "objectID": "resources.html#web-applications",
     "href": "resources.html#web-applications",
     "title": "Appendix C — Resources",
-    "section": "C.2 Web Applications",
-    "text": "C.2 Web Applications\n\nR-CNN - Webcam App\nR-CNN - YOLOv8 App"
+    "section": "C.3 Web Applications",
+    "text": "C.3 Web Applications\n\nR-CNN - Webcam App\nR-CNN - YOLOv8 App"
   }
 ]

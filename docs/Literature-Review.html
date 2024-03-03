@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8 - Online report.">
 
 <title>Computer Vision: Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8 - 2&nbsp; Literature Review</title>
 <style>
@@ -114,7 +115,6 @@ div.csl-indent {
       <a href="./">Computer Vision: Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/kimerared/R-CNN.git" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <a href="./Computer-Vision--Exploring-Object-Detection-and-Segmentation-using-Faster-R-CNN,-Mask-R-CNN,-and-YOLOv8.pdf" rel="" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -340,7 +340,7 @@ div.csl-indent {
 <p>An initial drawback of the R-CNN architecture was its computational inefficiency during inference, primarily stemming from its sequential processing of region proposals. Processing each region proposal independently led to redundant computations and prolonged inference times.</p>
 <div class="quarto-figure quarto-figure-center" style="text-align:center;">
 <figure class="figure">
-<p><img src="images/flowcharts/RCNN-flowcharts.jpg" class="img-fluid figure-img" alt="R-CNN Flowchart"></p>
+<p><img src="images/flowcharts/RCNN-flowcharts.png" class="img-fluid figure-img" alt="R-CNN Flowchart"></p>
 <figcaption class="figure-caption">Flowchart of R-CNN</figcaption>
 </figure>
 </div>
@@ -357,7 +357,7 @@ div.csl-indent {
 <p>Firstly, it utilizes a Region Proposal Network (RPN) to generate region proposals directly from the convolutional feature maps, eliminating the need for external proposal methods like selective search. The RPN functions by sliding a small grid (essentially a compact CNN) across the evolving feature map to predict the spatial dimensions (bounding boxes) and associated probability scores for objects within each sliding window. This streamlines the detection process and enhances efficiency. Furthermore, Fast R-CNN introduces the Region of Interest (RoI) pooling layer <span class="citation" data-cites="girshick2015fastrcnn"><a href="references.html#ref-girshick2015fastrcnn" role="doc-biblioref">[3]</a></span>, allowing feature extraction from region proposals of varying sizes without the need for expensive resizing operations. This enables precise alignment of features with the corresponding regions of interest, leading to improved localization accuracy. Moreover, Fast R-CNN adopts a unified network architecture, enabling end-to-end training of both the region proposal and object detection tasks. This approach ensures better optimization, and facilitates seamless integration of different components, contributing to the overall efficiency and effectiveness of the model.</p>
 <div class="no-row-height column-margin column-container"></div><div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
-<p><img src="images/flowcharts/fast-RCNN-flowcharts.jpg" class="img-fluid figure-img" alt="Fast R-CNN Flowchart"></p>
+<p><img src="images/flowcharts/fast-RCNN-flowcharts.png" class="img-fluid figure-img" alt="Fast R-CNN Flowchart"></p>
 <figcaption class="figure-caption">Flowchart of Fast R-CNN</figcaption>
 </figure>
 </div>
@@ -428,7 +428,7 @@ div.csl-indent {
 <p>The final output comprises a collection of object detections alongside their bounding boxes and corresponding class labels.</p>
 <div class="quarto-figure quarto-figure-center page-columns page-full" style="text-align:center;">
 <figure class="figure page-columns page-full">
-<p><img src="images/flowcharts/faster-RCNN-flowcharts.jpg" class="img-fluid figure-img" alt="Faster R-CNN Flowchart"></p>
+<p><img src="images/flowcharts/faster-RCNN-flowcharts.png" class="img-fluid figure-img" alt="Faster R-CNN Flowchart"></p>
 <figcaption class="figure-caption">Flowchart of Faster R-CNN <span class="citation" data-cites="ren2015fasterrcnn"><a href="references.html#ref-ren2015fasterrcnn" role="doc-biblioref">[4]</a></span></figcaption>
 <div class="no-row-height column-margin column-container"></div></figure>
 </div>

@@ -34,7 +34,7 @@ Lastly, R-CNN implemented non-maximum suppression to eliminate redundant detecti
 
 An initial drawback of the R-CNN architecture was its computational inefficiency during inference, primarily stemming from its sequential processing of region proposals. Processing each region proposal independently led to redundant computations and prolonged inference times.
 
-![Flowchart of R-CNN](images/flowcharts/RCNN-flowcharts.jpg){style="text-align:center;" fig-alt="R-CNN Flowchart" fig-align="center"}
+![Flowchart of R-CNN](images/flowcharts/RCNN-flowcharts.png){style="text-align:center;" fig-alt="R-CNN Flowchart" fig-align="center"}
 
 {{< pagebreak >}} {{< pagebreak >}}
 
@@ -50,7 +50,7 @@ Expanding upon its architecture, Fast R-CNN incorporates several key components 
 
 Firstly, it utilizes a Region Proposal Network (RPN) to generate region proposals directly from the convolutional feature maps, eliminating the need for external proposal methods like selective search. The RPN functions by sliding a small grid (essentially a compact CNN) across the evolving feature map to predict the spatial dimensions (bounding boxes) and associated probability scores for objects within each sliding window. This streamlines the detection process and enhances efficiency. Furthermore, Fast R-CNN introduces the Region of Interest (RoI) pooling layer @girshick2015fastrcnn, allowing feature extraction from region proposals of varying sizes without the need for expensive resizing operations. This enables precise alignment of features with the corresponding regions of interest, leading to improved localization accuracy. Moreover, Fast R-CNN adopts a unified network architecture, enabling end-to-end training of both the region proposal and object detection tasks. This approach ensures better optimization, and facilitates seamless integration of different components, contributing to the overall efficiency and effectiveness of the model.
 
-![Flowchart of Fast R-CNN](images/flowcharts/fast-RCNN-flowcharts.jpg){style="text-align: center;" fig-alt="Fast R-CNN Flowchart" fig-align="center"}
+![Flowchart of Fast R-CNN](images/flowcharts/fast-RCNN-flowcharts.png){style="text-align: center;" fig-alt="Fast R-CNN Flowchart" fig-align="center"}
 
 {{< pagebreak >}} {{< pagebreak >}}
 
@@ -109,7 +109,7 @@ Following prediction, non-maximum suppression is employed to discard redundant a
 
 The final output comprises a collection of object detections alongside their bounding boxes and corresponding class labels.
 
-![Flowchart of Faster R-CNN @ren2015fasterrcnn](images/flowcharts/faster-RCNN-flowcharts.jpg){style="text-align:center;" fig-alt="Faster R-CNN Flowchart" fig-align="center"}
+![Flowchart of Faster R-CNN @ren2015fasterrcnn](images/flowcharts/faster-RCNN-flowcharts.png){style="text-align:center;" fig-alt="Faster R-CNN Flowchart" fig-align="center"}
 
 ### Advantages of Faster R-CNN
 

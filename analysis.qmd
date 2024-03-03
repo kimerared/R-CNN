@@ -18,4 +18,4 @@ Following data preprocessing, YOLOv8 training commenced using the tank training 
 
 The following flowchart illustrates our process details for the custom military tank detector.
 
-![Custom Object Detector using YOLOv8](images/flowcharts/custom-YOLO-flowcharts.jpg){style="text-align: center;" fig-alt="Custom Object Detector using YOLOv8" fig-align="center"}
+![Custom Object Detector using YOLOv8](images/flowcharts/custom-YOLO-flowcharts.png){style="text-align: center;" fig-alt="Custom Object Detector using YOLOv8" fig-align="center"}

@@ -13,8 +13,8 @@ book:
     - "Software Engineer: Sai Devarashetty"
   date: "February 16, 2024"
   repo-url: https://github.com/kimerared/R-CNN.git
-  downloads: [pdf]
-  description: "Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8 -- Online report."
+  pdf-url: "report/RCNN-Object-Detection-&-Segmentation-v3.pdf"
+  description: "Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8 - Online report."
 
   chapters:
     - index.qmd
