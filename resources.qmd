@@ -6,10 +6,6 @@ jupyter: python3
 
 For your convenience, we have provided the following links accompanying the book report referencing the code notebooks used for the projects, and web applications.
 
-## PDF file
-
--   [R-CNN Report](report/RCNN-Object-Detection-&-Segmentation-v3.pdf)
-
 ## Repositories
 
 -   [Online Report - GitHub repository](https://github.com/kimerared/R-CNN.git)

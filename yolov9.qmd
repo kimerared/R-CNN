@@ -34,20 +34,32 @@ $$
 
 Reliable Gradient Information: PGI is introduced to ensure reliable gradient information is available for updating network weights. By providing complete input information for target tasks, PGI facilitates accurate gradient calculations essential for weight updates. Update Network Weights: The availability of reliable gradient information through PGI enables effective updating of network weights, enhancing the learning process and model performance. Auxiliary
 
-{{< pagebreak >}}
-
 ## Reversible Branch
 
 YOLOv9 incorporates an auxiliary reversible branch to further optimize gradient information flow and improve the overall training process.
 
-![Multi-Level Auxiliary Information](images/architecture/yolov9-auxiliary-branch.png){style="text-align: center;" fig-alt="Multi-Level Auxiliary Information"}
+This branch introduces a novel approach that allows for reversible network operations, enabling efficient training and inference processes. By incorporating reversible layers, YOLOv9 enhances model interpretability, reduces memory consumption, and improves training speed without compromising accuracy.
 
-{{< pagebreak >}} {{< pagebreak >}}
+#### **Key Features of YOLOv9 Reversible Branch:**
+
+1.  **Reversible Layers**: YOLOv9 integrates reversible layers that enable the network to store intermediate activations in a reversible manner, reducing memory overhead during training and inference.
+
+2.  **Improved Efficiency**: The reversible branch architecture enhances computational efficiency by eliminating the need to store intermediate activations, leading to faster training and inference times.
+
+3.  **Enhanced Interpretability**: The reversible operations in YOLOv9 facilitate better interpretability of the model by allowing the reconstruction of intermediate activations during inference.
+
+4.  **Memory Optimization**: By utilizing reversible layers, YOLOv9 optimizes memory consumption during training, making it more feasible to train deep neural networks on limited hardware resources.
+
+5.  **Maintained Accuracy**: Despite the efficiency improvements, YOLOv9's reversible branch maintains high accuracy levels comparable to traditional YOLO architectures.
+
+![Multi-Level Auxiliary Information](images/architecture/yolov9-auxiliary-branch.png){style="text-align: center;" fig-alt="Multi-Level Auxiliary Information"}
 
 ## Generalized ELAN (GELAN)
 
 CSPNet + ELAN: GELAN combines CSPNet with ELAN to enhance feature extraction and improve model efficiency. This fusion allows for more effective utilization of parameters and computational resources within the network architecture. Gradient Path Planning: GELAN's architecture focuses on gradient path planning to optimize information flow and ensure that gradient updates are efficiently utilized throughout the network, leading to improved performance in object detection tasks.
 
 ![The architecture of GELAN: (a) CSPNet @wang2020cspnet, (b) ELAN @wang2023designing , and (c) proposed GELAN.](images/architecture/GELAN.png){style="text-align: center;" fig-alt="The architecture of GELAN: (a) CSPNet @wang2020cspnet, (b) ELAN @wang2023designing , and (c) proposed GELAN."}
+
+{{< pagebreak >}}
 
 Utilizing Progressive Group Integration (PGI) to address the information bottleneck challenge and mitigate the incompatibility of deep supervision mechanisms with lightweight neural networks. Wang and colleagues developed GELAN, a notably efficient and lightweight neural network. The integration of PGI and GELAN in the creation of YOLOv9 has demonstrated competitive effectiveness. Noteworthy for its superior design, YOLOv9 achieves a reduction of 49% in parameter count and 43% in computational workload compared to YOLOv8, while concurrently exhibiting a 0.6% Average Precision (AP) @wang2024yolov9 enhancement on the MS COCO dataset.

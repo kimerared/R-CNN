@@ -7,12 +7,12 @@ book:
   subtitle: "A Comparative Analysis"
   favicon: 'book-favicon-512.png'
   author:
+    - "Sai Devarashetty, Software Engineer"
     - "Hector R. Gavilanes, Project Lead"
     - "Jacob Knight, Deep Learning Architect"
     - "Kyle Knuth, Data Scientist"
-    - "Sai Devarashetty, Software Engineer"
+    
   date: "February 16, 2024"
-  repo-url: https://github.com/kimerared/R-CNN.git
   description: "Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8 - Online report."
 
   chapters:

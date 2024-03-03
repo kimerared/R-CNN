@@ -113,9 +113,6 @@ div.csl-indent {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Computer Vision: Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/kimerared/R-CNN.git" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -291,18 +288,27 @@ X^{l+1} = X^l + f_{\theta}^{l+1} (X^l)
 <section id="programmable-gradient-information-pgi" class="level2" data-number="A.2">
 <h2 data-number="A.2" class="anchored" data-anchor-id="programmable-gradient-information-pgi"><span class="header-section-number">A.2</span> Programmable Gradient Information (PGI)</h2>
 <p>Reliable Gradient Information: PGI is introduced to ensure reliable gradient information is available for updating network weights. By providing complete input information for target tasks, PGI facilitates accurate gradient calculations essential for weight updates. Update Network Weights: The availability of reliable gradient information through PGI enables effective updating of network weights, enhancing the learning process and model performance. Auxiliary</p>
-<div style="page-break-after: always;"></div>
 </section>
 <section id="reversible-branch" class="level2" data-number="A.3">
 <h2 data-number="A.3" class="anchored" data-anchor-id="reversible-branch"><span class="header-section-number">A.3</span> Reversible Branch</h2>
 <p>YOLOv9 incorporates an auxiliary reversible branch to further optimize gradient information flow and improve the overall training process.</p>
+<p>This branch introduces a novel approach that allows for reversible network operations, enabling efficient training and inference processes. By incorporating reversible layers, YOLOv9 enhances model interpretability, reduces memory consumption, and improves training speed without compromising accuracy.</p>
+<section id="key-features-of-yolov9-reversible-branch" class="level4" data-number="A.3.0.1">
+<h4 data-number="A.3.0.1" class="anchored" data-anchor-id="key-features-of-yolov9-reversible-branch"><span class="header-section-number">A.3.0.1</span> <strong>Key Features of YOLOv9 Reversible Branch:</strong></h4>
+<ol type="1">
+<li><p><strong>Reversible Layers</strong>: YOLOv9 integrates reversible layers that enable the network to store intermediate activations in a reversible manner, reducing memory overhead during training and inference.</p></li>
+<li><p><strong>Improved Efficiency</strong>: The reversible branch architecture enhances computational efficiency by eliminating the need to store intermediate activations, leading to faster training and inference times.</p></li>
+<li><p><strong>Enhanced Interpretability</strong>: The reversible operations in YOLOv9 facilitate better interpretability of the model by allowing the reconstruction of intermediate activations during inference.</p></li>
+<li><p><strong>Memory Optimization</strong>: By utilizing reversible layers, YOLOv9 optimizes memory consumption during training, making it more feasible to train deep neural networks on limited hardware resources.</p></li>
+<li><p><strong>Maintained Accuracy</strong>: Despite the efficiency improvements, YOLOv9’s reversible branch maintains high accuracy levels comparable to traditional YOLO architectures.</p></li>
+</ol>
 <div class="quarto-figure quarto-figure-center" style="text-align: center;">
 <figure class="figure">
 <p><img src="images/architecture/yolov9-auxiliary-branch.png" class="img-fluid figure-img" alt="Multi-Level Auxiliary Information"></p>
 <figcaption class="figure-caption">Multi-Level Auxiliary Information</figcaption>
 </figure>
 </div>
-<p></p><div style="page-break-after: always;"></div> <div style="page-break-after: always;"></div><p></p>
+</section>
 </section>
 <section id="generalized-elan-gelan" class="level2 page-columns page-full" data-number="A.4">
 <h2 data-number="A.4" class="anchored" data-anchor-id="generalized-elan-gelan"><span class="header-section-number">A.4</span> Generalized ELAN (GELAN)</h2>
@@ -317,6 +323,7 @@ X^{l+1} = X^l + f_{\theta}^{l+1} (X^l)
 <div class="csl-left-margin">[3] </div><div class="csl-right-inline">C.-Y. Wang, H.-Y. M. Liao, and I.-H. Yeh, <span>“Designing network design strategies through gradient path analysis,”</span> <em>Journal of Information Science and Engineering (JISE)</em>, vol. 39, no. 4, pp. 975–995, 2023.</div>
 </div></div></figure>
 </div>
+<div style="page-break-after: always;"></div>
 <p>Utilizing Progressive Group Integration (PGI) to address the information bottleneck challenge and mitigate the incompatibility of deep supervision mechanisms with lightweight neural networks. Wang and colleagues developed GELAN, a notably efficient and lightweight neural network. The integration of PGI and GELAN in the creation of YOLOv9 has demonstrated competitive effectiveness. Noteworthy for its superior design, YOLOv9 achieves a reduction of 49% in parameter count and 43% in computational workload compared to YOLOv8, while concurrently exhibiting a 0.6% Average Precision (AP) <span class="citation" data-cites="wang2024yolov9"><a href="references.html#ref-wang2024yolov9" role="doc-biblioref">[1]</a></span> enhancement on the MS COCO dataset.</p>
 
 
