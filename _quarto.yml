@@ -13,7 +13,6 @@ book:
     - "Kyle Knuth, Data Scientist"
     
   date: "February 16, 2024"
-  description: "Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8 - Online report."
 
   chapters:
     - index.qmd
