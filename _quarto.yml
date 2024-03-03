@@ -8,12 +8,11 @@ book:
   favicon: 'book-favicon-512.png'
   author:
     - "Hector R. Gavilanes, Project Lead"
-    - "Deep Learning Architect: Jacob Knight"
-    - "Data Scientist: Kyle Knuth"
-    - "Software Engineer: Sai Devarashetty"
+    - "Jacob Knight, Deep Learning Architect"
+    - "Kyle Knuth, Data Scientist"
+    - "Sai Devarashetty, Software Engineer"
   date: "February 16, 2024"
   repo-url: https://github.com/kimerared/R-CNN.git
-  pdf-url: "report/RCNN-Object-Detection-&-Segmentation-v3.pdf"
   description: "Exploring Object Detection and Segmentation using Faster R-CNN, Mask R-CNN, and YOLOv8 - Online report."
 
   chapters:
@@ -45,7 +44,6 @@ format:
   pdf:
     documentclass: scrreprt
     reference-location: document
-    fig-dpi: 300
     
 editor: visual
 
